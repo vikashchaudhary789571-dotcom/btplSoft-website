@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: all var(--transition-normal);
+  transition: background var(--transition-normal), box-shadow var(--transition-normal), height var(--transition-normal);
   background: transparent;
 }
 
@@ -102,7 +102,7 @@
   letter-spacing: 0.5px;
   background: var(--primary-green);
   color: var(--white) !important;
-  transition: all var(--transition-normal);
+  transition: background var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-normal);
   box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
   margin-left: 16px;
   height: 64% !important;
@@ -134,7 +134,7 @@
   height: 3px;
   background: var(--white);
   border-radius: 2px;
-  transition: all var(--transition-normal);
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
 }
 
 .navbar.scrolled .mobile-menu-btn span {

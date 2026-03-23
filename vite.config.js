@@ -1,9 +1,32 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// Injects <link rel="preload"> for the hero banner image into built HTML
+function heroImagePreload() {
+  return {
+    name: 'hero-image-preload',
+    enforce: 'post',
+    transformIndexHtml: {
+      order: 'post',
+      handler(html, ctx) {
+        if (!ctx.bundle) return html
+        for (const key of Object.keys(ctx.bundle)) {
+          if (key.includes('WhatsApp') && key.endsWith('.webp')) {
+            return html.replace(
+              '</head>',
+              `  <link rel="preload" as="image" type="image/webp" href="/${key}" fetchpriority="high">\n  </head>`
+            )
+          }
+        }
+        return html
+      },
+    },
+  }
+}
+
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), heroImagePreload()],
   build: {
     target: 'es2020',
     minify: 'terser',
