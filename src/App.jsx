@@ -1,13 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
-
-function ScrollToTop() {
-  const { pathname } = useLocation()
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
-  return null
-}
 import { 
   ArrowRight, 
   ChevronDown,
@@ -49,8 +41,8 @@ import {
 } from 'lucide-react'
 import './App.css'
 import Navbar from './components/Navbar.jsx'
-import logoImg from './assets/images/btpl-logo.png'
-import bannerImg from './assets/images/WhatsApp Image 2026-03-17 at 12.13.43 PM.jpeg'
+import logoImg from './assets/images/btpl-logo.webp'
+import bannerImg from './assets/images/WhatsApp Image 2026-03-17 at 12.13.43 PM.webp'
 import About from './pages/About.jsx'
 import WebDevelopment from './pages/services/WebDevelopment.jsx'
 import AppDevelopment from './pages/services/AppDevelopment.jsx'
@@ -113,6 +105,14 @@ import PyTorch from './pages/technologies/PyTorch.jsx'
 import NumPy from './pages/technologies/NumPy.jsx'
 import Pandas from './pages/technologies/Pandas.jsx'
 import TechnologiesPage from './pages/technologies/Technologies.jsx'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
 
 function App() {
   // Counter animation hook

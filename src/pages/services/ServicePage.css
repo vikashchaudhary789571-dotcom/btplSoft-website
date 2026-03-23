@@ -817,12 +817,80 @@
 @media (max-width: 768px) {
   .sp-hero { padding: 100px 0 48px; min-height: 360px; }
   .sp-hero-title { font-size: 2rem; }
+  .sp-hero-desc  { font-size: 1rem; line-height: 1.7; -webkit-line-clamp: 4; margin-bottom: 28px; }
   .sp-services-grid { grid-template-columns: 1fr; }
   .sp-process-grid  { grid-template-columns: 1fr; }
-  .sp-why-grid      { grid-template-columns: 1fr; }
+  .sp-why-grid      { grid-template-columns: 1fr; gap: 16px; }
+  .sp-why-card      { padding: 24px 20px; gap: 14px; }
+  .sp-why-card h4   { font-size: 1.1rem; }
+  .sp-why-card p    { font-size: 0.9rem; }
   .sp-heading       { font-size: 1.9rem; }
+  .sp-sub           { font-size: 1rem; }
   .sp-cta h2        { font-size: 1.8rem; }
+  .sp-cta p         { font-size: 0.95rem; }
+  .sp-cta           { padding: 60px 0; }
   .sp-container     { padding: 0 20px; }
+  .sp-section       { padding: 60px 0; }
+  .sp-section-head  { margin-bottom: 36px; }
+  .sp-label         { font-size: 0.88rem; letter-spacing: 2px; }
+  .sp-hero-actions  { justify-content: center; }
+  .sp-btn-primary   { padding: 12px 26px; font-size: 0.95rem; }
+  .sp-btn-secondary { padding: 12px 22px; font-size: 0.9rem; }
+  .sp-hero-eyebrow  { font-size: 0.68rem; padding: 4px 14px; }
+  .sp-hero-sub      { font-size: 0.95rem; }
+  .sp-section-title { font-size: 1.8rem; }
+  .sp-overview-content .sp-heading { font-size: 2rem; }
+}
+@media (max-width: 480px) {
+  .sp-hero          { padding: 90px 0 40px; min-height: 300px; }
+  .sp-hero-title    { font-size: 1.65rem; line-height: 1.2; margin-bottom: 18px; }
+  .sp-hero-desc     { font-size: 0.92rem; line-height: 1.65; -webkit-line-clamp: 5; margin-bottom: 24px; }
+  .sp-hero-actions  { flex-direction: column; gap: 12px; align-items: center; }
+  .sp-btn-primary   { padding: 12px 24px; font-size: 0.9rem; width: 100%; justify-content: center; }
+  .sp-btn-secondary { padding: 12px 20px; font-size: 0.88rem; width: 100%; justify-content: center; }
+  .sp-heading       { font-size: 1.6rem; margin-bottom: 14px; }
+  .sp-sub           { font-size: 0.9rem; line-height: 1.65; }
+  .sp-section       { padding: 48px 0; }
+  .sp-section-head  { margin-bottom: 28px; }
+  .sp-cta           { padding: 48px 0; }
+  .sp-cta h2        { font-size: 1.5rem; margin-bottom: 12px; }
+  .sp-cta p         { font-size: 0.88rem; margin-bottom: 28px; }
+  .sp-cta .sp-btn-primary { width: auto; }
+  .sp-container     { padding: 0 16px; }
+  .sp-label         { font-size: 0.8rem; letter-spacing: 1.5px; gap: 8px; }
+  .sp-label::before { width: 18px; }
+  .sp-why-card      { padding: 20px 16px; gap: 12px; flex-direction: column; }
+  .sp-why-card h4   { font-size: 1.02rem; }
+  .sp-why-card p    { font-size: 0.88rem; }
+  .sp-service-card  { padding: 28px 20px; border-radius: 16px; }
+  .sp-service-icon  { width: 56px; height: 56px; border-radius: 14px; margin-bottom: 18px; }
+  .sp-service-card h3 { font-size: 1.05rem; }
+  .sp-service-card p  { font-size: 0.9rem; }
+  .sp-process-card    { padding: 32px 20px; border-radius: 18px; }
+  .sp-process-num     { width: 64px; height: 64px; font-size: 1.2rem; margin-bottom: 20px; }
+  .sp-process-card h4 { font-size: 1.05rem; }
+  .sp-process-card p  { font-size: 0.9rem; }
+  .sp-section-title   { font-size: 1.5rem; }
+  .sp-overview-content .sp-heading { font-size: 1.65rem; }
+  .sp-overview-content .sp-subtext-large { font-size: 0.92rem; }
+  .sp-tech-point      { padding: 24px 18px; gap: 16px; flex-direction: column; }
+  .sp-tech-point h4   { font-size: 1.05rem; }
+  .sp-tech-point p    { font-size: 0.9rem; }
+  .sp-tech-point .checkmark-wrapper { width: 46px; height: 46px; border-radius: 12px; }
+  .sp-cta-inner       { flex-direction: column; text-align: center; }
+  .sp-cta-text        { text-align: center; }
+  .sp-cta-title       { font-size: 1.5rem; }
+  .sp-cta-sub         { font-size: 0.88rem; }
+  .sp-cta-actions     { justify-content: center; width: 100%; }
+  .sp-hero-eyebrow    { font-size: 0.65rem; padding: 4px 12px; }
+  .sp-hero-sub        { font-size: 0.9rem; }
+}
+@media (max-width: 360px) {
+  .sp-hero-title    { font-size: 1.45rem; }
+  .sp-heading       { font-size: 1.4rem; }
+  .sp-container     { padding: 0 14px; }
+  .sp-cta h2        { font-size: 1.35rem; }
+  .sp-section       { padding: 40px 0; }
 }
 
 

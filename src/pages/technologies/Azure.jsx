@@ -184,10 +184,10 @@ export default function Azure() {
       {/* SERVICES */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">What We Do</p>
             <h2 className="sp-heading">Microsoft Azure Services</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               End-to-end Azure expertise — from initial architecture design and cloud migration to AI integration,
               data platforms, DevOps automation, and ongoing managed services.
             </p>
@@ -215,10 +215,10 @@ export default function Azure() {
       {/* WHY AZURE */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Azure</p>
             <h2 className="sp-heading">Why Microsoft Azure?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Azure is the cloud of choice for enterprises running Microsoft workloads — and increasingly the
               preferred platform for AI-first organisations. Here's why.
             </p>
@@ -238,10 +238,10 @@ export default function Azure() {
       {/* AZURE PRODUCTS */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Core Services</p>
             <h2 className="sp-heading">Key Azure Services We Work With</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               The foundational Azure services that power our cloud architectures — compute, data, networking, and operations.
             </p>
           </div>
@@ -260,10 +260,10 @@ export default function Azure() {
       {/* EXPERIENCE */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Expertise</p>
             <h2 className="sp-heading">Deep Azure Engineering Experience</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From enterprise data platforms and AI integrations to Kubernetes operations and hybrid cloud governance —
               our Azure expertise runs deep.
             </p>
@@ -286,10 +286,10 @@ export default function Azure() {
       {/* WHY BTPL */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Choose Us</p>
             <h2 className="sp-heading">Why BTPL for Your Azure Journey?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               We bring Microsoft-certified engineers, proven delivery methodology, and deep Azure platform knowledge to every
               engagement — from first conversation to long-term managed operations.
             </p>

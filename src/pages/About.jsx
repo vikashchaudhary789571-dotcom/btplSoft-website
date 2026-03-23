@@ -28,8 +28,8 @@ import {
   ChevronRight
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import logoImg from '../assets/images/btpl-logo.png'
-import aboutBannerImg from '../assets/images/about-banner.jpg'
+import logoImg from '../assets/images/btpl-logo.webp'
+import aboutBannerImg from '../assets/images/about-banner.webp'
 import './About.css'
 
 export default function About({ onOpenConsult }) {
@@ -42,10 +42,11 @@ export default function About({ onOpenConsult }) {
         style={{
           backgroundImage: `url(${aboutBannerImg})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center top',
           backgroundRepeat: 'no-repeat',
         }}
       >
+          {/* preload hint so browser fetches banner at highest priority */}
+        <img src={aboutBannerImg} alt="" aria-hidden="true" fetchPriority="high" style={{ display: 'none' }} />
         {/* dark overlay */}
         <div className="ab-hero-overlay" />
         <div className="ab-container">
@@ -351,7 +352,7 @@ export default function About({ onOpenConsult }) {
               <div className="ab-contact-icon"><MapPin size={20} /></div>
               <div className="ab-contact-info">
                 <h5>Our Office</h5>
-                <p>Noida, Uttar Pradesh, India</p>
+                <p>15442 Ventura Blvd. Ste 201-1736<br />Sherman Oaks, CA 91403</p>
               </div>
             </div>
             <div className="ab-contact-item">

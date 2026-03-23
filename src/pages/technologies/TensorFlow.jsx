@@ -183,10 +183,10 @@ export default function TensorFlow() {
       {/* ══════════════════ SERVICES ══════════════════ */}
       <section className="sp-section sp-bg-white" id="services">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">What We Build</p>
             <h2 className="sp-heading">TensorFlow Development Services</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               End-to-end TensorFlow expertise — from deep learning architecture design and transfer learning
               to TFX production pipelines, TF Serving deployment, and TFLite edge AI — all delivered by
               certified ML engineers with production deployment experience.
@@ -217,10 +217,10 @@ export default function TensorFlow() {
       {/* ══════════════════ WHY TENSORFLOW ══════════════════ */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why TensorFlow</p>
             <h2 className="sp-heading">Why Choose TensorFlow?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               TensorFlow is Google's production-proven ML platform — running on billions of Android devices, powering
               Search, Translate, and Photos at zero-millisecond latency, and trusted by Apple, Twitter, and Uber
               for their most demanding AI workloads.
@@ -243,10 +243,10 @@ export default function TensorFlow() {
       {/* ══════════════════ ECOSYSTEM ══════════════════ */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Ecosystem</p>
             <h2 className="sp-heading">TensorFlow Ecosystem We Master</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From core TF2 and Keras to TFX production pipelines, TFLite edge deployment, and TF.js
               browser inference — we leverage the complete TensorFlow platform to match every AI use case.
             </p>
@@ -266,10 +266,10 @@ export default function TensorFlow() {
       {/* ══════════════════ EXPERIENCE ══════════════════ */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Expertise</p>
             <h2 className="sp-heading">Deep TensorFlow Engineering Experience</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From research prototypes to enterprise-scale ML platforms — our TensorFlow engineers have solved
               every training, deployment, and monitoring challenge across healthcare, fintech, manufacturing,
               and e-commerce verticals.
@@ -291,10 +291,10 @@ export default function TensorFlow() {
       {/* ══════════════════ WHY BTPL ══════════════════ */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Choose Us</p>
             <h2 className="sp-heading">Why BTPL for TensorFlow?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Certified ML engineers, production-first MLOps delivery, and GPU/TPU cost optimisation expertise —
               building TensorFlow solutions that go live, stay accurate, and scale without incident.
             </p>

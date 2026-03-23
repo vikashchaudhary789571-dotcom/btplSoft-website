@@ -177,7 +177,7 @@ export default function Contact() {
                   <div className="info-icon"><MapPin size={24} /></div>
                   <div>
                     <h4>Visit Us</h4>
-                    <p>BTPL Soft Pvt. Ltd.<br />Noida, UP, India</p>
+                    <p>15442 Ventura Blvd. Ste 201-1736<br />Sherman Oaks, CA 91403</p>
                   </div>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function Contact() {
       <section className="contact-map-section">
         <div className="global-map-wrapper">
           <div className="global-map-image-container">
-            <img src="/src/assets/images/global-map.png" alt="BTPL Soft Global Presence" className="global-map-bg" />
+            <img src="/src/assets/images/global-map.webp" alt="BTPL Soft Global Presence" className="global-map-bg" />
             <div className="map-overlay-v2"></div>
             
             {/* Pulsing Location Pings */}

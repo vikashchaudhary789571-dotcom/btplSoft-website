@@ -112,14 +112,79 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .py-svc-grid { grid-template-columns: repeat(2, 1fr); }
-  .py-why-row { grid-template-columns: 52px 1fr; }
-  .py-why-desc { grid-column: 2; }
+  .py-svc-grid   { grid-template-columns: repeat(2, 1fr); }
+  .py-why-row    { grid-template-columns: 52px 1fr; }
+  .py-why-desc   { grid-column: 2; }
 }
+
 @media (max-width: 768px) {
-  .py-stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .py-svc-grid { grid-template-columns: 1fr; }
-  .py-why-row { grid-template-columns: 52px 1fr; }
-  .py-why-desc { display: none; }
-  .py-btpl-grid { grid-template-columns: 1fr; }
+  .py-stats-grid  { grid-template-columns: repeat(2, 1fr); }
+  .py-stat        { padding: 30px 16px; }
+  .py-stat::after { top: auto; bottom: 0; left: 15%; right: 15%; width: auto; height: 1px; }
+  .py-stat-num    { font-size: 2rem; }
+  .py-stat-label  { font-size: 0.78rem; }
+
+  .py-svc-grid    { grid-template-columns: 1fr; gap: 18px; }
+  .py-svc-icon-wrap { height: 76px; }
+  .py-svc-body    { padding: 20px; }
+  .py-svc-body h3 { font-size: 1.1rem; }
+  .py-svc-body p  { font-size: 0.95rem; }
+
+  .py-why-row     { grid-template-columns: 48px 1fr; gap: 16px; padding: 18px 20px; }
+  .py-why-icon    { width: 46px; height: 46px; }
+  .py-why-title   { font-size: 1.1rem; }
+  .py-why-desc    { display: none; }
+
+  .py-chips-grid  { gap: 10px; }
+  .py-chip        { padding: 8px 14px; font-size: 0.82rem; }
+  .py-exp-wrap h3 { font-size: 1.4rem; }
+  .py-exp-wrap p  { font-size: 0.95rem; margin-bottom: 28px; }
+
+  .py-btpl-grid   { grid-template-columns: 1fr; gap: 16px; }
+  .py-btpl-card   { padding: 22px 18px; gap: 14px; }
+  .py-btpl-icon   { width: 44px; height: 44px; }
+  .py-btpl-card h4 { font-size: 1.1rem; }
+  .py-btpl-card p  { font-size: 0.95rem; }
+}
+
+@media (max-width: 480px) {
+  .py-stats-grid  { grid-template-columns: repeat(2, 1fr); }
+  .py-stat        { padding: 20px 16px; }
+  .py-stat::after { display: none; }
+  .py-stat        { border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .py-stat:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.1); }
+  .py-stat:last-child { border-bottom: none; }
+  .py-stat:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+  .py-stat:nth-child(1),
+  .py-stat:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .py-stat-num    { font-size: 1.8rem; }
+
+  .py-svc-card    { border-radius: 12px; }
+  .py-svc-icon-wrap { height: 68px; }
+  .py-svc-body    { padding: 18px 16px; }
+  .py-svc-body h3 { font-size: 1.02rem; }
+  .py-svc-body p  { font-size: 0.9rem; line-height: 1.6; margin-bottom: 10px; }
+  .py-tag         { font-size: 0.68rem; padding: 2px 8px; }
+
+  .py-why-row     { grid-template-columns: 44px 1fr; gap: 14px; padding: 16px 16px; border-radius: 10px; }
+  .py-why-icon    { width: 42px; height: 42px; }
+  .py-why-title   { font-size: 1.02rem; }
+
+  .py-chips-grid  { gap: 8px; }
+  .py-chip        { padding: 7px 12px; font-size: 0.78rem; border-radius: 24px; }
+  .py-exp-wrap h3 { font-size: 1.25rem; }
+  .py-exp-wrap p  { font-size: 0.9rem; margin-bottom: 24px; }
+
+  .py-btpl-card   { padding: 20px 16px; gap: 12px; }
+  .py-btpl-icon   { width: 42px; height: 42px; }
+  .py-btpl-card h4 { font-size: 1.02rem; }
+  .py-btpl-card p  { font-size: 0.9rem; line-height: 1.6; }
+}
+
+@media (max-width: 360px) {
+  .py-stat-num    { font-size: 1.6rem; }
+  .py-svc-body    { padding: 16px 14px; }
+  .py-why-row     { padding: 14px 12px; }
+  .py-btpl-card   { padding: 16px 14px; }
+  .py-chip        { padding: 6px 10px; font-size: 0.72rem; }
 }

@@ -182,10 +182,10 @@ export default function Postman() {
       {/* SERVICES */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">What We Do</p>
             <h2 className="sp-heading">Postman API Testing Services</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               End-to-end API quality assurance — from collection design and automated assertions to
               CI/CD pipeline integration and production monitoring.
             </p>
@@ -214,10 +214,10 @@ export default function Postman() {
       {/* WHY POSTMAN */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Postman</p>
             <h2 className="sp-heading">Why We Use Postman for API Testing</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Postman is the world's leading API platform with 30 million developers. Here's why it's
               our default choice for every API testing engagement.
             </p>
@@ -239,10 +239,10 @@ export default function Postman() {
       {/* PROCESS */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Approach</p>
             <h2 className="sp-heading">Our Postman Testing Process</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               A clear 5-step process that takes your APIs from untested to fully automated, monitored, and documented.
             </p>
           </div>
@@ -261,10 +261,10 @@ export default function Postman() {
       {/* EXPERIENCE */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Expertise</p>
             <h2 className="sp-heading">Deep API Testing Experience</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Years of hands-on experience across every type of API, authentication pattern, and testing scenario.
             </p>
           </div>
@@ -288,10 +288,10 @@ export default function Postman() {
       {/* WHY BTPL */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Choose Us</p>
             <h2 className="sp-heading">Why Partner with BTPL for Postman Testing?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               We don't just write tests — we build quality systems that give your team confidence in every release.
             </p>
           </div>

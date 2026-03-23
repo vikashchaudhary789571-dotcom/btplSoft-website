@@ -146,7 +146,7 @@ export default function NumPy() {
           <h1 className="sp-heading" style={{ color: '#fff' }}>
             NumPy Development &amp; Scientific Computing Services
           </h1>
-          <p className="sp-subtext-large" style={{ color: 'rgba(255,255,255,0.82)' }}>
+          <p className="sp-sub" style={{ color: 'rgba(255,255,255,0.82)' }}>
             Harness the raw power of N-dimensional arrays. We build vectorised, GPU-ready numerical pipelines using NumPy, SciPy, CuPy, and JAX that out-perform Python loops by orders of magnitude — accelerating your AI, ML, and data engineering workloads.
           </p>
           <div className="sp-hero-actions">
@@ -175,12 +175,14 @@ export default function NumPy() {
 
       {/* ── OVERVIEW ── */}
       <section className="sp-section sp-bg-white">
-        <div className="sp-container sp-overview-content">
-          <p className="sp-label">What We Offer</p>
-          <h2 className="sp-heading">End-to-End NumPy &amp; Scientific Computing Solutions</h2>
-          <p className="sp-subtext-large">
-            NumPy is the cornerstone of the entire Python scientific computing ecosystem. As every serious ML framework and data library sits atop NumPy arrays, mastery of its internals — memory layout, broadcasting, BLAS bindings, and GPU portability — is the difference between pipelines that crawl and those that fly. Our engineers bring that mastery to your organisation.
-          </p>
+        <div className="sp-container">
+          <div className="sp-section-head center">
+            <p className="sp-label">What We Offer</p>
+            <h2 className="sp-heading">End-to-End NumPy &amp; Scientific Computing Solutions</h2>
+            <p className="sp-sub">
+              NumPy is the cornerstone of the entire Python scientific computing ecosystem. As every serious ML framework and data library sits atop NumPy arrays, mastery of its internals — memory layout, broadcasting, BLAS bindings, and GPU portability — is the difference between pipelines that crawl and those that fly. Our engineers bring that mastery to your organisation.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -294,13 +296,15 @@ export default function NumPy() {
 
       {/* ── CTA ── */}
       <section className="sp-section" style={{ background: 'linear-gradient(135deg, #013243, #1a4a6e)' }}>
-        <div className="sp-container sp-overview-content">
+        <div className="sp-container">
+          <div className="sp-section-head center">
           <h2 className="sp-heading" style={{ color: '#fff' }}>
             Ready to Supercharge Your Data Pipelines with NumPy?
           </h2>
-          <p className="sp-subtext-large" style={{ color: 'rgba(255,255,255,0.8)' }}>
+          <p className="sp-sub" style={{ color: 'rgba(255,255,255,0.8)' }}>
             Whether you need to migrate slow Python loops to vectorised operations, scale to GPU arrays with CuPy or JAX, or build production-grade scientific computing pipelines — our team delivers measurable performance improvements from day one.
           </p>
+          </div>
           <div style={{ display: 'flex', gap: '14px', marginTop: '32px', flexWrap: 'wrap', justifyContent: 'center' }}>
             <button
               className="sp-btn-primary"

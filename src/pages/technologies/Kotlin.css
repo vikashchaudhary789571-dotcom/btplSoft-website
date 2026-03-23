@@ -112,17 +112,86 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
-  .kt-svc-grid { grid-template-columns: 1fr; }
-  .kt-why-row { grid-template-columns: 52px 1fr; }
-  .kt-why-desc { grid-column: 2; }
-  .kt-exp-grid { grid-template-columns: repeat(2, 1fr); }
-  .kt-btpl-grid { grid-template-columns: repeat(2, 1fr); }
+  .kt-svc-grid    { grid-template-columns: 1fr; }
+  .kt-why-row     { grid-template-columns: 52px 1fr; }
+  .kt-why-desc    { grid-column: 2; }
+  .kt-exp-grid    { grid-template-columns: repeat(2, 1fr); }
+  .kt-btpl-grid   { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 768px) {
-  .kt-stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .kt-why-row { grid-template-columns: 1fr; }
-  .kt-why-icon { display: none; }
-  .kt-exp-grid { grid-template-columns: repeat(2, 1fr); }
-  .kt-btpl-grid { grid-template-columns: 1fr 1fr; }
+  .kt-stats-grid  { grid-template-columns: repeat(2, 1fr); }
+  .kt-stat        { padding: 28px 16px; }
+  .kt-stat:nth-child(1),
+  .kt-stat:nth-child(2) { border-bottom: 1px solid rgba(127,82,255,0.1); }
+  .kt-stat-num    { font-size: 2rem; }
+  .kt-stat-label  { font-size: 0.78rem; }
+
+  .kt-svc-card    { border-radius: 12px; }
+  .kt-svc-header  { height: 76px; }
+  .kt-svc-body    { padding: 18px; }
+  .kt-svc-body h3 { font-size: 1.1rem; }
+  .kt-svc-body p  { font-size: 0.95rem; }
+
+  .kt-why-row     { grid-template-columns: 1fr; padding: 20px; }
+  .kt-why-icon    { display: none; }
+  .kt-why-title   { font-size: 1.1rem; }
+  .kt-why-desc    { grid-column: 1; font-size: 0.95rem; }
+
+  .kt-exp-grid    { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .kt-exp-card    { padding: 20px 16px; }
+  .kt-exp-icon    { width: 40px; height: 40px; margin-bottom: 12px; }
+  .kt-exp-text    { font-size: 0.88rem; }
+  .kt-tech-strip  { gap: 8px; margin-top: 28px; padding-top: 24px; }
+  .kt-bubble      { font-size: 0.8rem; padding: 6px 14px; }
+
+  .kt-btpl-grid   { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .kt-btpl-card   { padding: 24px 16px; }
+  .kt-btpl-icon   { width: 48px; height: 48px; }
+  .kt-btpl-card h4 { font-size: 1.1rem; }
+  .kt-btpl-card p  { font-size: 0.95rem; }
 }
-@media (max-width: 480px) { .kt-btpl-grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 480px) {
+  .kt-stats-grid  { grid-template-columns: repeat(2, 1fr); }
+  .kt-stat        { padding: 20px 16px; border-right: none; border-bottom: 1px solid rgba(127,82,255,0.1); }
+  .kt-stat:nth-child(odd) { border-right: 1px solid rgba(127,82,255,0.1); }
+  .kt-stat:last-child { border-bottom: none; }
+  .kt-stat:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+  .kt-stat:nth-child(1),
+  .kt-stat:nth-child(2) { border-bottom: 1px solid rgba(127,82,255,0.1); }
+  .kt-stat-num    { font-size: 1.8rem; }
+
+  .kt-svc-header  { height: 68px; }
+  .kt-svc-body    { padding: 16px; }
+  .kt-svc-body h3 { font-size: 1.02rem; }
+  .kt-svc-body p  { font-size: 0.9rem; line-height: 1.6; margin-bottom: 10px; }
+  .kt-tag         { font-size: 0.68rem; padding: 2px 8px; }
+
+  .kt-why-row     { padding: 18px 16px; border-radius: 10px; }
+  .kt-why-title   { font-size: 1.02rem; }
+  .kt-why-desc    { font-size: 0.9rem; line-height: 1.6; }
+
+  .kt-exp-grid    { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .kt-exp-card    { padding: 16px 12px; border-radius: 10px; }
+  .kt-exp-icon    { width: 36px; height: 36px; margin-bottom: 10px; }
+  .kt-exp-text    { font-size: 0.82rem; }
+  .kt-tech-strip  { gap: 6px; }
+  .kt-bubble      { font-size: 0.75rem; padding: 5px 12px; border-radius: 6px; }
+
+  .kt-btpl-grid   { grid-template-columns: 1fr; gap: 14px; }
+  .kt-btpl-card   { padding: 22px 16px; }
+  .kt-btpl-icon   { width: 44px; height: 44px; margin-bottom: 12px; }
+  .kt-btpl-card h4 { font-size: 1.02rem; }
+  .kt-btpl-card p  { font-size: 0.9rem; line-height: 1.6; }
+}
+
+@media (max-width: 360px) {
+  .kt-stat-num    { font-size: 1.6rem; }
+  .kt-svc-body    { padding: 14px; }
+  .kt-svc-header  { height: 60px; }
+  .kt-why-row     { padding: 16px 14px; }
+  .kt-btpl-card   { padding: 18px 14px; }
+  .kt-exp-card    { padding: 14px 10px; }
+  .kt-bubble      { font-size: 0.7rem; padding: 4px 10px; }
+}

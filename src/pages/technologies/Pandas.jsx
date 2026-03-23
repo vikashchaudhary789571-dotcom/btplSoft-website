@@ -158,7 +158,7 @@ export default function Pandas() {
           <h1 className="sp-heading" style={{ color: '#fff' }}>
             Pandas Development &amp; Data Engineering Services
           </h1>
-          <p className="sp-subtext-large" style={{ color: 'rgba(255,255,255,0.82)' }}>
+          <p className="sp-sub" style={{ color: 'rgba(255,255,255,0.82)' }}>
             Turn raw, messy data into clean, analysis-ready insights. We build production-grade Pandas pipelines for ETL, time series analysis, feature engineering, and automated reporting — helping your team move from data chaos to business intelligence with speed and confidence.
           </p>
           <div className="sp-hero-actions">
@@ -187,12 +187,14 @@ export default function Pandas() {
 
       {/* ── OVERVIEW ── */}
       <section className="sp-section sp-bg-white">
-        <div className="sp-container sp-overview-content">
-          <p className="sp-label">What We Offer</p>
-          <h2 className="sp-heading">Comprehensive Pandas &amp; Data Engineering Solutions</h2>
-          <p className="sp-subtext-large">
-            Pandas is the world's most widely used data manipulation library and the common language of data analysts and engineers everywhere. Whether you're building a first ETL pipeline, migrating from Excel-based workflows, engineering ML features, or automating monthly reporting — Pandas sits at the centre of modern data work. Our engineers combine deep Pandas expertise with best practices in data quality, pipeline architecture, and performance to deliver solutions that scale.
-          </p>
+        <div className="sp-container">
+          <div className="sp-section-head center">
+            <p className="sp-label">What We Offer</p>
+            <h2 className="sp-heading">Comprehensive Pandas &amp; Data Engineering Solutions</h2>
+            <p className="sp-sub">
+              Pandas is the world's most widely used data manipulation library and the common language of data analysts and engineers everywhere. Whether you're building a first ETL pipeline, migrating from Excel-based workflows, engineering ML features, or automating monthly reporting — Pandas sits at the centre of modern data work. Our engineers combine deep Pandas expertise with best practices in data quality, pipeline architecture, and performance to deliver solutions that scale.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -310,13 +312,15 @@ export default function Pandas() {
 
       {/* ── CTA ── */}
       <section className="sp-section" style={{ background: 'linear-gradient(135deg, #005f8f, #0077B6)' }}>
-        <div className="sp-container sp-overview-content">
+        <div className="sp-container">
+          <div className="sp-section-head center">
           <h2 className="sp-heading" style={{ color: '#fff' }}>
             Ready to Transform Your Data with Pandas?
           </h2>
-          <p className="sp-subtext-large" style={{ color: 'rgba(255,255,255,0.8)' }}>
+          <p className="sp-sub" style={{ color: 'rgba(255,255,255,0.8)' }}>
             From first-time ETL pipelines to complex multi-source data warehousing, our Pandas engineers deliver clean, tested, production-ready code. Let's build a data backbone that scales with your business and gives your team the reliable insights they need to make confident decisions.
           </p>
+          </div>
           <div style={{ display: 'flex', gap: '14px', marginTop: '32px', flexWrap: 'wrap', justifyContent: 'center' }}>
             <button
               className="sp-btn-primary"

@@ -772,141 +772,211 @@
 }
 .ip-cta-btn:hover { background: #0d1b2a; color: #fff; box-shadow: 0 8px 28px rgba(0,0,0,0.25); transform: translateY(-2px); }
 
-/* ── RESPONSIVE ── */
+/* ══════════════════════════════════════════
+   RESPONSIVE — Industry Pages
+   Breakpoints: 1024 | 768 | 576 | 420
+   ══════════════════════════════════════════ */
+
+/* ── Large Tablet / Small Laptop ── */
 @media (max-width: 1024px) {
-  .ip-solutions-grid { grid-template-columns: repeat(2, 1fr); }
-  .ip-features-grid  { grid-template-columns: repeat(2, 1fr); }
-  .ip-process-grid   { grid-template-columns: repeat(2, 1fr); }
+  .ip-container       { padding: 0 32px; }
+  .ip-hero-title      { font-size: 2.6rem; }
+  .ip-solutions-grid  { grid-template-columns: repeat(2, 1fr); }
+  .ip-features-grid   { grid-template-columns: repeat(2, 1fr); }
+  .ip-process-grid    { grid-template-columns: repeat(2, 1fr); }
   .ip-process-grid::before { display: none; }
-  .ip-why-grid       { grid-template-columns: repeat(2, 1fr); }
-  .ip-checklist      { grid-template-columns: repeat(2, 1fr); }
-  .ip-overview-grid  { grid-template-columns: 1fr; }
-  .ip-overview-visual{ min-height: 280px; }
-  .ip-stats-strip    { grid-template-columns: repeat(2, 1fr); }
-  .ip-stats-strip .ip-stat-item:nth-child(2) { border-right: none; }
-  .ip-stats-strip .ip-stat-item:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,0.12); }
-  .ip-hero-title { font-size: 2.6rem; white-space: normal; }
+  .ip-why-grid        { grid-template-columns: repeat(2, 1fr); }
+  .ip-checklist       { grid-template-columns: repeat(2, 1fr); }
+  .ip-overview-grid   { grid-template-columns: 1fr; }
+  .ip-overview-visual { min-height: 280px; }
+  .ip-stats-strip     { grid-template-columns: repeat(2, 1fr); }
+  .ip-stats-strip .ip-stat-item:nth-child(2)   { border-right: none; }
+  .ip-stats-strip .ip-stat-item:nth-child(-n+2){ border-bottom: 1px solid rgba(255,255,255,0.12); }
+  /* disable stagger offset at this size */
+  .ip-solution-card:nth-child(3n + 2) { --y-offset: 0px; }
 }
+
+/* ── Tablet Portrait ── */
 @media (max-width: 768px) {
-  .ip-hero { padding: 110px 0 60px; }
-  .ip-hero-title { font-size: 2rem; }
-  .ip-solutions-grid { grid-template-columns: 1fr; }
-  .ip-features-grid  { grid-template-columns: 1fr; }
-  .ip-process-grid   { grid-template-columns: 1fr; }
-  .ip-why-grid       { grid-template-columns: 1fr; }
-  .ip-heading        { font-size: 1.9rem; }
-  .ip-cta h2         { font-size: 1.8rem; }
-  .ip-container      { padding: 0 20px; }
-  .ip-checklist      { grid-template-columns: 1fr; }
+  .ip-container      { padding: 0 24px; }
+  .ip-section        { padding: 72px 0; }
+  .ip-section-head   { margin-bottom: 40px; }
+
+  /* Hero */
+  .ip-hero           { padding: 110px 0 56px; }
+  .ip-hero-title     { font-size: 2rem; }
+  .ip-hero-desc      { font-size: 1rem; }
+  .ip-hero-badge     { display: inline-flex; font-size: 0.7rem; letter-spacing: 2px; padding: 7px 18px; margin-bottom: 18px; }
   .ip-hero-stats     { gap: 24px; }
-  .ip-stats-strip    { grid-template-columns: 1fr 1fr; }
+
+  /* Typography */
+  .ip-heading        { font-size: 1.75rem; }
+  .ip-label          { font-size: 0.8rem; letter-spacing: 2.5px; }
+  .ip-subtext        { font-size: 0.95rem; }
+
+  /* Grids → single column */
+  .ip-solutions-grid { grid-template-columns: 1fr; gap: 18px; }
+  .ip-features-grid  { grid-template-columns: repeat(2, 1fr); }
+  .ip-process-grid   { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .ip-why-grid       { grid-template-columns: 1fr; gap: 14px; }
+  .ip-checklist      { grid-template-columns: 1fr; gap: 12px; margin-top: 32px; }
+  .ip-stats-strip    { grid-template-columns: repeat(2, 1fr); }
+
+  /* CTA */
+  .ip-cta            { padding: 64px 0; }
+  .ip-cta h2         { font-size: 1.7rem; }
+  .ip-cta-btn        { padding: 14px 32px; font-size: 0.95rem; }
 }
 
-/* =============================
-   576px — Mobile Phones
-   ============================= */
+/* ── Mobile Phone ── */
 @media (max-width: 576px) {
-  .ip-container { padding: 0 12px; }
-  .ip-section { padding: 56px 0; }
-  .ip-hero { padding: 80px 0 36px; }
-  .ip-hero-title { font-size: 1.3rem; padding: 0 2px; }
-  .ip-hero-desc { font-size: 0.92rem; margin-bottom: 24px; }
-  .ip-hero-stats { gap: 12px; margin-top: 24px; padding-top: 18px; flex-direction: column; align-items: stretch; }
-  .ip-hero-stat-num { font-size: 1.3rem; }
-  .ip-hero-stat-label { font-size: 0.8rem; }
-  .ip-hero-actions { flex-direction: column; gap: 10px; }
-  .ip-btn-primary, .ip-btn-secondary { width: 100%; max-width: 320px; justify-content: center; }
-  .ip-section-head { margin-bottom: 28px; }
-  .ip-label { font-size: 0.7rem; letter-spacing: 2px; gap: 6px; }
-  .ip-heading { font-size: 1.1rem; }
-  .ip-subtext { font-size: 0.9rem; }
-  .ip-overview-grid { gap: 24px; }
-  .ip-overview-visual { min-height: 120px; border-radius: 10px; }
-  .ip-overview-icon-center p { font-size: 0.95rem; }
-  .ip-overview-content .ip-heading { font-size: 1.05rem; }
+  .ip-container      { padding: 0 16px; }
+  .ip-section        { padding: 56px 0; }
+  .ip-section-head   { margin-bottom: 28px; }
+
+  /* Hero */
+  .ip-hero           { padding: 96px 0 48px; background-position: center top !important; }
+  .ip-hero-title     { font-size: 1.65rem; line-height: 1.2; }
+  .ip-hero-desc      { font-size: 0.95rem; line-height: 1.7; margin-bottom: 28px; }
+  .ip-hero-badge     { display: inline-flex; font-size: 0.65rem; letter-spacing: 1.5px; padding: 6px 14px; margin-bottom: 14px; }
+  .ip-hero-stats     { gap: 14px; margin-top: 28px; padding-top: 20px; flex-wrap: wrap; justify-content: center; }
+  .ip-hero-stat-num  { font-size: 1.6rem; }
+  .ip-hero-stat-label{ font-size: 0.8rem; }
+  .ip-hero-actions   { flex-direction: column; gap: 12px; align-items: center; }
+  .ip-btn-primary,
+  .ip-btn-secondary  { width: 100%; max-width: 300px; justify-content: center; padding: 13px 24px; font-size: 0.9rem; }
+
+  /* Typography */
+  .ip-heading        { font-size: 1.4rem; margin-bottom: 14px; letter-spacing: -0.2px; }
+  .ip-label          { font-size: 0.72rem; letter-spacing: 2px; gap: 7px; margin-bottom: 12px; }
+  .ip-label::before  { width: 18px; }
+  .ip-subtext        { font-size: 0.9rem; line-height: 1.7; }
+
+  /* Overview grid */
+  .ip-overview-grid  { gap: 28px; }
+  .ip-overview-visual{ min-height: 180px; border-radius: 12px; }
+  .ip-overview-content .ip-heading { font-size: 1.3rem; }
   .ip-overview-content p { font-size: 0.9rem; }
-  .ip-checklist { grid-template-columns: 1fr; gap: 12px; margin-top: 24px; }
-  .ip-checklist li { font-size: 0.92rem; padding: 14px 10px; border-radius: 8px; }
-  .ip-checklist li .ip-chk-icon { width: 28px; height: 28px; border-radius: 6px; }
-  .ip-checklist li::after { font-size: 1.2rem; right: 6px; }
-  .ip-solutions-grid { gap: 16px; }
-  .ip-solution-card { padding: 18px 8px; }
-  .ip-solution-icon { width: 36px; height: 36px; margin-bottom: 10px; }
-  .ip-solution-card h3 { font-size: 1rem; }
-  .ip-solution-card p { font-size: 0.85rem; }
-  .ip-features-grid { gap: 10px; }
-  .ip-feature-card { padding: 18px 8px; border-radius: 8px; }
-  .ip-feature-num { font-size: 1.2rem; }
-  .ip-feature-card h4 { font-size: 0.92rem; }
-  .ip-feature-card p { font-size: 0.8rem; }
-  .ip-process-grid { gap: 10px; }
-  .ip-process-step { padding: 0 2px 18px; }
-  .ip-process-num { width: 36px; height: 36px; font-size: 0.9rem; margin-bottom: 10px; }
-  .ip-process-step h4 { font-size: 0.92rem; }
-  .ip-process-step p { font-size: 0.8rem; }
-  .ip-why-grid { gap: 10px; }
-  .ip-why-card { padding: 12px 6px; border-radius: 8px; gap: 8px; }
-  .ip-why-card h4 { font-size: 0.9rem; }
-  .ip-why-card p { font-size: 0.8rem; }
-  .ip-stats-strip { grid-template-columns: 1fr 1fr; border-radius: 8px; }
-  .ip-stat-item { padding: 18px 6px; }
-  .ip-stat-num { font-size: 1.2rem; }
-  .ip-stat-label { font-size: 0.8rem; }
-  .ip-cta { padding: 36px 0; }
-  .ip-cta h2 { font-size: 1.1rem; }
-  .ip-cta p { font-size: 0.85rem; margin-bottom: 18px; }
-  .ip-cta-btn { padding: 12px 18px; font-size: 0.92rem; }
+
+  /* Challenge checklist */
+  .ip-checklist      { grid-template-columns: 1fr; gap: 10px; margin-top: 24px; }
+  .ip-checklist li   { font-size: 0.9rem; padding: 16px 56px 16px 14px; border-radius: 10px; gap: 12px; }
+  .ip-checklist li .ip-chk-icon { width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0; }
+  .ip-checklist li::after { font-size: 2rem; right: 12px; color: rgba(33,150,243,0.14); }
+
+  /* Solutions */
+  .ip-solutions-grid { grid-template-columns: 1fr; gap: 14px; }
+  .ip-solution-card  { padding: 24px 20px; }
+  .ip-solution-card:nth-child(3n + 2) { --y-offset: 0px; }
+  .ip-solution-icon  { width: 44px; height: 44px; margin-bottom: 16px; }
+  .ip-solution-card h3 { font-size: 1.05rem; }
+  .ip-solution-card p  { font-size: 0.88rem; line-height: 1.65; }
+
+  /* Features */
+  .ip-features-grid  { grid-template-columns: 1fr; gap: 12px; }
+  .ip-feature-card   { padding: 24px 18px; border-radius: 12px; }
+  .ip-feature-num    { font-size: 2rem; }
+  .ip-feature-card h4{ font-size: 0.95rem; }
+  .ip-feature-card p { font-size: 0.88rem; }
+
+  /* Process */
+  .ip-process-grid   { grid-template-columns: 1fr; gap: 14px; }
+  .ip-process-step   { padding: 0 12px 28px; }
+  .ip-process-num    { width: 70px; height: 70px; font-size: 1.2rem; margin-bottom: 18px; }
+  .ip-process-num::after { display: none; }
+  .ip-process-step h4{ font-size: 1rem; margin-bottom: 8px; }
+  .ip-process-step p { font-size: 0.88rem; line-height: 1.65; }
+
+  /* Why us */
+  .ip-why-grid       { grid-template-columns: 1fr; gap: 12px; }
+  .ip-why-card       { padding: 20px 16px; border-radius: 10px; gap: 14px; }
+  .ip-why-card h4    { font-size: 1rem; margin-bottom: 6px; }
+  .ip-why-card p     { font-size: 0.88rem; line-height: 1.65; }
+
+  /* Stats */
+  .ip-stats-strip    { grid-template-columns: repeat(2, 1fr); border-radius: 10px; }
+  .ip-stat-item      { padding: 28px 14px; }
+  .ip-stat-num       { font-size: 2rem; }
+  .ip-stat-label     { font-size: 0.82rem; }
+
+  /* CTA */
+  .ip-cta            { padding: 52px 0; }
+  .ip-cta h2         { font-size: 1.4rem; margin-bottom: 12px; }
+  .ip-cta p          { font-size: 0.9rem; margin-bottom: 24px; }
+  .ip-cta-btn        {
+    display: flex;
+    width: calc(100% - 32px);
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
 }
 
-/* =============================
-   380px — Small Phones
-   ============================= */
-@media (max-width: 380px) {
-  .ip-container { padding: 0 4px; }
-  .ip-section { padding: 36px 0; }
-  .ip-hero { padding: 60px 0 18px; }
-  .ip-hero-title { font-size: 1.05rem; }
-  .ip-hero-desc { font-size: 0.8rem; }
-  .ip-hero-stats { gap: 6px; margin-top: 10px; padding-top: 8px; }
-  .ip-hero-stat-num { font-size: 1rem; }
-  .ip-hero-stat-label { font-size: 0.7rem; }
-  .ip-section-head { margin-bottom: 14px; }
-  .ip-label { font-size: 0.6rem; letter-spacing: 1px; gap: 3px; }
-  .ip-heading { font-size: 0.9rem; }
-  .ip-subtext { font-size: 0.7rem; }
-  .ip-overview-visual { min-height: 60px; border-radius: 4px; }
-  .ip-overview-icon-center p { font-size: 0.8rem; }
-  .ip-overview-content .ip-heading { font-size: 0.8rem; }
-  .ip-overview-content p { font-size: 0.7rem; }
-  .ip-checklist { gap: 6px; margin-top: 10px; }
-  .ip-checklist li { font-size: 0.8rem; padding: 8px 2px; border-radius: 4px; }
-  .ip-checklist li .ip-chk-icon { width: 18px; height: 18px; border-radius: 3px; }
-  .ip-checklist li::after { font-size: 0.7rem; right: 2px; }
-  .ip-solutions-grid { gap: 6px; }
-  .ip-solution-card { padding: 8px 2px; }
-  .ip-solution-icon { width: 20px; height: 20px; margin-bottom: 4px; }
-  .ip-solution-card h3 { font-size: 0.8rem; }
-  .ip-solution-card p { font-size: 0.7rem; }
-  .ip-features-grid { gap: 4px; }
-  .ip-feature-card { padding: 8px 2px; border-radius: 4px; }
-  .ip-feature-num { font-size: 0.7rem; }
-  .ip-feature-card h4 { font-size: 0.7rem; }
-  .ip-feature-card p { font-size: 0.7rem; }
-  .ip-process-grid { gap: 4px; }
-  .ip-process-step { padding: 0 1px 8px; }
-  .ip-process-num { width: 18px; height: 18px; font-size: 0.7rem; margin-bottom: 4px; }
-  .ip-process-step h4 { font-size: 0.7rem; }
-  .ip-process-step p { font-size: 0.7rem; }
-  .ip-why-grid { gap: 4px; }
-  .ip-why-card { padding: 4px 2px; border-radius: 4px; gap: 3px; }
-  .ip-why-card h4 { font-size: 0.7rem; }
-  .ip-why-card p { font-size: 0.7rem; }
-  .ip-stats-strip { grid-template-columns: 1fr 1fr; border-radius: 4px; }
-  .ip-stat-item { padding: 8px 2px; }
-  .ip-stat-num { font-size: 0.7rem; }
-  .ip-stat-label { font-size: 0.7rem; }
-  .ip-cta { padding: 18px 0; }
-  .ip-cta h2 { font-size: 0.7rem; }
-  .ip-cta p { font-size: 0.7rem; margin-bottom: 8px; }
-  .ip-cta-btn { padding: 6px 8px; font-size: 0.7rem; }
+/* ── Small / Narrow Phones ── */
+@media (max-width: 420px) {
+  .ip-container      { padding: 0 14px; }
+  .ip-section        { padding: 44px 0; }
+  .ip-section-head   { margin-bottom: 22px; }
+
+  /* Hero */
+  .ip-hero           { padding: 86px 0 40px; }
+  .ip-hero-title     { font-size: 1.4rem; }
+  .ip-hero-desc      { font-size: 0.9rem; }
+  .ip-hero-stats     { gap: 10px; margin-top: 22px; padding-top: 16px; }
+  .ip-hero-stat-num  { font-size: 1.35rem; }
+
+  /* Typography */
+  .ip-heading        { font-size: 1.2rem; }
+  .ip-label          { font-size: 0.68rem; letter-spacing: 1.5px; }
+  .ip-subtext        { font-size: 0.875rem; }
+
+  /* Checklist */
+  .ip-checklist li   { font-size: 0.875rem; padding: 13px 52px 13px 12px; }
+  .ip-checklist li::after { font-size: 1.8rem; right: 10px; color: rgba(33,150,243,0.14); }
+
+  /* Solution cards */
+  .ip-solution-card  { padding: 20px 16px; }
+  .ip-solution-card h3 { font-size: 1rem; }
+  .ip-solution-card p  { font-size: 0.85rem; }
+
+  /* Process */
+  .ip-process-num    { width: 60px; height: 60px; font-size: 1.1rem; margin-bottom: 14px; }
+  .ip-process-step h4{ font-size: 0.95rem; }
+  .ip-process-step p { font-size: 0.85rem; }
+
+  /* Why */
+  .ip-why-card       { padding: 16px 14px; }
+  .ip-why-card h4    { font-size: 0.95rem; }
+  .ip-why-card p     { font-size: 0.85rem; }
+
+  /* Stats */
+  .ip-stat-num       { font-size: 1.7rem; }
+  .ip-stat-label     { font-size: 0.78rem; }
+
+  /* CTA */
+  .ip-cta            { padding: 44px 0; }
+  .ip-cta h2         { font-size: 1.2rem; }
+  .ip-cta p          { font-size: 0.875rem; }
+  .ip-cta-btn        { font-size: 0.9rem; padding: 13px 20px; }
+}
+
+/* ── Accessibility: Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .ip-tech-track,
+  .ip-tech-track.reverse {
+    animation: none;
+    transform: none;
+  }
+  .ip-tech-marquee-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .ip-tech-track {
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

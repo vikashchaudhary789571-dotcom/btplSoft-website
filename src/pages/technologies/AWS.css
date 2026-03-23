@@ -190,13 +190,18 @@
 }
 @media (max-width: 480px) {
   .aws-stats-grid { grid-template-columns: 1fr 1fr; }
-  .aws-stat { padding: 20px 12px; }
-  .aws-stat-num { font-size: 1.7rem; }
+  .aws-stat { padding: 20px 12px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .aws-stat:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.08); }
+  .aws-stat:last-child { border-bottom: none; }
+  .aws-stat:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+  .aws-stat:nth-child(1), .aws-stat:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .aws-stat-num { font-size: 1.8rem; }
   .aws-stat-label { font-size: 0.75rem; }
 
   .aws-svc-header { padding: 12px 14px; }
   .aws-svc-icon { width: 36px; height: 36px; }
   .aws-svc-header-title { font-size: 1rem; }
+  .aws-svc-header-badge { font-size: 0.6rem; padding: 2px 6px; }
   .aws-svc-body { padding: 14px 14px 18px; }
   .aws-svc-body p { font-size: 0.88rem; line-height: 1.65; }
   .aws-svc-chip { font-size: 0.65rem; padding: 2px 8px; }
@@ -215,6 +220,39 @@
   .aws-exp-item { font-size: 0.88rem; padding: 10px 12px; }
   .aws-exp-tag { font-size: 0.76rem; padding: 4px 12px; }
 
-  .aws-btpl-grid { grid-template-columns: 1fr; }
+  .aws-btpl-grid { grid-template-columns: 1fr; gap: 12px; }
   .aws-btpl-card { padding: 20px 16px; }
+  .aws-btpl-icon { width: 46px; height: 46px; }
+  .aws-btpl-card h4 { font-size: 1rem; }
+  .aws-btpl-card p { font-size: 0.88rem; }
+}
+@media (max-width: 360px) {
+  .aws-stat { padding: 18px 10px; }
+  .aws-stat-num { font-size: 1.6rem; }
+  .aws-stat-label { font-size: 0.72rem; }
+
+  .aws-svc-header { padding: 10px 12px; }
+  .aws-svc-icon { width: 34px; height: 34px; }
+  .aws-svc-header-title { font-size: 0.95rem; }
+  .aws-svc-body { padding: 12px 12px 16px; }
+  .aws-svc-body p { font-size: 0.85rem; }
+  .aws-svc-chip { font-size: 0.62rem; }
+
+  .aws-why-card { padding: 14px 12px; gap: 10px; }
+  .aws-why-icon { width: 38px; height: 38px; }
+  .aws-why-body h3 { font-size: 0.95rem; }
+  .aws-why-body p { font-size: 0.85rem; }
+
+  .aws-product-card { padding: 14px 10px; }
+  .aws-product-icon { width: 36px; height: 36px; }
+  .aws-product-name { font-size: 0.9rem; }
+  .aws-product-desc { font-size: 0.82rem; }
+
+  .aws-exp-item { font-size: 0.85rem; padding: 8px 10px; }
+  .aws-exp-tag { font-size: 0.72rem; padding: 4px 10px; }
+
+  .aws-btpl-card { padding: 18px 14px; }
+  .aws-btpl-icon { width: 42px; height: 42px; }
+  .aws-btpl-card h4 { font-size: 0.95rem; }
+  .aws-btpl-card p { font-size: 0.85rem; }
 }

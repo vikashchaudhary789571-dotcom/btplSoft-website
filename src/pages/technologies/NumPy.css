@@ -170,12 +170,105 @@
 }
 @media (max-width: 768px) {
   .np-stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .np-stat { border-right: none; border-bottom: 1px solid #d0e4f7; padding: 28px 24px; }
+  .np-stat { padding: 24px 18px; border-right: none; border-bottom: 1px solid #d0e4f7; }
   .np-stat:nth-child(odd) { border-right: 1px solid #d0e4f7; }
   .np-stat::before, .np-stat::after { display: none; }
+  .np-stat-num { font-size: 2rem; }
+
   .np-svc-row { display: flex; flex-direction: column; padding: 18px; gap: 10px; }
-  .np-why-grid { grid-template-columns: 1fr; }
-  .np-products-grid { grid-template-columns: repeat(2, 1fr); }
-  .np-exp-list { grid-template-columns: 1fr; }
-  .np-btpl-grid { grid-template-columns: 1fr; }
+  .np-svc-row-icon { align-self: flex-start; width: 42px; height: 42px; }
+  .np-svc-row-name { font-size: 1.1rem; }
+  .np-svc-row-desc { font-size: 0.92rem; line-height: 1.7; }
+  .np-svc-chip { font-size: 0.68rem; padding: 3px 9px; }
+
+  .np-why-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 32px; }
+  .np-why-card { padding: 22px 18px; }
+  .np-why-card:hover { transform: none; }
+  .np-why-icon { width: 44px; height: 44px; margin-bottom: 14px; }
+  .np-why-card h3 { font-size: 1.08rem; margin-bottom: 6px; }
+  .np-why-card p { font-size: 0.92rem; line-height: 1.7; }
+
+  .np-products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 28px; }
+  .np-product-card { padding: 18px 14px; }
+  .np-product-icon { width: 40px; height: 40px; }
+  .np-product-name { font-size: 1.05rem; }
+  .np-product-desc { font-size: 0.9rem; }
+
+  .np-exp-wrap { padding: 20px 18px; }
+  .np-exp-list { grid-template-columns: 1fr; gap: 10px; }
+  .np-exp-item { font-size: 0.92rem; }
+  .np-exp-tag { font-size: 0.78rem; padding: 4px 12px; }
+
+  .np-btpl-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 32px; }
+  .np-btpl-card { padding: 22px 16px; }
+  .np-btpl-icon { width: 46px; height: 46px; }
+  .np-btpl-card h4 { font-size: 1.05rem; }
+  .np-btpl-card p { font-size: 0.9rem; }
+}
+@media (max-width: 480px) {
+  .np-stats-grid { grid-template-columns: 1fr 1fr; }
+  .np-stat { padding: 20px 14px; border-right: none; border-bottom: 1px solid #d0e4f7; }
+  .np-stat:nth-child(odd) { border-right: 1px solid #d0e4f7; }
+  .np-stat:last-child { border-bottom: none; }
+  .np-stat:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+  .np-stat:nth-child(1), .np-stat:nth-child(2) { border-bottom: 1px solid #d0e4f7; }
+  .np-stat-num { font-size: 1.8rem; }
+  .np-stat-label { font-size: 0.75rem; }
+
+  .np-svc-row { padding: 14px; gap: 8px; }
+  .np-svc-row-icon { width: 38px; height: 38px; }
+  .np-svc-row-name { font-size: 1rem; }
+  .np-svc-row-desc { font-size: 0.88rem; line-height: 1.65; }
+  .np-svc-chip { font-size: 0.65rem; padding: 2px 8px; }
+
+  .np-why-card { padding: 18px 14px; }
+  .np-why-icon { width: 40px; height: 40px; margin-bottom: 12px; }
+  .np-why-card h3 { font-size: 1rem; }
+  .np-why-card p { font-size: 0.88rem; line-height: 1.65; }
+
+  .np-products-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .np-product-card { padding: 16px 12px; }
+  .np-product-icon { width: 38px; height: 38px; }
+  .np-product-name { font-size: 0.95rem; }
+  .np-product-desc { font-size: 0.85rem; }
+
+  .np-exp-wrap { padding: 16px 14px; }
+  .np-exp-item { font-size: 0.88rem; }
+  .np-exp-tag { font-size: 0.74rem; padding: 4px 10px; }
+
+  .np-btpl-grid { grid-template-columns: 1fr; gap: 12px; }
+  .np-btpl-card { padding: 20px 16px; }
+  .np-btpl-icon { width: 42px; height: 42px; }
+  .np-btpl-card h4 { font-size: 1rem; }
+  .np-btpl-card p { font-size: 0.88rem; }
+}
+@media (max-width: 360px) {
+  .np-stat { padding: 18px 10px; }
+  .np-stat-num { font-size: 1.6rem; }
+  .np-stat-label { font-size: 0.72rem; }
+
+  .np-svc-row { padding: 12px; }
+  .np-svc-row-icon { width: 34px; height: 34px; }
+  .np-svc-row-name { font-size: 0.95rem; }
+  .np-svc-row-desc { font-size: 0.85rem; }
+  .np-svc-chip { font-size: 0.62rem; }
+
+  .np-why-card { padding: 14px 12px; }
+  .np-why-icon { width: 36px; height: 36px; }
+  .np-why-card h3 { font-size: 0.95rem; }
+  .np-why-card p { font-size: 0.85rem; }
+
+  .np-product-card { padding: 14px 10px; }
+  .np-product-icon { width: 34px; height: 34px; }
+  .np-product-name { font-size: 0.9rem; }
+  .np-product-desc { font-size: 0.82rem; }
+
+  .np-exp-wrap { padding: 14px 12px; }
+  .np-exp-item { font-size: 0.85rem; }
+  .np-exp-tag { font-size: 0.7rem; padding: 3px 8px; }
+
+  .np-btpl-card { padding: 18px 14px; }
+  .np-btpl-icon { width: 38px; height: 38px; }
+  .np-btpl-card h4 { font-size: 0.95rem; }
+  .np-btpl-card p { font-size: 0.85rem; }
 }

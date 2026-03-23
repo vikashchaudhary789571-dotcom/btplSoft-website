@@ -177,10 +177,10 @@ export default function JMeter() {
       {/* SERVICES */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">What We Do</p>
             <h2 className="sp-heading">JMeter Performance Testing Services</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From baseline benchmarking to massive distributed load tests — we cover every performance testing scenario
               your application needs to prove production-readiness.
             </p>
@@ -211,10 +211,10 @@ export default function JMeter() {
       {/* WHY JMETER */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why JMeter</p>
             <h2 className="sp-heading">Why Apache JMeter for Performance Testing?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               The industry's most trusted open-source load testing tool — offering unmatched versatility, integration
               depth, and realistic user simulation capabilities.
             </p>
@@ -234,10 +234,10 @@ export default function JMeter() {
       {/* METRICS */}
       <section className="jm-metrics">
         <div className="sp-container">
-          <div className="sp-overview-content" style={{ marginBottom: 0 }}>
+          <div className="sp-section-head center" style={{ marginBottom: 0 }}>
             <p className="sp-label">Performance Targets</p>
             <h2 className="sp-heading" style={{ color: '#fff' }}>Performance Benchmarks We Deliver</h2>
-            <p className="sp-subtext-large" style={{ color: 'rgba(255,255,255,0.6)' }}>
+            <p className="sp-sub" style={{ color: 'rgba(255,255,255,0.6)' }}>
               The KPIs we engineer every application to meet under production traffic conditions.
             </p>
           </div>
@@ -257,10 +257,10 @@ export default function JMeter() {
       {/* EXPERIENCE */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Expertise</p>
             <h2 className="sp-heading">Deep Performance Testing Experience</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               A decade of load testing expertise across every industry, application type, and infrastructure stack.
             </p>
           </div>
@@ -284,10 +284,10 @@ export default function JMeter() {
       {/* WHY BTPL */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Choose Us</p>
             <h2 className="sp-heading">Why Partner with BTPL for Performance Testing?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               We treat performance as a product requirement — not an afterthought. Every engagement ends with
               actionable findings and measurable improvements.
             </p>

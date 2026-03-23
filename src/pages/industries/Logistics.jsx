@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { Truck, ArrowRight, CheckCircle, MapPin, BarChart2, Package, Globe, Cpu, Navigation, Fuel, Clock, Route, ShieldCheck, Users } from 'lucide-react'
 import '../industries/IndustryPage.css'
+import heroBanner from '../../assets/industries/global-logistics-transportation-network.webp'
+import ctaBanner from '../../assets/industries/truck-driver-occupation.webp'
 
 const solutions = [
   { icon: <MapPin size={26} />, title: 'Fleet Management Systems', desc: 'Real-time GPS fleet tracking, driver behaviour monitoring, vehicle health diagnostics and automated maintenance scheduling.' },
@@ -40,7 +42,7 @@ const challenges = [
 export default function Logistics() {
   return (
     <div>
-      <section className="ip-hero ip-hero-center">
+      <section className="ip-hero ip-hero-center" style={{ backgroundImage: `url(${heroBanner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="ip-hero-overlay" />
         <div className="ip-container">
 
@@ -133,8 +135,20 @@ export default function Logistics() {
         </div>
       </section>
 
-      <section className="ip-cta">
-        <div className="ip-container">
+      <section
+        className="ip-cta"
+        style={{
+          backgroundImage: `url(${ctaBanner})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          position: 'relative',
+        }}
+      >
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(135deg, rgba(10,22,40,0.82) 0%, rgba(15,60,30,0.78) 100%)',
+        }} />
+        <div className="ip-container" style={{ position: 'relative', zIndex: 1 }}>
           <h2>Ready to Optimise Your Logistics Operations?</h2>
           <p>Partner with BTPL Soft to build smarter, faster and more cost-efficient logistics technology.</p>
           <Link to="/contact" className="ip-cta-btn">Start Your Project <ArrowRight size={18} /></Link>

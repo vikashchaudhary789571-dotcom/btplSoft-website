@@ -184,10 +184,10 @@ export default function AWS() {
       {/* SERVICES */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">What We Do</p>
             <h2 className="sp-heading">AWS Cloud Services</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From architecture design and migration to ongoing operations and cost optimisation — we offer
               end-to-end AWS expertise across every layer of the cloud stack.
             </p>
@@ -217,10 +217,10 @@ export default function AWS() {
       {/* WHY AWS */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why AWS</p>
             <h2 className="sp-heading">Why Amazon Web Services?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               AWS has led Gartner's Magic Quadrant for Cloud Infrastructure for 13 consecutive years.
               Here's why it remains our primary cloud platform recommendation for most businesses.
             </p>
@@ -242,10 +242,10 @@ export default function AWS() {
       {/* AWS PRODUCTS */}
       <section className="aws-products">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Core Services</p>
             <h2 className="sp-heading">Key AWS Services We Work With</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               The core AWS services powering our cloud architectures — from compute and storage to
               networking and observability.
             </p>
@@ -265,10 +265,10 @@ export default function AWS() {
       {/* EXPERIENCE */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Expertise</p>
             <h2 className="sp-heading">Deep AWS Engineering Experience</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Over a decade of hands-on AWS experience — from greenfield cloud-native builds to complex
               enterprise migrations and compliance-heavy regulated industries.
             </p>
@@ -291,10 +291,10 @@ export default function AWS() {
       {/* WHY BTPL */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Choose Us</p>
             <h2 className="sp-heading">Why Build Your Cloud with BTPL?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               We treat your AWS infrastructure as a product — designed for reliability, security, and
               long-term cost efficiency, not just getting things running.
             </p>

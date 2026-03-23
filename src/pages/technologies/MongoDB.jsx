@@ -189,10 +189,10 @@ export default function MongoDB() {
       {/* SERVICES */}
       <section className="sp-section sp-bg-white" id="services">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">What We Do</p>
             <h2 className="sp-heading">MongoDB Services</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               End-to-end MongoDB expertise — from Atlas cluster architecture and schema design to performance tuning,
               HA replication, horizontal sharding, and production security hardening.
             </p>
@@ -227,10 +227,10 @@ export default function MongoDB() {
       {/* WHY MONGODB */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why MongoDB</p>
             <h2 className="sp-heading">Why Choose MongoDB?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               MongoDB has grown from a niche NoSQL experiment to the world's most popular non-relational database —
               powering everything from global SaaS platforms to mission-critical financial systems. Here's why.
             </p>
@@ -252,10 +252,10 @@ export default function MongoDB() {
       {/* PRODUCTS */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Core Products</p>
             <h2 className="sp-heading">MongoDB Products We Work With</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               The full MongoDB platform — from the Atlas managed cloud service to edge sync and real-time streaming processing.
             </p>
           </div>
@@ -274,10 +274,10 @@ export default function MongoDB() {
       {/* EXPERIENCE */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Expertise</p>
             <h2 className="sp-heading">Deep MongoDB Engineering Experience</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From startup MVP to enterprise-grade Atlas deployments — our MongoDB engineers have solved every
               performance, scaling, and operational challenge the document database ecosystem throws at them.
             </p>
@@ -300,10 +300,10 @@ export default function MongoDB() {
       {/* WHY BTPL */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Choose Us</p>
             <h2 className="sp-heading">Why BTPL for MongoDB?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Certified expertise, schema-first methodology, and proven migration tooling — delivering production-ready
               MongoDB systems from Atlas architecture to long-term database operations.
             </p>

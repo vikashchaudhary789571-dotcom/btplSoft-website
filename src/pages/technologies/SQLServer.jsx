@@ -183,10 +183,10 @@ export default function SQLServer() {
       {/* ══════════════════ SERVICES — vertical timeline ══════════════════ */}
       <section className="sp-section sp-bg-white" id="services">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">What We Do</p>
             <h2 className="sp-heading">SQL Server Services</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               End-to-end SQL Server expertise — from Always On HA architecture and Query Store performance tuning
               to Azure SQL migrations, BI stack delivery, and ongoing managed database operations.
             </p>
@@ -217,10 +217,10 @@ export default function SQLServer() {
       {/* ══════════════════ WHY SQL SERVER ══════════════════ */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why SQL Server</p>
             <h2 className="sp-heading">Why Choose SQL Server?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               SQL Server powers 80% of .NET enterprise applications worldwide — delivering the deepest Microsoft
               ecosystem integration, world-class BI tooling, and an unmatched path to Azure cloud modernisation.
             </p>
@@ -240,10 +240,10 @@ export default function SQLServer() {
       {/* ══════════════════ PRODUCTS ══════════════════ */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Microsoft Data Stack</p>
             <h2 className="sp-heading">SQL Server Ecosystem We Master</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From on-premises SQL Server 2022 to fully managed Azure SQL and the complete Microsoft BI platform —
               we work across the full Microsoft data ecosystem for every workload pattern.
             </p>
@@ -263,10 +263,10 @@ export default function SQLServer() {
       {/* ══════════════════ EXPERIENCE ══════════════════ */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Expertise</p>
             <h2 className="sp-heading">Deep SQL Server Engineering Experience</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From Always On HA design to Azure SQL migration — our SQL Server DBAs have solved every performance,
               availability, and compliance challenge across manufacturing, finance, retail, and healthcare sectors.
             </p>
@@ -287,10 +287,10 @@ export default function SQLServer() {
       {/* ══════════════════ WHY BTPL ══════════════════ */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Choose Us</p>
             <h2 className="sp-heading">Why BTPL for SQL Server?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Microsoft-certified expertise, Azure SQL migration tooling, and full BI stack capability — delivering
               SQL Server solutions from on-premises architecture to cloud-native PaaS deployments.
             </p>

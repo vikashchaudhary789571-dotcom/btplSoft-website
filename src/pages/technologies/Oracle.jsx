@@ -183,10 +183,10 @@ export default function Oracle() {
       {/* ══════════════════ SERVICES — numbered enterprise cards ══════════════════ */}
       <section className="sp-section sp-bg-white" id="services">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">What We Do</p>
             <h2 className="sp-heading">Oracle Database Services</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               End-to-end Oracle expertise — from RAC architecture and AWR performance tuning to Data Guard DR,
               ERP database support, Oracle Cloud migrations, and comprehensive security hardening.
             </p>
@@ -212,10 +212,10 @@ export default function Oracle() {
       {/* ══════════════════ WHY ORACLE ══════════════════ */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Oracle</p>
             <h2 className="sp-heading">Why Choose Oracle Database?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Oracle Database has powered the world's most demanding enterprise workloads for 45+ years — from
               global banking core systems to airline reservation platforms handling millions of concurrent transactions.
             </p>
@@ -237,10 +237,10 @@ export default function Oracle() {
       {/* ══════════════════ PRODUCTS ══════════════════ */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Oracle Portfolio</p>
             <h2 className="sp-heading">Oracle Products We Work With</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               The full Oracle technology stack — from core database and Exadata hardware to cloud-managed Autonomous
               Database, GoldenGate replication, and APEX application development.
             </p>
@@ -260,10 +260,10 @@ export default function Oracle() {
       {/* ══════════════════ EXPERIENCE ══════════════════ */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Expertise</p>
             <h2 className="sp-heading">Deep Oracle Engineering Experience</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From RAC cluster commissioning to Autonomous Database migrations — our Oracle DBAs have operated
               mission-critical production systems in banking, healthcare, manufacturing, and government sectors.
             </p>
@@ -284,10 +284,10 @@ export default function Oracle() {
       {/* ══════════════════ WHY BTPL ══════════════════ */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Choose Us</p>
             <h2 className="sp-heading">Why BTPL for Oracle?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               OCP-certified engineers, enterprise ERP support expertise, and a proven migration factory —
               delivering production-grade Oracle solutions from architecture through long-term managed operations.
             </p>

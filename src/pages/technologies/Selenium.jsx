@@ -183,10 +183,10 @@ export default function Selenium() {
       {/* SERVICES */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">What We Do</p>
             <h2 className="sp-heading">Selenium Automation Services</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From single-page app testing to enterprise-wide cross-browser automation — we cover the full
               spectrum of Selenium WebDriver capabilities.
             </p>
@@ -217,10 +217,10 @@ export default function Selenium() {
       {/* WHY SELENIUM */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Selenium</p>
             <h2 className="sp-heading">Why We Choose Selenium for Web Automation</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Selenium has been the gold standard for web automation since 2004. Here's why it remains our
               primary choice for browser-based test automation in 2026.
             </p>
@@ -242,10 +242,10 @@ export default function Selenium() {
       {/* FRAMEWORKS */}
       <section className="se-frameworks">
         <div className="sp-container">
-          <div className="sp-overview-content" style={{ marginBottom: 0 }}>
+          <div className="sp-section-head center" style={{ marginBottom: 0 }}>
             <p className="sp-label">Technology Stack</p>
             <h2 className="sp-heading" style={{ color: '#fff' }}>Frameworks & Tools We Use</h2>
-            <p className="sp-subtext-large" style={{ color: 'rgba(255,255,255,0.6)' }}>
+            <p className="sp-sub" style={{ color: 'rgba(255,255,255,0.6)' }}>
               The complete technology ecosystem we use to build, run, and report on Selenium test automation.
             </p>
           </div>
@@ -264,10 +264,10 @@ export default function Selenium() {
       {/* EXPERIENCE */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Expertise</p>
             <h2 className="sp-heading">Comprehensive Selenium Automation Experience</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               A decade of automating complex web applications — from simple form submissions to sophisticated
               multi-tab, multi-window, and dynamic SPA interactions.
             </p>
@@ -292,10 +292,10 @@ export default function Selenium() {
       {/* WHY BTPL */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Choose Us</p>
             <h2 className="sp-heading">Why Partner with BTPL for Selenium Automation?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               We don't just automate tests — we build quality systems that make your engineering team move faster
               with full confidence in every release.
             </p>

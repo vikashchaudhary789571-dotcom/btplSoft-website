@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Landmark, ArrowRight, CheckCircle, Shield, Lock, Globe, BarChart2, CreditCard, FileCheck, AlertTriangle, RefreshCw, Zap, Users } from 'lucide-react'
 import '../industries/IndustryPage.css'
+import heroBanner from '../../assets/industries/data-center-it-specialist-monitoring-ai-llm-visualization-output.webp'
 
 const solutions = [
   { icon: <Lock size={26} />, title: 'Secure Payment Gateways', desc: 'PCI-DSS compliant payment processing systems with multi-currency support, fraud detection and real-time transaction monitoring.' },
@@ -40,7 +41,7 @@ const challenges = [
 export default function BankingFintech() {
   return (
     <div>
-      <section className="ip-hero ip-hero-center">
+      <section className="ip-hero ip-hero-center" style={{ backgroundImage: `url(${heroBanner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="ip-hero-overlay" />
         <div className="ip-container">
 
@@ -133,8 +134,20 @@ export default function BankingFintech() {
         </div>
       </section>
 
-      <section className="ip-cta">
-        <div className="ip-container">
+      <section
+        className="ip-cta"
+        style={{
+          backgroundImage: `url(${heroBanner})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          position: 'relative',
+        }}
+      >
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(135deg, rgba(10,22,40,0.82) 0%, rgba(15,60,30,0.78) 100%)',
+        }} />
+        <div className="ip-container" style={{ position: 'relative', zIndex: 1 }}>
           <h2>Ready to Modernise Your Financial Platform?</h2>
           <p>Partner with BTPL Soft to build secure, compliant FinTech solutions that your customers will trust.</p>
           <Link to="/contact" className="ip-cta-btn">Start Your Project <ArrowRight size={18} /></Link>

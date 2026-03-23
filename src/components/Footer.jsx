@@ -3,7 +3,7 @@ import {
   Linkedin, Twitter, Facebook, Instagram,
   MapPin, Mail, Phone
 } from 'lucide-react'
-import logoImg from '../assets/images/btpl-logo.png'
+import logoImg from '../assets/images/btpl-logo.webp'
 import './Footer.css'
 
 export default function Footer() {
@@ -61,7 +61,7 @@ export default function Footer() {
             <h4>Get In Touch</h4>
             <div className="footer-contact-item">
               <div className="footer-contact-icon"><MapPin size={18} /></div>
-              <p>BTPL Soft Pvt. Ltd.<br />Noida, UP, India</p>
+              <p>15442 Ventura Blvd. Ste 201-1736<br />Sherman Oaks, CA 91403</p>
             </div>
             <div className="footer-contact-item">
               <div className="footer-contact-icon"><Mail size={18} /></div>

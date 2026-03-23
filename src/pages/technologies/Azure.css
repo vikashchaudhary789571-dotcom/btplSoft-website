@@ -144,14 +144,105 @@
 }
 @media (max-width: 768px) {
   .az-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .az-stat { padding: 24px 16px; }
+  .az-stat-num { font-size: 2rem; }
+
   .az-svc-tile { grid-template-columns: 1fr; }
-  .az-svc-tile-left { flex-direction: row; padding: 16px 20px; border-radius: 0; }
-  .az-why-grid { grid-template-columns: 1fr; }
-  .az-products-grid { grid-template-columns: repeat(2, 1fr); }
-  .az-exp-list { grid-template-columns: 1fr; }
-  .az-btpl-grid { grid-template-columns: repeat(2, 1fr); }
+  .az-svc-tile-left { flex-direction: row; padding: 16px 20px; border-radius: 0; gap: 10px; }
+  .az-svc-tile-icon { width: 44px; height: 44px; }
+  .az-svc-tile-category { font-size: 0.65rem; }
+  .az-svc-tile-right { padding: 18px 18px; }
+  .az-svc-tile-right h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .az-svc-tile-right p { font-size: 0.92rem; line-height: 1.7; margin-bottom: 12px; }
+  .az-svc-chip { font-size: 0.68rem; padding: 3px 10px; }
+
+  .az-why-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 32px; }
+  .az-why-card { padding: 22px 18px; }
+  .az-why-card:hover { transform: none; }
+  .az-why-icon { width: 46px; height: 46px; margin-bottom: 14px; }
+  .az-why-card h3 { font-size: 1.08rem; margin-bottom: 8px; }
+  .az-why-card p { font-size: 0.92rem; line-height: 1.7; }
+
+  .az-products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 28px; }
+  .az-product-card { padding: 18px 14px; }
+  .az-product-icon { width: 44px; height: 44px; }
+  .az-product-name { font-size: 1.05rem; }
+  .az-product-desc { font-size: 0.9rem; }
+
+  .az-exp-list { grid-template-columns: 1fr; gap: 10px; }
+  .az-exp-item { font-size: 0.92rem; padding: 10px 14px; }
+  .az-exp-tag { font-size: 0.8rem; padding: 5px 14px; }
+
+  .az-btpl-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 32px; }
+  .az-btpl-card { padding: 22px 14px; }
+  .az-btpl-icon { width: 50px; height: 50px; }
+  .az-btpl-card h4 { font-size: 1.05rem; }
+  .az-btpl-card p { font-size: 0.9rem; }
 }
 @media (max-width: 480px) {
-  .az-products-grid { grid-template-columns: repeat(2, 1fr); }
-  .az-btpl-grid { grid-template-columns: 1fr; }
+  .az-stats-grid { grid-template-columns: 1fr 1fr; }
+  .az-stat { padding: 20px 12px; border-right: none; border-bottom: 1px solid #e8edf5; }
+  .az-stat:nth-child(odd) { border-right: 1px solid #e8edf5; }
+  .az-stat:last-child { border-bottom: none; }
+  .az-stat:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+  .az-stat:nth-child(1), .az-stat:nth-child(2) { border-bottom: 1px solid #e8edf5; }
+  .az-stat-num { font-size: 1.8rem; }
+  .az-stat-label { font-size: 0.75rem; }
+
+  .az-svc-tile-left { padding: 12px 16px; }
+  .az-svc-tile-icon { width: 40px; height: 40px; }
+  .az-svc-tile-right { padding: 14px 14px; }
+  .az-svc-tile-right h3 { font-size: 1rem; }
+  .az-svc-tile-right p { font-size: 0.88rem; line-height: 1.65; }
+  .az-svc-chip { font-size: 0.65rem; padding: 2px 8px; }
+
+  .az-why-card { padding: 18px 14px; }
+  .az-why-icon { width: 42px; height: 42px; margin-bottom: 12px; }
+  .az-why-card h3 { font-size: 1rem; }
+  .az-why-card p { font-size: 0.88rem; line-height: 1.65; }
+
+  .az-products-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .az-product-card { padding: 16px 12px; }
+  .az-product-icon { width: 40px; height: 40px; }
+  .az-product-name { font-size: 0.95rem; }
+  .az-product-desc { font-size: 0.85rem; }
+
+  .az-exp-item { font-size: 0.88rem; padding: 10px 12px; }
+  .az-exp-tag { font-size: 0.76rem; padding: 4px 12px; }
+
+  .az-btpl-grid { grid-template-columns: 1fr; gap: 12px; }
+  .az-btpl-card { padding: 20px 16px; }
+  .az-btpl-icon { width: 46px; height: 46px; }
+  .az-btpl-card h4 { font-size: 1rem; }
+  .az-btpl-card p { font-size: 0.88rem; }
+}
+@media (max-width: 360px) {
+  .az-stat { padding: 18px 10px; }
+  .az-stat-num { font-size: 1.6rem; }
+  .az-stat-label { font-size: 0.72rem; }
+
+  .az-svc-tile-left { padding: 10px 14px; }
+  .az-svc-tile-icon { width: 36px; height: 36px; }
+  .az-svc-tile-right { padding: 12px 12px; }
+  .az-svc-tile-right h3 { font-size: 0.95rem; }
+  .az-svc-tile-right p { font-size: 0.85rem; }
+  .az-svc-chip { font-size: 0.62rem; }
+
+  .az-why-card { padding: 14px 12px; }
+  .az-why-icon { width: 38px; height: 38px; }
+  .az-why-card h3 { font-size: 0.95rem; }
+  .az-why-card p { font-size: 0.85rem; }
+
+  .az-product-card { padding: 14px 10px; }
+  .az-product-icon { width: 36px; height: 36px; }
+  .az-product-name { font-size: 0.9rem; }
+  .az-product-desc { font-size: 0.82rem; }
+
+  .az-exp-item { font-size: 0.85rem; padding: 8px 10px; }
+  .az-exp-tag { font-size: 0.72rem; padding: 4px 10px; }
+
+  .az-btpl-card { padding: 18px 14px; }
+  .az-btpl-icon { width: 42px; height: 42px; }
+  .az-btpl-card h4 { font-size: 0.95rem; }
+  .az-btpl-card p { font-size: 0.85rem; }
 }

@@ -441,12 +441,91 @@
   .rj-eco-grid   { grid-template-columns: repeat(2, 1fr); }
   .rj-exp-list   { grid-template-columns: repeat(2, 1fr); }
 }
+
 @media (max-width: 768px) {
   .rj-stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .rj-svc-grid   { grid-template-columns: 1fr; }
-  .rj-why-grid   { grid-template-columns: 1fr; }
-  .rj-btpl-grid  { grid-template-columns: 1fr; }
-  .rj-eco-grid   { grid-template-columns: repeat(2, 1fr); }
-  .rj-exp-list   { grid-template-columns: 1fr; }
+  .rj-stat       { padding: 28px 16px; }
+  .rj-stat:nth-child(1),
+  .rj-stat:nth-child(2) { border-bottom: 1px solid #edf0f4; }
   .rj-stat-num   { font-size: 2rem; }
+  .rj-stat-label { font-size: 0.85rem; }
+
+  .rj-svc-grid   { grid-template-columns: 1fr; gap: 20px; }
+  .rj-svc-card   { padding: 28px 22px; }
+  .rj-svc-num    { font-size: 2.8rem; }
+  .rj-svc-icon   { width: 54px; height: 54px; border-radius: 14px; }
+  .rj-svc-title  { font-size: 1.1rem; }
+  .rj-svc-desc   { font-size: 0.95rem; }
+
+  .rj-why-grid   { grid-template-columns: 1fr; gap: 20px; }
+  .rj-why-card   { padding: 24px 20px; gap: 18px; }
+  .rj-why-icon   { width: 52px; height: 52px; border-radius: 12px; }
+  .rj-why-content h3 { font-size: 1.1rem; }
+  .rj-why-content p  { font-size: 0.95rem; }
+
+  .rj-btpl-grid  { grid-template-columns: 1fr; gap: 18px; }
+  .rj-btpl-card  { padding: 28px 22px; }
+  .rj-btpl-icon  { width: 56px; height: 56px; border-radius: 14px; }
+  .rj-btpl-card h3 { font-size: 1.1rem; }
+  .rj-btpl-card p  { font-size: 0.95rem; }
+
+  .rj-eco-grid   { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .rj-eco-card   { padding: 22px 16px; }
+  .rj-eco-name   { font-size: 1.05rem; }
+  .rj-eco-desc   { font-size: 0.9rem; }
+
+  .rj-exp-list   { grid-template-columns: 1fr; gap: 10px; }
+  .rj-exp-item   { padding: 10px 14px; font-size: 0.95rem; }
+  .rj-exp-content h3 { font-size: 1.6rem; }
+  .rj-exp-content p  { font-size: 0.95rem; }
+
+  .rj-hero-badge { font-size: 0.72rem; padding: 6px 14px; gap: 8px; letter-spacing: 1px; margin-bottom: 20px; }
+  .rj-pills      { gap: 8px; margin-top: 24px; justify-content: center; }
+  .rj-pill       { padding: 5px 12px; font-size: 0.78rem; }
+  .rj-atom-wrap  { margin-top: 36px; }
+  .rj-atom       { width: 120px; height: 120px; }
+  .rj-atom-core  { width: 20px; height: 20px; }
+}
+
+@media (max-width: 480px) {
+  .rj-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .rj-stat       { padding: 20px 16px; border-right: none; border-bottom: 1px solid #edf0f4; }
+  .rj-stat:nth-child(odd) { border-right: 1px solid #edf0f4; }
+  .rj-stat:last-child { border-bottom: none; }
+  .rj-stat:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+  .rj-stat:nth-child(1),
+  .rj-stat:nth-child(2) { border-bottom: 1px solid #edf0f4; }
+  .rj-stat-num   { font-size: 1.8rem; }
+
+  .rj-svc-card   { padding: 24px 18px; border-radius: 16px; }
+  .rj-svc-num    { font-size: 2.4rem; margin-bottom: 8px; }
+  .rj-svc-icon   { width: 48px; height: 48px; margin-bottom: 16px; }
+  .rj-svc-title  { font-size: 1.05rem; }
+  .rj-svc-desc   { font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px; }
+  .rj-svc-tag    { font-size: 0.72rem; padding: 3px 10px; }
+
+  .rj-why-card   { flex-direction: column; gap: 14px; padding: 22px 18px; }
+  .rj-why-icon   { width: 48px; height: 48px; }
+
+  .rj-btpl-card  { padding: 24px 18px; border-radius: 16px; }
+  .rj-btpl-icon  { width: 50px; height: 50px; margin-bottom: 18px; }
+
+  .rj-eco-grid   { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .rj-eco-card   { padding: 18px 12px; border-radius: 12px; }
+  .rj-eco-icon   { width: 44px; height: 44px; margin-bottom: 12px; }
+  .rj-eco-name   { font-size: 0.95rem; }
+  .rj-eco-desc   { font-size: 0.82rem; line-height: 1.5; }
+
+  .rj-exp-item   { padding: 10px 12px; font-size: 0.9rem; gap: 10px; }
+  .rj-exp-content h3 { font-size: 1.4rem; }
+  .rj-exp-content p  { font-size: 0.9rem; margin-bottom: 28px; }
+}
+
+@media (max-width: 360px) {
+  .rj-eco-grid   { grid-template-columns: 1fr; }
+  .rj-stat-num   { font-size: 1.6rem; }
+  .rj-svc-card   { padding: 20px 14px; }
+  .rj-why-card   { padding: 18px 14px; }
+  .rj-btpl-card  { padding: 20px 14px; }
+  .rj-hero-badge { font-size: 0.68rem; padding: 5px 12px; }
 }

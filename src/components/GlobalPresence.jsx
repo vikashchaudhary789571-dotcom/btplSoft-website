@@ -1,6 +1,6 @@
 import React from 'react';
 import './GlobalPresence.css';
-import mapImg from '../assets/images/global-map-2.jpg';
+import mapImg from "../assets/images/global-map-2.webp";
 import { Globe2, MapPin, Users2, ShieldCheck, Zap } from 'lucide-react';
 
 const locations = [

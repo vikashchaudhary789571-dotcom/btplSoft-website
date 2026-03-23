@@ -146,8 +146,11 @@
 }
 @media (max-width: 768px) {
   .jm-stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .jm-stat { padding: 24px 16px; }
+  .jm-stat { padding: 28px 16px; }
+  .jm-stat:nth-child(1),
+  .jm-stat:nth-child(2) { border-bottom: 1px solid #edf0f4; }
   .jm-stat-num { font-size: 2rem; }
+  .jm-stat-label { font-size: 0.78rem; }
 
   .jm-svc-list { gap: 16px; margin-top: 32px; }
   .jm-svc-row {
@@ -182,17 +185,32 @@
   .jm-why-card p { font-size: 0.92rem; }
 
   .jm-exp-list { grid-template-columns: 1fr; }
+  .jm-exp-item { font-size: 0.92rem; padding: 10px 14px; }
+  .jm-exp-tag { font-size: 0.8rem; padding: 5px 14px; }
+
   .jm-metrics-grid { grid-template-columns: 1fr; gap: 16px; }
+  .jm-metric-card { padding: 24px 20px; }
+  .jm-metric-icon { width: 48px; height: 48px; }
   .jm-metric-val { font-size: 1.6rem; }
+  .jm-metric-label { font-size: 0.85rem; }
+  .jm-metric-desc { font-size: 0.78rem; }
+
   .jm-btpl-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .jm-btpl-card { padding: 22px 14px; }
+  .jm-btpl-icon { width: 50px; height: 50px; }
   .jm-btpl-card h4 { font-size: 1.05rem; }
   .jm-btpl-card p { font-size: 0.9rem; }
 }
+
 @media (max-width: 480px) {
-  .jm-stats-grid { grid-template-columns: 1fr 1fr; }
-  .jm-stat { padding: 20px 12px; }
-  .jm-stat-num { font-size: 1.7rem; }
+  .jm-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .jm-stat { padding: 20px 12px; border-right: none; border-bottom: 1px solid #edf0f4; }
+  .jm-stat:nth-child(odd) { border-right: 1px solid #edf0f4; }
+  .jm-stat:last-child { border-bottom: none; }
+  .jm-stat:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+  .jm-stat:nth-child(1),
+  .jm-stat:nth-child(2) { border-bottom: 1px solid #edf0f4; }
+  .jm-stat-num { font-size: 1.8rem; }
   .jm-stat-label { font-size: 0.75rem; }
 
   .jm-svc-list { gap: 14px; }
@@ -203,7 +221,32 @@
   .jm-svc-text p { font-size: 0.88rem; line-height: 1.65; }
   .jm-svc-tag { font-size: 0.65rem; padding: 2px 8px; }
 
+  .jm-why-card { padding: 20px 16px; }
+  .jm-why-icon { width: 42px; height: 42px; margin-bottom: 12px; }
+  .jm-why-card h3 { font-size: 1.02rem; }
+  .jm-why-card p { font-size: 0.88rem; line-height: 1.6; }
+
+  .jm-metric-card { padding: 20px 16px; }
+  .jm-metric-icon { width: 44px; height: 44px; }
+  .jm-metric-val { font-size: 1.4rem; }
+  .jm-metric-label { font-size: 0.8rem; }
+  .jm-metric-desc { font-size: 0.75rem; }
+
   .jm-btpl-grid { grid-template-columns: 1fr; }
+  .jm-btpl-card { padding: 20px 16px; }
+  .jm-btpl-icon { width: 46px; height: 46px; margin-bottom: 12px; }
+  .jm-btpl-card h4 { font-size: 1.02rem; }
+  .jm-btpl-card p { font-size: 0.88rem; line-height: 1.6; }
+
   .jm-exp-item { font-size: 0.9rem; padding: 10px 12px; }
   .jm-exp-tag { font-size: 0.78rem; padding: 5px 12px; }
+}
+
+@media (max-width: 360px) {
+  .jm-stat-num { font-size: 1.6rem; }
+  .jm-svc-content { padding: 12px 12px 16px; }
+  .jm-why-card { padding: 18px 14px; }
+  .jm-btpl-card { padding: 18px 14px; }
+  .jm-metric-card { padding: 16px 14px; }
+  .jm-metric-val { font-size: 1.2rem; }
 }

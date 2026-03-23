@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Factory, ArrowRight, CheckCircle, Cpu, Wifi, BarChart2, Shield, Cog, TrendingUp, AlertTriangle, Layers, Eye, Users, RefreshCw, HardHat } from 'lucide-react'
 import '../industries/IndustryPage.css'
+import heroBanner from '../../assets/industries/robotic-arms-modern-factory-setting.webp'
 
 const solutions = [
   { icon: <Cpu size={26} />, title: 'Smart Factory Automation', desc: 'IoT-enabled smart factory solutions with real-time equipment monitoring, predictive maintenance and automated production line control.' },
@@ -40,7 +41,7 @@ const challenges = [
 export default function Manufacturing() {
   return (
     <div>
-      <section className="ip-hero ip-hero-center">
+      <section className="ip-hero ip-hero-center" style={{ backgroundImage: `url(${heroBanner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="ip-hero-overlay" />
         <div className="ip-container">
 
@@ -133,8 +134,20 @@ export default function Manufacturing() {
         </div>
       </section>
 
-      <section className="ip-cta">
-        <div className="ip-container">
+      <section
+        className="ip-cta"
+        style={{
+          backgroundImage: `url(${heroBanner})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          position: 'relative',
+        }}
+      >
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(135deg, rgba(10,22,40,0.82) 0%, rgba(15,60,30,0.78) 100%)',
+        }} />
+        <div className="ip-container" style={{ position: 'relative', zIndex: 1 }}>
           <h2>Ready to Modernise Your Manufacturing Operations?</h2>
           <p>Partner with BTPL Soft to embark on your Industry 4.0 journey with confidence and measurable ROI.</p>
           <Link to="/contact" className="ip-cta-btn">Start Your Project <ArrowRight size={18} /></Link>

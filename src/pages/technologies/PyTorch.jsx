@@ -183,10 +183,10 @@ export default function PyTorch() {
       {/* ══════════════════ SERVICES ══════════════════ */}
       <section className="sp-section sp-bg-white" id="services">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">What We Build</p>
             <h2 className="sp-heading">PyTorch Development Services</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Full-stack PyTorch expertise — from novel architecture research and LLM fine-tuning to distributed
               training, TorchServe production deployment, and ONNX cross-platform model export.
             </p>
@@ -212,10 +212,10 @@ export default function PyTorch() {
       {/* ══════════════════ WHY PYTORCH ══════════════════ */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why PyTorch</p>
             <h2 className="sp-heading">Why Choose PyTorch?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               PyTorch has become the dominant ML research and production framework — powering GPT-4, Llama 3,
               Stable Diffusion, and the majority of cutting-edge AI models published and deployed worldwide.
             </p>
@@ -235,10 +235,10 @@ export default function PyTorch() {
       {/* ══════════════════ ECOSYSTEM ══════════════════ */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Ecosystem</p>
             <h2 className="sp-heading">PyTorch Ecosystem We Master</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From core PyTorch and HuggingFace Transformers to TorchServe deployment, DeepSpeed distributed
               training, and ONNX cross-platform export — the complete modern ML toolchain.
             </p>
@@ -258,10 +258,10 @@ export default function PyTorch() {
       {/* ══════════════════ EXPERIENCE ══════════════════ */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Expertise</p>
             <h2 className="sp-heading">Deep PyTorch Engineering Experience</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From LLM fine-tuning and diffusion model deployment to industrial computer vision and distributed
               training infrastructure — our PyTorch engineers have delivered production AI at every scale.
             </p>
@@ -282,10 +282,10 @@ export default function PyTorch() {
       {/* ══════════════════ WHY BTPL ══════════════════ */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Choose Us</p>
             <h2 className="sp-heading">Why BTPL for PyTorch?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Research-grade ML expertise, LLM fine-tuning experience, and full production deployment capability —
               taking your PyTorch models from notebook to monitored production serving infrastructure.
             </p>

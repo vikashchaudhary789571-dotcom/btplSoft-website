@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { GraduationCap, ArrowRight, CheckCircle, Monitor, Users, Globe, Cpu, BarChart2, BookOpen, Target, Award, Accessibility, Layers } from 'lucide-react'
 import '../industries/IndustryPage.css'
+import heroBanner from '../../assets/industries/learning-education-academics-knowledge-concept.webp'
 
 const solutions = [
   { icon: <BookOpen size={26} />, title: 'LMS Platforms', desc: 'Scalable Learning Management Systems with course creation, student progress tracking, assessments, certifications and integrations.' },
@@ -40,7 +41,7 @@ const challenges = [
 export default function Education() {
   return (
     <div>
-      <section className="ip-hero ip-hero-center">
+      <section className="ip-hero ip-hero-center" style={{ backgroundImage: `url(${heroBanner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="ip-hero-overlay" />
         <div className="ip-container">
 
@@ -133,8 +134,20 @@ export default function Education() {
         </div>
       </section>
 
-      <section className="ip-cta">
-        <div className="ip-container">
+      <section
+        className="ip-cta"
+        style={{
+          backgroundImage: `url(${heroBanner})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          position: 'relative',
+        }}
+      >
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(135deg, rgba(10,22,40,0.82) 0%, rgba(15,60,30,0.78) 100%)',
+        }} />
+        <div className="ip-container" style={{ position: 'relative', zIndex: 1 }}>
           <h2>Ready to Transform Your Learning Experience?</h2>
           <p>Let's build an engaging, scalable EdTech platform that empowers learners and educators alike.</p>
           <Link to="/contact" className="ip-cta-btn">Start Your Project <ArrowRight size={18} /></Link>

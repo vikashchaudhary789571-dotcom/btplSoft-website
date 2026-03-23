@@ -33,6 +33,7 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, #0a1628 0%, #0d1b2a 50%, #0f2a1a 100%);
+  background-position: center top;
 }
 
 /* dark gradient overlay over the banner image */
@@ -248,7 +249,7 @@
   padding: 24px 28px;
   background: linear-gradient(135deg, rgba(76,175,80,0.04) 0%, rgba(76,175,80,0.02) 100%);
   border-radius: 0 12px 12px 0;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 
@@ -511,7 +512,7 @@
   border-radius: 12px;
   background: #fff;
   position: relative;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   overflow: hidden;
 }
 
@@ -596,7 +597,7 @@
   align-items: flex-start;
   padding: 32px 0;
   border-bottom: 1px solid #e5e7eb;
-  transition: all 0.3s ease;
+  transition: padding-left 0.3s ease;
   position: relative;
 }
 
@@ -632,7 +633,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
   position: relative;
 }
 
@@ -642,7 +643,7 @@
   inset: -4px;
   border-radius: 50%;
   border: 2px solid transparent;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
 .ab-why-item:hover .ab-why-icon::after {
@@ -807,7 +808,7 @@
   border-radius: 12px;
   padding: 28px 20px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
 }
 
 .ab-panel-stat:hover {
@@ -864,7 +865,7 @@
   border: 1px solid #e5e7eb;
   border-radius: 16px;
   background: #fff;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -899,7 +900,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
   position: relative;
   z-index: 1;
 }
@@ -1009,7 +1010,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: #fff;
-  transition: all 0.3s;
+  transition: transform 0.3s ease;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
 }
@@ -1227,6 +1228,7 @@
   /* Hero */
   .ab-hero {
     padding: 100px 0 48px;
+    background-position: 70% top;
   }
 
   .ab-hero-title {
@@ -1521,6 +1523,7 @@
   /* Hero */
   .ab-hero {
     padding: 90px 0 40px;
+    background-position: 75% top;
   }
 
   .ab-hero-title {
@@ -1839,4 +1842,29 @@
   .ab-service-tile:nth-child(n) {
     border-right: none;
   }
+}
+
+/* ════════════════════════════════════
+   PERFORMANCE — skip off-screen rendering
+   ════════════════════════════════════ */
+.ab-stats {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 220px;
+}
+
+.ab-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 600px;
+}
+
+.ab-contact-strip,
+.ab-cta {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 200px;
+}
+
+.ab-engage-card,
+.ab-value-card,
+.ab-process-card {
+  will-change: transform;
 }

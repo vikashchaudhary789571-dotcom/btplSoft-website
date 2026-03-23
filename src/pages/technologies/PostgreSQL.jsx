@@ -177,10 +177,10 @@ export default function PostgreSQL() {
       {/* ══════════════════ SERVICES — SQL table metaphor ══════════════════ */}
       <section className="sp-section sp-bg-white" id="services">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">What We Do</p>
             <h2 className="sp-heading">PostgreSQL Services</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               End-to-end PostgreSQL expertise — from schema architecture and extension deployment to performance
               tuning, HA replication, cloud migrations, and fully managed database operations.
             </p>
@@ -209,10 +209,10 @@ export default function PostgreSQL() {
       {/* ══════════════════ WHY POSTGRESQL ══════════════════ */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why PostgreSQL</p>
             <h2 className="sp-heading">Why Choose PostgreSQL?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               PostgreSQL has earned the title "World's Most Advanced Open Source Relational Database" over 35+
               years of active development — trusted by Apple, Instagram, Spotify, and thousands of SaaS companies globally.
             </p>
@@ -232,10 +232,10 @@ export default function PostgreSQL() {
       {/* ══════════════════ ECOSYSTEM ══════════════════ */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Ecosystem</p>
             <h2 className="sp-heading">PostgreSQL Ecosystem We Master</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From core PostgreSQL to world-class extensions and cloud-managed services — we leverage the full
               ecosystem to deliver the right tool for every workload type and scale.
             </p>
@@ -255,10 +255,10 @@ export default function PostgreSQL() {
       {/* ══════════════════ EXPERIENCE ══════════════════ */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Expertise</p>
             <h2 className="sp-heading">Deep PostgreSQL Engineering Experience</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From startup MVP to enterprise-grade relational systems — our PostgreSQL engineers have solved every
               performance, scaling, and operational challenge the ecosystem can present.
             </p>
@@ -279,10 +279,10 @@ export default function PostgreSQL() {
       {/* ══════════════════ WHY BTPL ══════════════════ */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Choose Us</p>
             <h2 className="sp-heading">Why BTPL for PostgreSQL?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Certified expertise, a migration factory methodology, and performance-first engineering — delivering
               production-ready PostgreSQL systems from architecture through to long-term managed operations.
             </p>

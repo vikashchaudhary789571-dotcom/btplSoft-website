@@ -183,10 +183,10 @@ export default function GoogleCloud() {
       {/* SERVICES */}
       <section className="sp-section sp-bg-white" id="services">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">What We Do</p>
             <h2 className="sp-heading">Google Cloud Services</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               From Kubernetes-native applications and petabyte analytics to generative AI and zero-trust security —
               our GCP expertise spans the full platform.
             </p>
@@ -212,10 +212,10 @@ export default function GoogleCloud() {
       {/* WHY GCP */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Google Cloud</p>
             <h2 className="sp-heading">Why Choose Google Cloud Platform?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               GCP consistently leads industry benchmarks in data analytics performance, Kubernetes capabilities, and AI platform depth.
               Here's what makes GCP the right choice for forward-thinking companies.
             </p>
@@ -237,10 +237,10 @@ export default function GoogleCloud() {
       {/* GCP PRODUCTS */}
       <section className="sp-section gc-products-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Core Services</p>
             <h2 className="sp-heading">Key GCP Services We Work With</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               The foundation of every GCP architecture we build — compute, data, AI, messaging, and operations.
             </p>
           </div>
@@ -259,10 +259,10 @@ export default function GoogleCloud() {
       {/* EXPERIENCE */}
       <section className="sp-section sp-bg-white">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Our Expertise</p>
             <h2 className="sp-heading">Deep Google Cloud Engineering Experience</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Our GCP engineers have built everything from real-time streaming data pipelines and multi-region
               Kubernetes platforms to production Vertex AI RAG applications and BigQuery data warehouses.
             </p>
@@ -285,10 +285,10 @@ export default function GoogleCloud() {
       {/* WHY BTPL */}
       <section className="sp-section">
         <div className="sp-container">
-          <div className="sp-overview-content">
+          <div className="sp-section-head center">
             <p className="sp-label">Why Choose Us</p>
             <h2 className="sp-heading">Why BTPL for Google Cloud?</h2>
-            <p className="sp-subtext-large">
+            <p className="sp-sub">
               Certified engineers, domain-specialist teams, and proven accelerators — delivering GCP excellence
               from the first architecture review through to long-term operations.
             </p>

@@ -166,9 +166,108 @@
 }
 @media (max-width: 768px) {
   .mg-stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .mg-svc-grid { grid-template-columns: 1fr; }
-  .mg-why-grid { grid-template-columns: 1fr; }
-  .mg-products-grid { grid-template-columns: repeat(2, 1fr); }
-  .mg-exp-list { grid-template-columns: 1fr; }
-  .mg-btpl-grid { grid-template-columns: 1fr; }
+  .mg-stat { padding: 24px 16px; }
+  .mg-stat-num { font-size: 2rem; }
+
+  .mg-svc-grid { grid-template-columns: 1fr; gap: 18px; margin-top: 32px; }
+  .mg-svc-header { padding: 14px 16px; gap: 12px; }
+  .mg-svc-icon { width: 40px; height: 40px; }
+  .mg-svc-title { font-size: 1.1rem; }
+  .mg-svc-body { padding: 16px 16px 20px; }
+  .mg-svc-body p { font-size: 0.92rem; line-height: 1.7; margin-bottom: 12px; }
+  .mg-svc-chip { font-size: 0.68rem; padding: 3px 10px; }
+  .mg-svc-snippet { font-size: 0.65rem; padding: 8px 14px; }
+
+  .mg-why-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 32px; }
+  .mg-why-card { flex-direction: column; gap: 14px; padding: 20px 18px; }
+  .mg-why-card:hover { transform: none; }
+  .mg-why-icon { width: 46px; height: 46px; }
+  .mg-why-card h3 { font-size: 1.08rem; margin-bottom: 6px; }
+  .mg-why-card p { font-size: 0.92rem; line-height: 1.7; }
+
+  .mg-products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 28px; }
+  .mg-product-card { padding: 18px 14px; }
+  .mg-product-icon { width: 40px; height: 40px; }
+  .mg-product-name { font-size: 1.05rem; }
+  .mg-product-desc { font-size: 0.9rem; }
+
+  .mg-exp-list { grid-template-columns: 1fr; gap: 10px; }
+  .mg-exp-item { font-size: 0.92rem; padding: 10px 14px; }
+  .mg-exp-tag { font-size: 0.8rem; padding: 5px 14px; }
+
+  .mg-btpl-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 32px; }
+  .mg-btpl-card { padding: 22px 16px; }
+  .mg-btpl-icon { width: 46px; height: 46px; }
+  .mg-btpl-card h4 { font-size: 1.05rem; }
+  .mg-btpl-card p { font-size: 0.9rem; }
+}
+@media (max-width: 480px) {
+  .mg-stats-grid { grid-template-columns: 1fr 1fr; }
+  .mg-stat { padding: 20px 12px; border-right: none; border-bottom: 1px solid rgba(0, 237, 100, 0.12); }
+  .mg-stat:nth-child(odd) { border-right: 1px solid rgba(0, 237, 100, 0.12); }
+  .mg-stat:last-child { border-bottom: none; }
+  .mg-stat:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+  .mg-stat:nth-child(1), .mg-stat:nth-child(2) { border-bottom: 1px solid rgba(0, 237, 100, 0.12); }
+  .mg-stat-num { font-size: 1.8rem; }
+  .mg-stat-label { font-size: 0.75rem; }
+
+  .mg-svc-header { padding: 12px 14px; }
+  .mg-svc-icon { width: 36px; height: 36px; }
+  .mg-svc-title { font-size: 1rem; }
+  .mg-svc-badge { font-size: 0.6rem; padding: 2px 6px; }
+  .mg-svc-body { padding: 14px 14px 18px; }
+  .mg-svc-body p { font-size: 0.88rem; line-height: 1.65; }
+  .mg-svc-chip { font-size: 0.65rem; padding: 2px 8px; }
+  .mg-svc-snippet { font-size: 0.6rem; padding: 6px 12px; }
+
+  .mg-why-card { padding: 16px 14px; gap: 12px; }
+  .mg-why-icon { width: 42px; height: 42px; }
+  .mg-why-card h3 { font-size: 1rem; }
+  .mg-why-card p { font-size: 0.88rem; line-height: 1.65; }
+
+  .mg-products-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .mg-product-card { padding: 16px 12px; }
+  .mg-product-icon { width: 38px; height: 38px; }
+  .mg-product-name { font-size: 0.95rem; }
+  .mg-product-desc { font-size: 0.85rem; }
+
+  .mg-exp-item { font-size: 0.88rem; padding: 10px 12px; }
+  .mg-exp-tag { font-size: 0.76rem; padding: 4px 12px; }
+
+  .mg-btpl-grid { grid-template-columns: 1fr; gap: 12px; }
+  .mg-btpl-card { padding: 20px 16px; }
+  .mg-btpl-icon { width: 42px; height: 42px; }
+  .mg-btpl-card h4 { font-size: 1rem; }
+  .mg-btpl-card p { font-size: 0.88rem; }
+}
+@media (max-width: 360px) {
+  .mg-stat { padding: 18px 10px; }
+  .mg-stat-num { font-size: 1.6rem; }
+  .mg-stat-label { font-size: 0.72rem; }
+
+  .mg-svc-header { padding: 10px 12px; }
+  .mg-svc-icon { width: 34px; height: 34px; }
+  .mg-svc-title { font-size: 0.95rem; }
+  .mg-svc-body { padding: 12px 12px 16px; }
+  .mg-svc-body p { font-size: 0.85rem; }
+  .mg-svc-chip { font-size: 0.62rem; }
+  .mg-svc-snippet { font-size: 0.56rem; padding: 5px 10px; }
+
+  .mg-why-card { padding: 14px 12px; gap: 10px; }
+  .mg-why-icon { width: 38px; height: 38px; }
+  .mg-why-card h3 { font-size: 0.95rem; }
+  .mg-why-card p { font-size: 0.85rem; }
+
+  .mg-product-card { padding: 14px 10px; }
+  .mg-product-icon { width: 34px; height: 34px; }
+  .mg-product-name { font-size: 0.9rem; }
+  .mg-product-desc { font-size: 0.82rem; }
+
+  .mg-exp-item { font-size: 0.85rem; padding: 8px 10px; }
+  .mg-exp-tag { font-size: 0.72rem; padding: 4px 10px; }
+
+  .mg-btpl-card { padding: 18px 14px; }
+  .mg-btpl-icon { width: 38px; height: 38px; }
+  .mg-btpl-card h4 { font-size: 0.95rem; }
+  .mg-btpl-card p { font-size: 0.85rem; }
 }

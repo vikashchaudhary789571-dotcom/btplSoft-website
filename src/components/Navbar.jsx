@@ -4,7 +4,7 @@ import {
   ChevronDown
 } from 'lucide-react'
 import './Navbar.css'
-import logoImg from '../assets/images/btpl-logo.png'
+import logoImg from '../assets/images/btpl-logo.webp'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
