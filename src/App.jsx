@@ -165,27 +165,28 @@ function App() {
             setYearsStarted(true)
             setClientsStarted(true)
             setCountriesStarted(true)
-            observer.disconnect()
           }
         })
       },
       { threshold: 0.3 }
     )
     
-    // Use requestIdleCallback to defer observer setup
-    const setup = () => {
+    // Wait for DOM to be ready
+    const checkAndObserve = () => {
       const statsEl = document.getElementById('stats-bar')
-      if (statsEl) observer.observe(statsEl)
+      if (statsEl) {
+        observer.observe(statsEl)
+      } else {
+        // Retry after a short delay if element not found
+        setTimeout(checkAndObserve, 100)
+      }
     }
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(setup)
-    } else {
-      setTimeout(setup, 200)
-    }
+    
+    checkAndObserve()
     return () => observer.disconnect()
   }, [setProjectsStarted, setYearsStarted, setClientsStarted, setCountriesStarted])
 
-  // Scroll animation observer — deferred to idle
+  // Scroll animation observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -198,14 +199,7 @@ function App() {
       },
       { threshold: 0.1 }
     )
-    const setup = () => {
-      document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el))
-    }
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(setup)
-    } else {
-      setTimeout(setup, 300)
-    }
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el))
     return () => observer.disconnect()
   }, [])
 
@@ -284,8 +278,7 @@ function App() {
         <Route path="/" element={<>
 
       {/* ===== HERO SECTION ===== */}
-      <section className="hero-section" id="hero">
-        <img src={bannerImg} alt="" className="hero-bg-img" width="1920" height="1080" fetchPriority="high" />
+      <section className="hero-section" id="hero" style={{ backgroundImage: `url(${bannerImg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
         <div className="hero-bg-overlay"></div>
         <div className="hero-grid-pattern"></div>
         <div className="hero-particles">
