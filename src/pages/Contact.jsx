@@ -202,7 +202,7 @@ export default function Contact() {
       <section className="contact-map-section">
         <div className="global-map-wrapper">
           <div className="global-map-image-container">
-            <img src="/src/assets/images/global-map.webp" alt="BTPL Soft Global Presence" className="global-map-bg" />
+            <img src="/src/assets/images/global-map.webp" alt="BTPL Soft Global Presence" className="global-map-bg" width="1200" height="600" loading="lazy" />
             <div className="map-overlay-v2"></div>
             
             {/* Pulsing Location Pings */}

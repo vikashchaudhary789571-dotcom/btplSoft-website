@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <Link to="/">
-              <img src={logoImg} alt="BTPL Soft Logo" />
+              <img src={logoImg} alt="BTPL Soft Logo" width="140" height="44" loading="lazy" />
             </Link>
             <p>
               Delivering innovative technology solutions that help businesses

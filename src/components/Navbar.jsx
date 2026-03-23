@@ -59,7 +59,7 @@ export default function Navbar() {
 
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="main-nav">
         <Link to="/" className="navbar-logo" onClick={closeMobile}>
-          <img src={logoImg} alt="BTPL Soft Logo" />
+          <img src={logoImg} alt="BTPL Soft Logo" width="140" height="44" />
         </Link>
 
         <div className={`nav-links ${mobileMenu ? 'active' : ''}`}>

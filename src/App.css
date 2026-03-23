@@ -2,6 +2,10 @@
    BTPL SOFT - Professional Website Styles
    ============================================ */
 
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 .inline { display: inline-block; }
 .mr-1 { margin-right: 0.25rem; }
 .mr-2 { margin-right: 0.5rem; }

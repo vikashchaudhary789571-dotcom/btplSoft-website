@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { 
   ArrowRight, 
@@ -43,68 +43,79 @@ import './App.css'
 import Navbar from './components/Navbar.jsx'
 import logoImg from './assets/images/btpl-logo.webp'
 import bannerImg from './assets/images/WhatsApp Image 2026-03-17 at 12.13.43 PM.webp'
-import About from './pages/About.jsx'
-import WebDevelopment from './pages/services/WebDevelopment.jsx'
-import AppDevelopment from './pages/services/AppDevelopment.jsx'
-import CustomSoftware from './pages/services/CustomSoftware.jsx'
-import SEOOptimization from './pages/services/SEOOptimization.jsx'
-import DigitalMarketing from './pages/services/DigitalMarketing.jsx'
-import SocialMedia from './pages/services/SocialMedia.jsx'
-import AISolution from './pages/services/AISolution.jsx'
-import DedicatedResources from './pages/services/DedicatedResources.jsx'
-import SaaSSolution from './pages/services/SaaSSolution.jsx'
-import ShopifySolution from './pages/services/ShopifySolution.jsx'
-import EcommerceB2B from './pages/services/EcommerceB2B.jsx'
-import QAAndTesting from './pages/services/QAAndTesting.jsx'
-import UIUXDesign from './pages/services/UIUXDesign.jsx'
-import ServicesPage from './pages/services/Services.jsx'
-import Contact from './pages/Contact.jsx'
-import CaseStudies from './pages/CaseStudies.jsx'
-import CaseStudyDetail from './pages/CaseStudyDetail.jsx'
-import TechStack from './components/TechStack.jsx'
-import GlobalPresence from './components/GlobalPresence.jsx'
+
+// Lazy load all route pages for code splitting
+const About = lazy(() => import('./pages/About.jsx'))
+const WebDevelopment = lazy(() => import('./pages/services/WebDevelopment.jsx'))
+const AppDevelopment = lazy(() => import('./pages/services/AppDevelopment.jsx'))
+const CustomSoftware = lazy(() => import('./pages/services/CustomSoftware.jsx'))
+const SEOOptimization = lazy(() => import('./pages/services/SEOOptimization.jsx'))
+const DigitalMarketing = lazy(() => import('./pages/services/DigitalMarketing.jsx'))
+const SocialMedia = lazy(() => import('./pages/services/SocialMedia.jsx'))
+const AISolution = lazy(() => import('./pages/services/AISolution.jsx'))
+const DedicatedResources = lazy(() => import('./pages/services/DedicatedResources.jsx'))
+const SaaSSolution = lazy(() => import('./pages/services/SaaSSolution.jsx'))
+const ShopifySolution = lazy(() => import('./pages/services/ShopifySolution.jsx'))
+const EcommerceB2B = lazy(() => import('./pages/services/EcommerceB2B.jsx'))
+const QAAndTesting = lazy(() => import('./pages/services/QAAndTesting.jsx'))
+const UIUXDesign = lazy(() => import('./pages/services/UIUXDesign.jsx'))
+const ServicesPage = lazy(() => import('./pages/services/Services.jsx'))
+const Contact = lazy(() => import('./pages/Contact.jsx'))
+const CaseStudies = lazy(() => import('./pages/CaseStudies.jsx'))
+const CaseStudyDetail = lazy(() => import('./pages/CaseStudyDetail.jsx'))
+const TechStack = lazy(() => import('./components/TechStack.jsx'))
+const GlobalPresence = lazy(() => import('./components/GlobalPresence.jsx'))
 import Footer from './components/Footer.jsx'
-import FAQ from './components/FAQ.jsx'
-import PrivacyPolicy from './pages/legal/PrivacyPolicy.jsx'
-import TermsConditions from './pages/legal/TermsConditions.jsx'
-import ServicePolicy from './pages/legal/ServicePolicy.jsx'
-import IndustriesPage from './pages/industries/Industries.jsx'
-import Healthcare from './pages/industries/Healthcare.jsx'
-import BankingFintech from './pages/industries/BankingFintech.jsx'
-import ECommerce from './pages/industries/ECommerce.jsx'
-import Education from './pages/industries/Education.jsx'
-import Manufacturing from './pages/industries/Manufacturing.jsx'
-import Logistics from './pages/industries/Logistics.jsx'
-import RealEstate from './pages/industries/RealEstate.jsx'
-import Energy from './pages/industries/Energy.jsx'
-import ReactJS from './pages/technologies/ReactJS.jsx'
-import NextJS from './pages/technologies/NextJS.jsx'
-import Angular from './pages/technologies/Angular.jsx'
-import VueJS from './pages/technologies/VueJS.jsx'
-import PHP from './pages/technologies/PHP.jsx'
-import Python from './pages/technologies/Python.jsx'
-import Java from './pages/technologies/Java.jsx'
-import NodeJS from './pages/technologies/NodeJS.jsx'
-import DotNET from './pages/technologies/DotNET.jsx'
-import ReactNativeApp from './pages/technologies/ReactNative.jsx'
-import Flutter from './pages/technologies/Flutter.jsx'
-import Swift from './pages/technologies/Swift.jsx'
-import Kotlin from './pages/technologies/Kotlin.jsx'
-import Postman from './pages/technologies/Postman.jsx'
-import JMeter from './pages/technologies/JMeter.jsx'
-import Selenium from './pages/technologies/Selenium.jsx'
-import AWS from './pages/technologies/AWS.jsx'
-import Azure from './pages/technologies/Azure.jsx'
-import GoogleCloud from './pages/technologies/GoogleCloud.jsx'
-import MongoDB from './pages/technologies/MongoDB.jsx'
-import PostgreSQL from './pages/technologies/PostgreSQL.jsx'
-import Oracle from './pages/technologies/Oracle.jsx'
-import SQLServer from './pages/technologies/SQLServer.jsx'
-import TensorFlow from './pages/technologies/TensorFlow.jsx'
-import PyTorch from './pages/technologies/PyTorch.jsx'
-import NumPy from './pages/technologies/NumPy.jsx'
-import Pandas from './pages/technologies/Pandas.jsx'
-import TechnologiesPage from './pages/technologies/Technologies.jsx'
+const FAQ = lazy(() => import('./components/FAQ.jsx'))
+const PrivacyPolicy = lazy(() => import('./pages/legal/PrivacyPolicy.jsx'))
+const TermsConditions = lazy(() => import('./pages/legal/TermsConditions.jsx'))
+const ServicePolicy = lazy(() => import('./pages/legal/ServicePolicy.jsx'))
+const IndustriesPage = lazy(() => import('./pages/industries/Industries.jsx'))
+const Healthcare = lazy(() => import('./pages/industries/Healthcare.jsx'))
+const BankingFintech = lazy(() => import('./pages/industries/BankingFintech.jsx'))
+const ECommerce = lazy(() => import('./pages/industries/ECommerce.jsx'))
+const Education = lazy(() => import('./pages/industries/Education.jsx'))
+const Manufacturing = lazy(() => import('./pages/industries/Manufacturing.jsx'))
+const Logistics = lazy(() => import('./pages/industries/Logistics.jsx'))
+const RealEstate = lazy(() => import('./pages/industries/RealEstate.jsx'))
+const Energy = lazy(() => import('./pages/industries/Energy.jsx'))
+const ReactJS = lazy(() => import('./pages/technologies/ReactJS.jsx'))
+const NextJS = lazy(() => import('./pages/technologies/NextJS.jsx'))
+const Angular = lazy(() => import('./pages/technologies/Angular.jsx'))
+const VueJS = lazy(() => import('./pages/technologies/VueJS.jsx'))
+const PHP = lazy(() => import('./pages/technologies/PHP.jsx'))
+const Python = lazy(() => import('./pages/technologies/Python.jsx'))
+const Java = lazy(() => import('./pages/technologies/Java.jsx'))
+const NodeJS = lazy(() => import('./pages/technologies/NodeJS.jsx'))
+const DotNET = lazy(() => import('./pages/technologies/DotNET.jsx'))
+const ReactNativeApp = lazy(() => import('./pages/technologies/ReactNative.jsx'))
+const Flutter = lazy(() => import('./pages/technologies/Flutter.jsx'))
+const Swift = lazy(() => import('./pages/technologies/Swift.jsx'))
+const Kotlin = lazy(() => import('./pages/technologies/Kotlin.jsx'))
+const Postman = lazy(() => import('./pages/technologies/Postman.jsx'))
+const JMeter = lazy(() => import('./pages/technologies/JMeter.jsx'))
+const Selenium = lazy(() => import('./pages/technologies/Selenium.jsx'))
+const AWS = lazy(() => import('./pages/technologies/AWS.jsx'))
+const Azure = lazy(() => import('./pages/technologies/Azure.jsx'))
+const GoogleCloud = lazy(() => import('./pages/technologies/GoogleCloud.jsx'))
+const MongoDB = lazy(() => import('./pages/technologies/MongoDB.jsx'))
+const PostgreSQL = lazy(() => import('./pages/technologies/PostgreSQL.jsx'))
+const Oracle = lazy(() => import('./pages/technologies/Oracle.jsx'))
+const SQLServer = lazy(() => import('./pages/technologies/SQLServer.jsx'))
+const TensorFlow = lazy(() => import('./pages/technologies/TensorFlow.jsx'))
+const PyTorch = lazy(() => import('./pages/technologies/PyTorch.jsx'))
+const NumPy = lazy(() => import('./pages/technologies/NumPy.jsx'))
+const Pandas = lazy(() => import('./pages/technologies/Pandas.jsx'))
+const TechnologiesPage = lazy(() => import('./pages/technologies/Technologies.jsx'))
+
+// Page loading fallback
+function PageLoader() {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh' }}>
+      <div style={{ width: 40, height: 40, border: '3px solid rgba(33,150,243,0.2)', borderTopColor: '#2196F3', borderRadius: '50%', animation: 'spin .8s linear infinite' }} />
+    </div>
+  )
+}
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -217,6 +228,7 @@ function App() {
       <ScrollToTop />
       <Navbar />
 
+      <Suspense fallback={<PageLoader />}>
       <Routes>
         <Route path="/about" element={<About onOpenConsult={() => setShowModal(true)} />} />
         <Route path="/services" element={<ServicesPage onOpenConsult={() => setShowModal(true)} />} />
@@ -306,7 +318,7 @@ function App() {
             <div className="tech-orbit-wrap">
               {/* Center */}
               <div className="tech-orbit-center">
-                <img src={logoImg} alt="BTPL" className="tech-orbit-logo" />
+                <img src={logoImg} alt="BTPL" className="tech-orbit-logo" width="60" height="60" />
               </div>
 
               {/* Ring 1 — innermost */}
@@ -433,7 +445,7 @@ function App() {
             <div className="about-visual">
               <div className="about-image-container">
                 <div className="about-graphic">
-                  <img src={logoImg} alt="BTPL Soft" className="about-logo-large" />
+                  <img src={logoImg} alt="BTPL Soft" className="about-logo-large" width="80" height="80" loading="lazy" />
                   <h3>Innovation-Driven Development</h3>
                   <p>Engineering Excellence Since Day One</p>
                 </div>
@@ -470,9 +482,13 @@ function App() {
         </div>
       </section>
 
-      <TechStack />
+      <Suspense fallback={null}>
+        <TechStack />
+      </Suspense>
 
-      <GlobalPresence />
+      <Suspense fallback={null}>
+        <GlobalPresence />
+      </Suspense>
 
       {/* ===== INDUSTRIES SECTION ===== */}
       <section className="industries-section" id="industries">
@@ -535,7 +551,10 @@ function App() {
 
       </> } />
       </Routes>
-      <FAQ />
+      </Suspense>
+      <Suspense fallback={null}>
+        <FAQ />
+      </Suspense>
       <Footer />
 
       {showModal && (

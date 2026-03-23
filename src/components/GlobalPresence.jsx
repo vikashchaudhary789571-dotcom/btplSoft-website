@@ -56,7 +56,7 @@ export default function GlobalPresence() {
         <div className="gp-v3-visual-area">
           <div className="gp-v3-map-frame">
             <div className="gp-v3-scanner-line"></div>
-            <img src={mapImg} alt="World Map" className="gp-v3-map-img" />
+            <img src={mapImg} alt="World Map" className="gp-v3-map-img" width="1200" height="600" loading="lazy" />
             
             <div className="gp-v3-pings-layer">
               {locations.map((loc) => (

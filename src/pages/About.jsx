@@ -46,7 +46,7 @@ export default function About({ onOpenConsult }) {
         }}
       >
           {/* preload hint so browser fetches banner at highest priority */}
-        <img src={aboutBannerImg} alt="" aria-hidden="true" fetchPriority="high" style={{ display: 'none' }} />
+        <img src={aboutBannerImg} alt="" aria-hidden="true" fetchPriority="high" width="1920" height="600" style={{ display: 'none' }} />
         {/* dark overlay */}
         <div className="ab-hero-overlay" />
         <div className="ab-container">

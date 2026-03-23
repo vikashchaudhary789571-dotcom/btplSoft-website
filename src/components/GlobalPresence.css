@@ -146,13 +146,14 @@
   box-shadow: 0 0 12px rgba(76,175,80,0.4);
   animation: map-scan 4s infinite linear;
   z-index: 3;
+  will-change: transform;
 }
 
 @keyframes map-scan {
-  0% { top: 0; opacity: 0; }
+  0% { transform: translateY(0); opacity: 0; }
   10% { opacity: 1; }
   90% { opacity: 1; }
-  100% { top: 100%; opacity: 0; }
+  100% { transform: translateY(calc(100vh - 2px)); opacity: 0; }
 }
 
 /* ── NODES ── */
