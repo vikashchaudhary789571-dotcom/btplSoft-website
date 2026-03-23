@@ -1,8 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import {
-  ChevronDown
-} from 'lucide-react'
+import ChevronDown from 'lucide-react/dist/esm/icons/chevron-down'
 import './Navbar.css'
 import logoImg from '../assets/images/btpl-logo.webp'
 

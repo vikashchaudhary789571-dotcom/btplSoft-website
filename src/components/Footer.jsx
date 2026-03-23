@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
-import {
-  Linkedin, Twitter, Facebook, Instagram,
-  MapPin, Mail, Phone
-} from 'lucide-react'
+import Linkedin from 'lucide-react/dist/esm/icons/linkedin'
+import Twitter from 'lucide-react/dist/esm/icons/twitter'
+import Facebook from 'lucide-react/dist/esm/icons/facebook'
+import Instagram from 'lucide-react/dist/esm/icons/instagram'
+import MapPin from 'lucide-react/dist/esm/icons/map-pin'
+import Mail from 'lucide-react/dist/esm/icons/mail'
+import Phone from 'lucide-react/dist/esm/icons/phone'
 import logoImg from '../assets/images/btpl-logo.webp'
 import './Footer.css'
 
@@ -13,7 +16,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <Link to="/">
-              <img src={logoImg} alt="BTPL Soft Logo" width="140" height="44" loading="lazy" />
+              <img src={logoImg} alt="BTPL Soft Logo" width="120" height="38" loading="lazy" />
             </Link>
             <p>
               Delivering innovative technology solutions that help businesses

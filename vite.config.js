@@ -5,10 +5,22 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
+    target: 'es2020',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        passes: 2,
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes('node_modules/react-dom') || id.includes('node_modules/react/') || id.includes('node_modules/react-router')) {
+          if (id.includes('node_modules/react-dom')) {
+            return 'react-dom'
+          }
+          if (id.includes('node_modules/react/') || id.includes('node_modules/react-router')) {
             return 'vendor'
           }
           if (id.includes('node_modules/lucide-react')) {
@@ -18,5 +30,6 @@ export default defineConfig({
       },
     },
     cssCodeSplit: true,
+    chunkSizeWarningLimit: 600,
   },
 })

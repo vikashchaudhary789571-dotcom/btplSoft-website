@@ -1,44 +1,28 @@
-import { useState, useEffect, lazy, Suspense } from 'react'
+import { useState, useEffect, useCallback, useMemo, lazy, Suspense } from 'react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
-import { 
-  ArrowRight, 
-  ChevronDown,
-  Check,
-  X,
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Globe, 
-  Cpu, 
-  Briefcase, 
-  Database, 
-  Layers, 
-  Activity, 
-  Landmark, 
-  ShoppingCart, 
-  GraduationCap, 
-  Factory, 
-  Truck, 
-  Home, 
-  Zap, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram,
-  ShieldCheck,
-  Rocket,
-  Search,
-  TrendingUp,
-  Target,
-  Share2,
-  Monitor,
-  Users,
-  Layout,
-  Cpu as AI
-} from 'lucide-react'
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right'
+import Check from 'lucide-react/dist/esm/icons/check'
+import X from 'lucide-react/dist/esm/icons/x'
+import Code from 'lucide-react/dist/esm/icons/code'
+import Smartphone from 'lucide-react/dist/esm/icons/smartphone'
+import Cloud from 'lucide-react/dist/esm/icons/cloud'
+import Globe from 'lucide-react/dist/esm/icons/globe'
+import Activity from 'lucide-react/dist/esm/icons/activity'
+import Landmark from 'lucide-react/dist/esm/icons/landmark'
+import ShoppingCart from 'lucide-react/dist/esm/icons/shopping-cart'
+import GraduationCap from 'lucide-react/dist/esm/icons/graduation-cap'
+import Factory from 'lucide-react/dist/esm/icons/factory'
+import Truck from 'lucide-react/dist/esm/icons/truck'
+import Home from 'lucide-react/dist/esm/icons/house'
+import Zap from 'lucide-react/dist/esm/icons/zap'
+import Mail from 'lucide-react/dist/esm/icons/mail'
+import Phone from 'lucide-react/dist/esm/icons/phone'
+import ShieldCheck from 'lucide-react/dist/esm/icons/shield-check'
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up'
+import Monitor from 'lucide-react/dist/esm/icons/monitor'
+import Users from 'lucide-react/dist/esm/icons/users'
+import Layout from 'lucide-react/dist/esm/icons/layout'
+const AI = Code  // reuse Code icon to avoid extra import
 import './App.css'
 import Navbar from './components/Navbar.jsx'
 import logoImg from './assets/images/btpl-logo.webp'
@@ -126,25 +110,25 @@ function ScrollToTop() {
 }
 
 function App() {
-  // Counter animation hook
-  const useCounter = (target, duration = 2000) => {
+  // Counter animation hook — uses rAF for better perf
+  const useCounter = (target, duration = 1500) => {
     const [count, setCount] = useState(0)
     const [started, setStarted] = useState(false)
     
     useEffect(() => {
       if (!started) return
-      let start = 0
-      const increment = target / (duration / 16)
-      const timer = setInterval(() => {
-        start += increment
-        if (start >= target) {
-          setCount(target)
-          clearInterval(timer)
-        } else {
-          setCount(Math.floor(start))
+      let raf
+      const startTime = performance.now()
+      const animate = (now) => {
+        const elapsed = now - startTime
+        const progress = Math.min(elapsed / duration, 1)
+        setCount(Math.floor(progress * target))
+        if (progress < 1) {
+          raf = requestAnimationFrame(animate)
         }
-      }, 16)
-      return () => clearInterval(timer)
+      }
+      raf = requestAnimationFrame(animate)
+      return () => cancelAnimationFrame(raf)
     }, [started, target, duration])
     
     return [count, setStarted]
@@ -154,10 +138,12 @@ function App() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', service: '', message: '' })
   const [formSubmitted, setFormSubmitted] = useState(false)
 
-  const handleConsultSubmit = (e) => {
+  const openConsult = useCallback(() => setShowModal(true), [])
+
+  const handleConsultSubmit = useCallback((e) => {
     e.preventDefault()
     setFormSubmitted(true)
-  }
+  }, [])
 
   const closeModal = () => {
     setShowModal(false)
@@ -207,6 +193,7 @@ function App() {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-in')
+            observer.unobserve(entry.target)
           }
         })
       },
@@ -230,21 +217,21 @@ function App() {
 
       <Suspense fallback={<PageLoader />}>
       <Routes>
-        <Route path="/about" element={<About onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services" element={<ServicesPage onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/custom-software-solution" element={<CustomSoftware onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/ai-solution" element={<AISolution onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/web-designer-development" element={<WebDevelopment onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/dedicated-resources" element={<DedicatedResources onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/marketing-solution" element={<DigitalMarketing onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/seo-optimization" element={<SEOOptimization onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/social-media" element={<SocialMedia onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/saas-solution" element={<SaaSSolution onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/shopify-solution" element={<ShopifySolution onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/bigcommerce-solution" element={<EcommerceB2B onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/mobile-app-solution" element={<AppDevelopment onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/software-testing-solution" element={<QAAndTesting onOpenConsult={() => setShowModal(true)} />} />
-        <Route path="/services/ui-ux-solution" element={<UIUXDesign onOpenConsult={() => setShowModal(true)} />} />
+        <Route path="/about" element={<About onOpenConsult={openConsult} />} />
+        <Route path="/services" element={<ServicesPage onOpenConsult={openConsult} />} />
+        <Route path="/services/custom-software-solution" element={<CustomSoftware onOpenConsult={openConsult} />} />
+        <Route path="/services/ai-solution" element={<AISolution onOpenConsult={openConsult} />} />
+        <Route path="/services/web-designer-development" element={<WebDevelopment onOpenConsult={openConsult} />} />
+        <Route path="/services/dedicated-resources" element={<DedicatedResources onOpenConsult={openConsult} />} />
+        <Route path="/services/marketing-solution" element={<DigitalMarketing onOpenConsult={openConsult} />} />
+        <Route path="/services/seo-optimization" element={<SEOOptimization onOpenConsult={openConsult} />} />
+        <Route path="/services/social-media" element={<SocialMedia onOpenConsult={openConsult} />} />
+        <Route path="/services/saas-solution" element={<SaaSSolution onOpenConsult={openConsult} />} />
+        <Route path="/services/shopify-solution" element={<ShopifySolution onOpenConsult={openConsult} />} />
+        <Route path="/services/bigcommerce-solution" element={<EcommerceB2B onOpenConsult={openConsult} />} />
+        <Route path="/services/mobile-app-solution" element={<AppDevelopment onOpenConsult={openConsult} />} />
+        <Route path="/services/software-testing-solution" element={<QAAndTesting onOpenConsult={openConsult} />} />
+        <Route path="/services/ui-ux-solution" element={<UIUXDesign onOpenConsult={openConsult} />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-conditions" element={<TermsConditions />} />
         <Route path="/service-policy" element={<ServicePolicy />} />
@@ -296,7 +283,6 @@ function App() {
         <div className="hero-grid-pattern"></div>
         <div className="hero-particles">
           <div className="particle"></div><div className="particle"></div><div className="particle"></div><div className="particle"></div>
-          <div className="particle"></div><div className="particle"></div><div className="particle"></div><div className="particle"></div>
         </div>
         
         <div className="hero-container">
@@ -309,7 +295,7 @@ function App() {
               in the modern digital landscape.
             </p>
             <div className="hero-buttons">
-              <button onClick={() => setShowModal(true)} className="btn-primary">Get Free Consultation <ArrowRight size={20} /></button>
+              <button onClick={openConsult} className="btn-primary">Get Free Consultation <ArrowRight size={20} /></button>
               <Link to="/services" className="btn-secondary">Explore Services <ArrowRight size={20} /></Link>
             </div>
           </div>
