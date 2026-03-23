@@ -1,0 +1,123 @@
+/* ============================================
+   Java Technology Page — jv-* Styles
+   Brand Blue #2196F3 | Java Orange hover #f89820
+   ============================================ */
+
+/* ── STATS — white bg, blue numbers ── */
+.jv-stats { background: var(--white); border-bottom: 1px solid var(--gray-200); padding: 0; }
+.jv-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.jv-stat {
+  padding: 40px 24px; text-align: center;
+  border-right: 1px solid var(--gray-200);
+  transition: background var(--transition-normal);
+}
+.jv-stat:last-child { border-right: none; }
+.jv-stat:hover { background: #fff8e1; }
+.jv-stat-num { font-size: 2.8rem; font-weight: 600; color: var(--primary-blue); line-height: 1; display: block; margin-bottom: 6px; transition: color var(--transition-normal); }
+.jv-stat:hover .jv-stat-num { color: #f89820; }
+.jv-stat-label { font-size: 0.82rem; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* ── SERVICES — 3-col bottom-border accent cards ── */
+.jv-svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.jv-svc-card {
+  background: var(--white); border: 1px solid var(--gray-200);
+  border-bottom: 4px solid transparent; border-radius: var(--radius-md); padding: 28px 24px;
+  transition: border-bottom-color var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+.jv-svc-card:hover { border-bottom-color: #f89820; box-shadow: var(--shadow-lg); transform: translateY(-5px); }
+.jv-svc-icon {
+  width: 52px; height: 52px; border-radius: var(--radius-sm);
+  background: #e3f2fd; display: flex; align-items: center; justify-content: center;
+  color: var(--primary-blue); margin-bottom: 16px;
+  transition: background var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+}
+.jv-svc-card:hover .jv-svc-icon { background: #f89820; color: var(--white); transform: rotate(10deg) scale(1.12); }
+.jv-svc-card h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 8px; color: var(--dark-800); }
+.jv-svc-card p { font-size: 1rem; line-height: 1.7; color: var(--gray-400); margin-bottom: 12px; }
+.jv-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.jv-tag {
+  font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 20px;
+  background: #e3f2fd; color: var(--primary-blue);
+  text-transform: uppercase; letter-spacing: 0.04em;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.jv-svc-card:hover .jv-tag { background: #fff3e0; color: #e65100; }
+
+/* ── WHY JAVA — 2-col icon-left dark cards ── */
+.jv-why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; }
+.jv-why-card {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 28px; background: rgba(255,255,255,0.04);
+  border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.07);
+  transition: background var(--transition-normal), border-color var(--transition-normal);
+}
+.jv-why-card:hover { background: rgba(248,152,32,0.08); border-color: rgba(248,152,32,0.35); }
+.jv-why-icon {
+  flex-shrink: 0; width: 52px; height: 52px; border-radius: var(--radius-sm);
+  background: rgba(33,150,243,0.12);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--primary-blue);
+  transition: background var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+}
+.jv-why-card:hover .jv-why-icon { background: #f89820; color: var(--white); transform: scale(1.15) rotate(-6deg); }
+.jv-why-card h3 { font-size: 1.2rem; font-weight: 500; color: var(--white); margin-bottom: 8px; }
+.jv-why-card p { font-size: 1rem; color: var(--gray-300); line-height: 1.7; }
+
+/* ── EXPERIENCE — horizontal 4-pillar timeline ── */
+.jv-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 48px; position: relative; }
+.jv-timeline::before {
+  content: ''; position: absolute;
+  top: 22px; left: 12.5%; right: 12.5%;
+  height: 2px; background: linear-gradient(90deg, var(--primary-blue), #f89820, var(--primary-blue), #f89820);
+  z-index: 0;
+}
+.jv-tl-item { display: flex; flex-direction: column; align-items: center; padding: 0 16px; text-align: center; }
+.jv-tl-dot {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--primary-blue); border: 3px solid var(--white);
+  box-shadow: 0 0 0 3px var(--primary-blue);
+  margin-bottom: 22px; position: relative; z-index: 1;
+  transition: background var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+.jv-tl-item:hover .jv-tl-dot { background: #f89820; box-shadow: 0 0 0 3px #f89820; transform: scale(1.3); }
+.jv-tl-icon {
+  color: var(--primary-blue); margin-bottom: 10px;
+  transition: color var(--transition-normal), transform var(--transition-normal);
+}
+.jv-tl-item:hover .jv-tl-icon { color: #f89820; transform: scale(1.2); }
+.jv-tl-label { font-size: 1.2rem; font-weight: 500; color: var(--dark-800); margin-bottom: 6px; line-height: 1.3; }
+.jv-tl-desc { font-size: 1rem; color: var(--gray-400); line-height: 1.7; }
+
+/* ── WHY BTPL — dark 2x2 icon-left ── */
+.jv-btpl-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; }
+.jv-btpl-card {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: rgba(255,255,255,0.05); border-radius: var(--radius-md);
+  padding: 28px; border: 1px solid rgba(255,255,255,0.08);
+  transition: background var(--transition-normal), border-color var(--transition-normal);
+}
+.jv-btpl-card:hover { background: rgba(33,150,243,0.1); border-color: rgba(33,150,243,0.4); }
+.jv-btpl-icon {
+  flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(33,150,243,0.12);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--primary-blue);
+  transition: background var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+}
+.jv-btpl-card:hover .jv-btpl-icon { background: #f89820; color: var(--white); transform: scale(1.15); }
+.jv-btpl-card h4 { font-size: 1.2rem; font-weight: 500; color: var(--white); margin-bottom: 6px; }
+.jv-btpl-card p { font-size: 1rem; color: var(--gray-300); line-height: 1.7; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .jv-svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .jv-timeline { grid-template-columns: repeat(2, 1fr); }
+  .jv-timeline::before { display: none; }
+}
+@media (max-width: 768px) {
+  .jv-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .jv-svc-grid { grid-template-columns: 1fr; }
+  .jv-why-grid { grid-template-columns: 1fr; }
+  .jv-timeline { grid-template-columns: 1fr 1fr; }
+  .jv-btpl-grid { grid-template-columns: 1fr; }
+}

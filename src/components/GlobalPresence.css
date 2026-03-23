@@ -1,0 +1,368 @@
+/* ============================================
+   GlobalPresence — Clean Light Design
+   ============================================ */
+
+.gp-v3-section {
+  padding: 100px 0;
+  background: #f8faf9;
+  position: relative;
+  overflow: hidden;
+  color: #1a1a2e;
+}
+
+/* Subtle dot pattern */
+.gp-v3-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(76, 175, 80, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.gp-v3-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16rem;
+  font-weight: 900;
+  color: rgba(76, 175, 80, 0.03);
+  z-index: 0;
+  pointer-events: none;
+  letter-spacing: 40px;
+}
+
+/* ── TOP AREA ── */
+.gp-v3-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 64px;
+  position: relative;
+  z-index: 2;
+}
+
+.gp-v3-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(76, 175, 80, 0.08);
+  border: 1px solid rgba(76, 175, 80, 0.18);
+  border-radius: 100px;
+  color: #2E7D32;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.gp-v3-heading {
+  font-size: 3.2rem;
+  line-height: 1.12;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.gp-v3-heading span {
+  color: #2E7D32;
+}
+
+/* ── STATS ── */
+.gp-v3-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.gp-v3-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2E7D32;
+  border: 1px solid #e0e8e2;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.stat-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  color: #1a1a2e;
+  font-weight: 700;
+}
+
+.stat-info p {
+  font-size: 0.78rem;
+  color: #6B7280;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  letter-spacing: 0.3px;
+}
+
+/* ── MAP VISUAL ── */
+.gp-v3-visual-area {
+  position: relative;
+  z-index: 2;
+}
+
+.gp-v3-map-frame {
+  width: 100%;
+  aspect-ratio: 16/7;
+  background: #fff;
+  border: 1px solid #e0e8e2;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.06);
+}
+
+.gp-v3-map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  filter: saturate(0.3) brightness(1.15);
+}
+
+.gp-v3-scanner-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #4CAF50, transparent);
+  box-shadow: 0 0 12px rgba(76,175,80,0.4);
+  animation: map-scan 4s infinite linear;
+  z-index: 3;
+}
+
+@keyframes map-scan {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* ── NODES ── */
+.gp-v3-node {
+  position: absolute;
+  z-index: 5;
+}
+
+.node-dot {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  border: 2.5px solid #4CAF50;
+  box-shadow: 0 2px 8px rgba(76,175,80,0.25);
+}
+
+.is-hq .node-dot {
+  background: #4CAF50;
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 2px 12px rgba(76,175,80,0.4);
+}
+
+.node-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #4CAF50;
+  border-radius: 50%;
+  animation: node-ping 2s infinite ease-out;
+}
+
+@keyframes node-ping {
+  0% { width: 100%; height: 100%; opacity: 1; }
+  100% { width: 400%; height: 400%; opacity: 0; }
+}
+
+.node-card {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #e0e8e2;
+  border-radius: 10px;
+  padding: 10px 14px;
+  min-width: 135px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.gp-v3-node:hover .node-card {
+  opacity: 1;
+  visibility: visible;
+  bottom: 30px;
+}
+
+.node-card-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2E7D32;
+}
+
+.node-card-content strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #1a1a2e;
+}
+
+.node-card-content span {
+  font-size: 0.72rem;
+  color: #6B7280;
+}
+
+.node-connector {
+  display: none;
+}
+
+/* ── BOTTOM BOXES ── */
+.gp-v3-bottom-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: -36px;
+  padding: 0 32px;
+  position: relative;
+}
+
+.info-box {
+  background: #fff;
+  padding: 36px;
+  border: 1px solid #e0e8e2;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+}
+
+.info-box.accent {
+  border-color: rgba(76, 175, 80, 0.25);
+  background: linear-gradient(135deg, #f0faf1 0%, #fff 100%);
+}
+
+.info-box h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  color: #2E7D32;
+  font-weight: 600;
+}
+
+.info-box p {
+  color: #6B7280;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 1024px) {
+  .gp-v3-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 36px;
+  }
+
+  .gp-v3-heading {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gp-v3-section {
+    padding: 64px 0;
+  }
+
+  .gp-v3-top {
+    margin-bottom: 40px;
+  }
+
+  .gp-v3-heading {
+    font-size: 2.1rem;
+  }
+
+  .gp-v3-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gp-v3-stat-card {
+    justify-content: center;
+  }
+
+  .gp-v3-bottom-info {
+    grid-template-columns: 1fr;
+    margin-top: 24px;
+    padding: 0;
+    gap: 16px;
+  }
+
+  .info-box {
+    padding: 28px 24px;
+  }
+
+  .gp-v3-map-frame {
+    aspect-ratio: 16/10;
+    border-radius: 12px;
+  }
+
+  .gp-v3-bg-text {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gp-v3-section {
+    padding: 48px 0;
+  }
+
+  .gp-v3-heading {
+    font-size: 1.75rem;
+  }
+
+  .gp-v3-bg-text {
+    font-size: 5rem;
+  }
+
+  .gp-v3-badge {
+    font-size: 0.72rem;
+    padding: 5px 12px;
+  }
+
+  .info-box {
+    padding: 24px 20px;
+  }
+
+  .info-box h3 {
+    font-size: 1.15rem;
+  }
+
+  .info-box p {
+    font-size: 0.92rem;
+  }
+
+  .gp-v3-map-frame {
+    border-radius: 10px;
+  }
+}

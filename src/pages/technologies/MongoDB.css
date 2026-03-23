@@ -1,0 +1,174 @@
+/* ============================================
+   MongoDB Page — mg-* Styles
+   Atlas Dark #001E2B | Green #47A248 | Neon #00ED64
+   ============================================ */
+
+/* ── STATS — MongoDB Atlas dark theme ── */
+.mg-stats { background: #001E2B; padding: 0; }
+.mg-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.mg-stat {
+  padding: 38px 24px; text-align: center;
+  border-right: 1px solid rgba(0, 237, 100, 0.12);
+  transition: background 0.3s; position: relative;
+}
+.mg-stat:last-child { border-right: none; }
+.mg-stat:hover { background: rgba(0, 237, 100, 0.06); }
+.mg-stat::after {
+  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 0; height: 2px; background: linear-gradient(90deg, #00ED64, #47A248);
+  transition: width 0.4s; border-radius: 2px;
+}
+.mg-stat:hover::after { width: 55%; }
+.mg-stat-num {
+  font-size: 2.6rem; font-weight: 600; line-height: 1;
+  display: block; margin-bottom: 6px;
+  background: linear-gradient(135deg, #00ED64, #47A248);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.mg-stat-label {
+  font-size: 0.85rem; color: rgba(255,255,255,0.45);
+  text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500;
+}
+
+/* ── SERVICES — 3-col Atlas-dark header cards with JSON snippet ── */
+.mg-svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
+.mg-svc-card {
+  background: #fff; border-radius: 16px;
+  border: 1.5px solid #e8edf5; overflow: hidden;
+  transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s;
+}
+.mg-svc-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 52px rgba(0, 237, 100, 0.12);
+  border-color: rgba(71, 162, 72, 0.4);
+}
+.mg-svc-header {
+  background: linear-gradient(135deg, #001E2B, #023430);
+  padding: 18px 20px; display: flex; align-items: flex-start; gap: 14px;
+}
+.mg-svc-icon {
+  width: 46px; height: 46px; border-radius: 10px;
+  background: rgba(0, 237, 100, 0.15); border: 1.5px solid rgba(0, 237, 100, 0.3);
+  display: flex; align-items: center; justify-content: center; color: #00ED64; flex-shrink: 0;
+  transition: background 0.35s, transform 0.35s;
+}
+.mg-svc-card:hover .mg-svc-icon { background: #00ED64; color: #001E2B; transform: rotate(-8deg) scale(1.1); }
+.mg-svc-header-text { flex: 1; }
+.mg-svc-title { font-size: 1.2rem; font-weight: 500; color: #fff; line-height: 1.3; }
+.mg-svc-badge {
+  display: inline-block; margin-top: 5px;
+  font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 4px;
+  background: rgba(0, 237, 100, 0.2); color: #00ED64;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+
+/* JSON-style snippet preview — unique to MongoDB page */
+.mg-svc-snippet {
+  background: #061f2d; padding: 10px 18px;
+  font-family: 'Courier New', Courier, monospace; font-size: 0.71rem;
+  color: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(0, 237, 100, 0.08);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.mg-svc-snippet .mg-snip-key { color: #699dc8; }
+.mg-svc-snippet .mg-snip-val { color: #00ED64; }
+.mg-svc-snippet .mg-snip-str { color: #f9c784; }
+
+.mg-svc-body { padding: 20px 20px 22px; }
+.mg-svc-body p { font-size: 1rem; color: #64748b; line-height: 1.7; margin-bottom: 14px; }
+.mg-svc-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.mg-svc-chip {
+  font-size: 0.72rem; font-weight: 600; padding: 4px 11px; border-radius: 6px;
+  background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0;
+  transition: all 0.25s;
+}
+.mg-svc-card:hover .mg-svc-chip { background: rgba(0, 237, 100, 0.1); color: #1a6b2a; border-color: rgba(71,162,72,0.35); }
+
+/* ── WHY MONGODB — 2-col icon-circle cards ── */
+.mg-why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 48px; }
+.mg-why-card {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 28px 26px; background: #fff;
+  border: 1.5px solid #e8edf5; border-radius: 16px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.mg-why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(0, 237, 100, 0.1);
+  border-color: rgba(71,162,72,0.35);
+}
+.mg-why-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: linear-gradient(135deg, #001E2B, #023430);
+  display: flex; align-items: center; justify-content: center; color: #00ED64; flex-shrink: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.mg-why-card:hover .mg-why-icon {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 0 0 7px rgba(0, 237, 100, 0.12);
+}
+.mg-why-card h3 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0 0 8px; }
+.mg-why-card p { font-size: 1rem; color: #64748b; line-height: 1.7; margin: 0; }
+
+/* ── PRODUCTS — 4-col neon green glow on hover ── */
+.mg-products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+.mg-product-card {
+  background: #fff; border-radius: 14px; border: 1.5px solid #e8edf5;
+  padding: 22px 18px; display: flex; flex-direction: column; gap: 10px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.mg-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(0, 237, 100, 0.18);
+  border-color: rgba(71,162,72,0.4);
+}
+.mg-product-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: rgba(0, 237, 100, 0.1);
+  display: flex; align-items: center; justify-content: center; color: #47A248;
+  transition: background 0.3s, color 0.3s;
+}
+.mg-product-card:hover .mg-product-icon { background: #00ED64; color: #001E2B; }
+.mg-product-name { font-size: 1.2rem; font-weight: 500; color: #1e293b; }
+.mg-product-desc { font-size: 1rem; color: #64748b; line-height: 1.7; }
+
+/* ── EXPERIENCE ── */
+.mg-exp-wrap { margin-top: 36px; }
+.mg-exp-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.mg-exp-item { display: flex; align-items: center; gap: 12px; font-size: 0.97rem; color: #1e293b; line-height: 1.5; background: #f4fdf5; border: 1px solid #b8dfba; border-left: 4px solid #47A248; border-radius: 8px; padding: 12px 16px; }
+.mg-exp-item svg { flex-shrink: 0; color: #47A248; }
+.mg-exp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.mg-exp-tag { font-size: 0.85rem; font-weight: 600; padding: 6px 16px; border-radius: 20px; border: 1.5px solid #b7dfb9; color: #276d2b; background: #f0fdf4; }
+
+/* ── WHY BTPL — 4-col ── */
+.mg-btpl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.mg-btpl-card {
+  background: #fff; border-radius: 14px; border: 1.5px solid #e8edf5;
+  padding: 28px 22px; display: flex; flex-direction: column; gap: 12px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.mg-btpl-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(0,237,100,0.12); border-color: rgba(71,162,72,0.35); }
+.mg-btpl-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(0, 237, 100, 0.1);
+  display: flex; align-items: center; justify-content: center; color: #47A248;
+  transition: background 0.3s, color 0.3s;
+}
+.mg-btpl-card:hover .mg-btpl-icon { background: #47A248; color: #fff; }
+.mg-btpl-card h4 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0; }
+.mg-btpl-card p { font-size: 1rem; color: #64748b; line-height: 1.7; margin: 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .mg-svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .mg-products-grid { grid-template-columns: repeat(3, 1fr); }
+  .mg-btpl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .mg-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .mg-svc-grid { grid-template-columns: 1fr; }
+  .mg-why-grid { grid-template-columns: 1fr; }
+  .mg-products-grid { grid-template-columns: repeat(2, 1fr); }
+  .mg-exp-list { grid-template-columns: 1fr; }
+  .mg-btpl-grid { grid-template-columns: 1fr; }
+}

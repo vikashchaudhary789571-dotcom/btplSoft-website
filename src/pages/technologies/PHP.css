@@ -1,0 +1,131 @@
+/* ============================================
+   PHP Technology Page — ph-* Styles
+   Brand Blue #2196F3 | PHP Purple hover #8892BF
+   ============================================ */
+
+/* ── STATS STRIP ── */
+.ph-stats { background: var(--dark-900); padding: 0; }
+.ph-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.ph-stat {
+  padding: 36px 24px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  transition: background var(--transition-normal);
+}
+.ph-stat:last-child { border-right: none; }
+.ph-stat:hover { background: rgba(33,150,243,0.08); }
+.ph-stat-num {
+  font-size: 2.4rem; font-weight: 600;
+  color: var(--white); display: block;
+  line-height: 1; margin-bottom: 6px;
+}
+.ph-stat-num span { color: var(--primary-blue); }
+.ph-stat-label { font-size: 0.82rem; color: var(--gray-300); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ── SERVICES — 2-col icon-left card layout ── */
+.ph-svc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+.ph-svc-card {
+  display: flex; gap: 20px; align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md); padding: 28px 24px;
+  transition: box-shadow var(--transition-normal), border-color var(--transition-normal), transform var(--transition-normal);
+}
+.ph-svc-card:hover { box-shadow: var(--shadow-lg); border-color: var(--primary-blue); transform: translateY(-3px); }
+.ph-svc-icon-wrap {
+  flex-shrink: 0; width: 54px; height: 54px;
+  border-radius: var(--radius-sm); background: #e3f2fd;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--primary-blue);
+  transition: background var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+}
+.ph-svc-card:hover .ph-svc-icon-wrap { background: #8892BF; color: var(--white); transform: rotate(-8deg) scale(1.12); }
+.ph-svc-body h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 8px; color: var(--dark-800); }
+.ph-svc-body p { font-size: 1rem; line-height: 1.7; color: var(--gray-400); margin-bottom: 10px; }
+.ph-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.ph-tag {
+  font-size: 0.7rem; font-weight: 600;
+  padding: 3px 10px; border-radius: 20px;
+  background: #e3f2fd; color: var(--primary-blue);
+  text-transform: uppercase; letter-spacing: 0.04em;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.ph-svc-card:hover .ph-tag { background: #ede7f6; color: #8892BF; }
+
+/* ── WHY PHP — 3-col numbered cards on dark bg ── */
+.ph-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+.ph-why-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: var(--radius-md); padding: 32px 24px;
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: background var(--transition-normal), border-color var(--transition-normal), transform var(--transition-normal);
+}
+.ph-why-card:hover { background: rgba(136,146,191,0.12); border-color: rgba(136,146,191,0.4); transform: translateY(-4px); }
+.ph-why-num {
+  font-size: 3.2rem; font-weight: 900;
+  color: rgba(33,150,243,0.18); line-height: 1; margin-bottom: 8px;
+  transition: color var(--transition-normal);
+}
+.ph-why-card:hover .ph-why-num { color: rgba(136,146,191,0.5); }
+.ph-why-icon {
+  color: var(--primary-blue); margin-bottom: 12px;
+  transition: color var(--transition-normal), transform var(--transition-normal);
+}
+.ph-why-card:hover .ph-why-icon { color: #8892BF; transform: scale(1.25) rotate(-5deg); }
+.ph-why-card h3 { font-size: 1.2rem; font-weight: 500; color: var(--white); margin-bottom: 8px; }
+.ph-why-card p { font-size: 1rem; color: var(--gray-300); line-height: 1.7; }
+
+/* ── EXPERIENCE ── */
+.ph-exp-wrap { display: flex; flex-direction: column; gap: 28px; margin-top: 32px; }
+.ph-exp-counters { display: flex; flex-wrap: wrap; gap: 16px; }
+.ph-exp-counter {
+  flex: 1 1 140px; border-radius: var(--radius-sm); padding: 18px 20px;
+  text-align: center; color: var(--dark-800);
+  background: #f8fafc; border: 1px solid #e2e8f0;
+}
+.ph-exp-counter:nth-child(2) { background: #f8fafc; }
+.ph-exp-counter-num { font-size: 1.7rem; font-weight: 700; display: block; margin-bottom: 4px; color: var(--primary-blue); }
+.ph-exp-counter-label { font-size: 0.78rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.07em; }
+.ph-exp-list { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px 28px; }
+.ph-exp-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 0.9rem; color: var(--dark-800); line-height: 1.5;
+}
+.ph-exp-item svg { color: var(--primary-green); flex-shrink: 0; margin-top: 2px; }
+
+/* ── WHY BTPL — 4-col icon-top on light bg ── */
+.ph-btpl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 48px; }
+.ph-btpl-card {
+  text-align: center; padding: 32px 20px;
+  border-radius: var(--radius-md); background: var(--white);
+  border: 1px solid var(--gray-200);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+.ph-btpl-card:hover { border-color: var(--primary-blue); box-shadow: var(--shadow-md); transform: translateY(-5px); }
+.ph-btpl-icon {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: linear-gradient(135deg, #e3f2fd, #f1f8e9);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px; color: var(--primary-blue);
+  transition: color var(--transition-normal), background var(--transition-normal), transform var(--transition-normal);
+}
+.ph-btpl-card:hover .ph-btpl-icon {
+  background: linear-gradient(135deg, #8892BF, var(--primary-blue));
+  color: var(--white); transform: rotate(12deg) scale(1.1);
+}
+.ph-btpl-card h4 { font-size: 1.2rem; font-weight: 500; margin-bottom: 8px; color: var(--dark-800); }
+.ph-btpl-card p { font-size: 1rem; color: var(--gray-400); line-height: 1.7; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .ph-svc-grid { grid-template-columns: 1fr; }
+  .ph-why-grid { grid-template-columns: repeat(2, 1fr); }
+  .ph-btpl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .ph-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .ph-why-grid { grid-template-columns: 1fr; }
+  .ph-exp-list { grid-template-columns: repeat(2, 1fr); }
+  .ph-btpl-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) { .ph-btpl-grid { grid-template-columns: 1fr; } }

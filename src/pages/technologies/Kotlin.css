@@ -1,0 +1,128 @@
+/* ============================================
+   Kotlin Page — kt-* Styles
+   Brand Purple #7F52FF | Light: #f3e8ff
+   ============================================ */
+
+/* ── STATS — dark bg, green to purple gradient nums ── */
+.kt-stats { background: #f3e8ff; padding: 0; }
+.kt-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.kt-stat {
+  padding: 36px 24px; text-align: center;
+  border-right: 1px solid rgba(127,82,255,0.1);
+  transition: background var(--transition-normal);
+}
+.kt-stat:last-child { border-right: none; }
+.kt-stat:hover { background: rgba(127,82,255,0.08); }
+.kt-stat-num {
+  font-size: 2.5rem; font-weight: 600; line-height: 1; display: block; margin-bottom: 6px;
+  color: #7F52FF;
+}
+.kt-stat-label { font-size: 0.82rem; color: #546e7a; text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ── SERVICES — 2-col with icon-top gradient header area ── */
+.kt-svc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+.kt-svc-card {
+  border-radius: var(--radius-md); overflow: hidden;
+  border: 1px solid var(--gray-200); background: var(--white);
+  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+.kt-svc-card:hover { box-shadow: 0 10px 36px rgba(127,82,255,0.10); transform: translateY(-5px); }
+.kt-svc-header {
+  height: 90px; display: flex; align-items: center; justify-content: center;
+  background: #f3e8ff;
+  color: #7F52FF;
+  transition: background var(--transition-normal), color var(--transition-normal);
+}
+.kt-svc-card:hover .kt-svc-header { background: #ede7f6; color: #5E35B1; }
+.kt-svc-header svg { transition: transform var(--transition-normal); }
+.kt-svc-card:hover .kt-svc-header svg { transform: scale(1.2) rotate(10deg); }
+.kt-svc-body { padding: 22px; }
+.kt-svc-body h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 8px; color: var(--dark-800); }
+.kt-svc-body p { font-size: 1rem; color: var(--gray-400); line-height: 1.7; margin-bottom: 12px; }
+.kt-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.kt-tag {
+  font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 20px;
+  background: #f3e8ff; color: #7F52FF; text-transform: uppercase; letter-spacing: 0.04em;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.kt-svc-card:hover .kt-tag { background: #ede7f6; color: #512DA8; }
+
+/* ── WHY KOTLIN — alternating row layout ── */
+.kt-why-list { display: flex; flex-direction: column; gap: 16px; margin-top: 48px; }
+.kt-why-row {
+  display: grid; grid-template-columns: 60px 220px 1fr;
+  gap: 24px; align-items: center;
+  padding: 22px 28px; background: var(--white);
+  border-radius: var(--radius-md); border-left: 4px solid #7F52FF;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+.kt-why-row:nth-child(even) { border-left-color: #9575CD; }
+.kt-why-row:hover { border-left-color: #7F52FF; box-shadow: var(--shadow-md); transform: translateX(4px); }
+.kt-why-icon {
+  width: 52px; height: 52px; border-radius: var(--radius-sm);
+  background: #f3e8ff; display: flex; align-items: center; justify-content: center;
+  color: #7F52FF;
+  transition: background var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+}
+.kt-why-row:hover .kt-why-icon { background: #ede7f6; color: #5E35B1; transform: rotate(-8deg) scale(1.1); }
+.kt-why-title { font-size: 1.2rem; font-weight: 500; color: var(--dark-800); }
+.kt-why-desc { font-size: 1rem; color: var(--gray-400); line-height: 1.7; }
+
+/* ── EXPERIENCE — professional card grid ── */
+.kt-exp-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px;
+}
+.kt-exp-card {
+  background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-md);
+  padding: 24px 20px; text-align: center;
+  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+.kt-exp-card:hover { box-shadow: 0 6px 24px rgba(127,82,255,0.08); transform: translateY(-3px); }
+.kt-exp-icon {
+  width: 44px; height: 44px; border-radius: 50%; margin: 0 auto 14px;
+  background: #f3e8ff; display: flex; align-items: center; justify-content: center;
+  color: #7F52FF;
+}
+.kt-exp-text { font-size: 0.92rem; font-weight: 500; color: var(--dark-800); line-height: 1.5; }
+
+.kt-tech-strip {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+  margin-top: 36px; padding-top: 32px; border-top: 1px solid var(--gray-200);
+}
+.kt-bubble { font-size: 0.85rem; font-weight: 500; padding: 8px 18px; border-radius: 8px; color: #5E35B1; background: #f3e8ff; }
+
+/* ── WHY BTPL — light 4-col ── */
+.kt-btpl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 48px; }
+.kt-btpl-card {
+  text-align: center; padding: 28px 18px; border-radius: var(--radius-md);
+  background: var(--white); border: 1px solid var(--gray-200);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+.kt-btpl-card:hover { border-color: #B39DDB; box-shadow: var(--shadow-md); transform: translateY(-5px); }
+.kt-btpl-icon {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #f3e8ff; display: flex; align-items: center; justify-content: center;
+  color: #7F52FF; margin: 0 auto 14px;
+  transition: background var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+}
+.kt-btpl-card:hover .kt-btpl-icon { background: #ede7f6; color: #5E35B1; transform: rotate(12deg) scale(1.1); }
+.kt-btpl-card h4 { font-size: 1.2rem; font-weight: 500; color: var(--dark-800); margin-bottom: 6px; }
+.kt-btpl-card p { font-size: 1rem; color: var(--gray-400); line-height: 1.7; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .kt-svc-grid { grid-template-columns: 1fr; }
+  .kt-why-row { grid-template-columns: 52px 1fr; }
+  .kt-why-desc { grid-column: 2; }
+  .kt-exp-grid { grid-template-columns: repeat(2, 1fr); }
+  .kt-btpl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .kt-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .kt-why-row { grid-template-columns: 1fr; }
+  .kt-why-icon { display: none; }
+  .kt-exp-grid { grid-template-columns: repeat(2, 1fr); }
+  .kt-btpl-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) { .kt-btpl-grid { grid-template-columns: 1fr; } }

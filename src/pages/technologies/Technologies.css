@@ -1,0 +1,288 @@
+/* ============================================
+   BTPL SOFT — Technologies Listing Page
+   ============================================ */
+
+.tp-page {
+  font-family: var(--font-body);
+  background: #fff;
+  color: var(--dark-800);
+}
+
+/* ── Hero ── */
+.tp-hero {
+  padding: 140px 0 80px;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 22, 40, 0.5);
+  z-index: 0;
+}
+
+.tp-hero .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.tp-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tp-eyebrow {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #4CAF50;
+  margin-bottom: 14px;
+}
+
+.tp-hero-title {
+  font-family: var(--font-primary);
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.12;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.tp-blue { color: #2196F3; }
+
+.tp-hero-sub {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Body section ── */
+.tp-body {
+  padding: 70px 0 90px;
+  background: #f8fafc;
+}
+
+/* ── Filter tabs ── */
+.tp-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.tp-tab {
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 22px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 0;
+  background: #fff;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tp-tab:hover {
+  border-color: #2196F3;
+  color: #2196F3;
+}
+
+.tp-tab.active {
+  background: #2196F3;
+  border-color: #2196F3;
+  color: #fff;
+}
+
+/* ── Category section ── */
+.tp-category-section {
+  margin-bottom: 60px;
+}
+
+.tp-category-section:last-child {
+  margin-bottom: 0;
+}
+
+.tp-category-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.tp-category-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tp-category-title {
+  font-family: var(--font-primary);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.tp-category-count {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  background: #f1f5f9;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.tp-category-line {
+  flex: 1;
+  height: 2px;
+  border-radius: 2px;
+  opacity: 0.25;
+}
+
+/* ── Grid ── */
+.tp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* ── Card ── */
+.tp-card {
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 0;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.22s ease;
+}
+
+.tp-card:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 6px 22px rgba(33,150,243,0.1);
+  transform: translateY(-3px);
+}
+
+.tp-card:hover .tp-card-arrow {
+  color: #2196F3;
+  transform: translateX(3px);
+}
+
+.tp-card-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  flex-shrink: 0;
+  letter-spacing: -0.5px;
+}
+
+.tp-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.tp-card-name {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tp-card-cat {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.tp-card-arrow {
+  color: #cbd5e1;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+/* ── CTA ── */
+.tp-cta {
+  background: linear-gradient(130deg, #0a1628 0%, #0d1b2a 60%, #0f2a1a 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.tp-cta h2 {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.tp-cta p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.62);
+  margin-bottom: 32px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .tp-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 1024px) {
+  .tp-hero-title { font-size: 2.8rem; }
+}
+
+@media (max-width: 768px) {
+  .tp-grid { grid-template-columns: repeat(2, 1fr); }
+  .tp-hero-title { font-size: 2rem; }
+  .tp-hero { padding: 100px 0 48px; min-height: 360px; }
+}
+
+@media (max-width: 480px) {
+  .tp-grid { grid-template-columns: 1fr; }
+}

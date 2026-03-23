@@ -1,0 +1,350 @@
+/* ── Google Cloud Page Styles ── */
+/* Prefix: gc-* */
+/* Brand palette: Blue #4285F4 | Red #EA4335 | Yellow #FBBC05 | Green #34A853 */
+
+/* ═══════════════════════════════
+   STATS STRIP
+═══════════════════════════════ */
+.gc-stats {
+  background: #fff;
+  padding: 56px 0;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.gc-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.gc-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  border-right: 1px solid #e8eaed;
+  transition: background 0.2s;
+}
+.gc-stat:last-child { border-right: none; }
+.gc-stat:hover { background: #f8f9ff; }
+
+.gc-stat-num {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+/* Rotating GCP colors on stat numbers */
+.gc-stat:nth-child(1) .gc-stat-num { color: #4285F4; }
+.gc-stat:nth-child(2) .gc-stat-num { color: #EA4335; }
+.gc-stat:nth-child(3) .gc-stat-num { color: #34A853; }
+.gc-stat:nth-child(4) .gc-stat-num { color: #FBBC05; }
+
+.gc-stat-label {
+  font-size: 0.88rem;
+  color: #5f6368;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ═══════════════════════════════
+   SERVICES — 3-COL CARDS
+═══════════════════════════════ */
+.gc-svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.gc-svc-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #dadce0;
+  border-top: 4px solid transparent;
+  padding: 28px 24px;
+  transition: transform 0.22s, box-shadow 0.22s, border-top-color 0.22s;
+}
+.gc-svc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.1);
+}
+
+/* GCP rotating top border */
+.gc-svc-card:nth-child(1) { border-top-color: #4285F4; }
+.gc-svc-card:nth-child(2) { border-top-color: #EA4335; }
+.gc-svc-card:nth-child(3) { border-top-color: #34A853; }
+.gc-svc-card:nth-child(4) { border-top-color: #FBBC05; }
+.gc-svc-card:nth-child(5) { border-top-color: #4285F4; }
+.gc-svc-card:nth-child(6) { border-top-color: #EA4335; }
+
+.gc-svc-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.gc-svc-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* GCP rotating icon bg */
+.gc-svc-card:nth-child(1) .gc-svc-icon { background: rgba(66,133,244,0.1); color: #4285F4; }
+.gc-svc-card:nth-child(2) .gc-svc-icon { background: rgba(234,67,53,0.1);  color: #EA4335; }
+.gc-svc-card:nth-child(3) .gc-svc-icon { background: rgba(52,168,83,0.1);  color: #34A853; }
+.gc-svc-card:nth-child(4) .gc-svc-icon { background: rgba(251,188,5,0.1);  color: #F9AB00; }
+.gc-svc-card:nth-child(5) .gc-svc-icon { background: rgba(66,133,244,0.1); color: #4285F4; }
+.gc-svc-card:nth-child(6) .gc-svc-icon { background: rgba(234,67,53,0.1);  color: #EA4335; }
+
+.gc-svc-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-left: auto;
+}
+
+.gc-svc-card:nth-child(1) .gc-svc-badge { background: rgba(66,133,244,0.1);  color: #4285F4; }
+.gc-svc-card:nth-child(2) .gc-svc-badge { background: rgba(234,67,53,0.1);   color: #EA4335; }
+.gc-svc-card:nth-child(3) .gc-svc-badge { background: rgba(52,168,83,0.1);   color: #34A853; }
+.gc-svc-card:nth-child(4) .gc-svc-badge { background: rgba(251,188,5,0.12);  color: #B8860B; }
+.gc-svc-card:nth-child(5) .gc-svc-badge { background: rgba(66,133,244,0.1);  color: #4285F4; }
+.gc-svc-card:nth-child(6) .gc-svc-badge { background: rgba(234,67,53,0.1);   color: #EA4335; }
+
+.gc-svc-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #202124;
+  margin: 0 0 10px;
+}
+
+.gc-svc-card p {
+  font-size: 1rem;
+  color: #5f6368;
+  line-height: 1.7;
+  margin: 0 0 16px;
+}
+
+.gc-svc-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.gc-svc-chip {
+  font-size: 0.75rem;
+  background: #f1f3f4;
+  color: #3c4043;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-weight: 500;
+  transition: background 0.18s;
+}
+.gc-svc-chip:hover { background: #e8eaed; }
+
+/* ═══════════════════════════════
+   WHY GCP — 2-COL ICON-LEFT
+═══════════════════════════════ */
+.gc-why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.gc-why-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #dadce0;
+  padding: 28px 24px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  transition: box-shadow 0.22s, transform 0.22s;
+}
+.gc-why-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.09);
+}
+
+.gc-why-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* GCP rotating why-card icon colors */
+.gc-why-card:nth-child(1) .gc-why-icon { background: rgba(66,133,244,0.1);  color: #4285F4; }
+.gc-why-card:nth-child(2) .gc-why-icon { background: rgba(234,67,53,0.1);   color: #EA4335; }
+.gc-why-card:nth-child(3) .gc-why-icon { background: rgba(52,168,83,0.1);   color: #34A853; }
+.gc-why-card:nth-child(4) .gc-why-icon { background: rgba(251,188,5,0.12);  color: #F9AB00; }
+.gc-why-card:nth-child(5) .gc-why-icon { background: rgba(66,133,244,0.1);  color: #4285F4; }
+.gc-why-card:nth-child(6) .gc-why-icon { background: rgba(234,67,53,0.1);   color: #EA4335; }
+
+.gc-why-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #202124;
+  margin: 0 0 8px;
+}
+.gc-why-card p {
+  font-size: 1rem;
+  color: #5f6368;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ═══════════════════════════════
+   GCP PRODUCTS GRID (4-col)
+═══════════════════════════════ */
+.gc-products-section {
+  background: #f8f9fa;
+}
+
+.gc-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.gc-product-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #dadce0;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.22s, transform 0.22s;
+}
+.gc-product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.gc-product-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gc-product-card:nth-child(1) .gc-product-icon { background: rgba(66,133,244,0.1);  color: #4285F4; }
+.gc-product-card:nth-child(2) .gc-product-icon { background: rgba(234,67,53,0.1);   color: #EA4335; }
+.gc-product-card:nth-child(3) .gc-product-icon { background: rgba(52,168,83,0.1);   color: #34A853; }
+.gc-product-card:nth-child(4) .gc-product-icon { background: rgba(251,188,5,0.12);  color: #F9AB00; }
+.gc-product-card:nth-child(5) .gc-product-icon { background: rgba(66,133,244,0.1);  color: #4285F4; }
+.gc-product-card:nth-child(6) .gc-product-icon { background: rgba(234,67,53,0.1);   color: #EA4335; }
+.gc-product-card:nth-child(7) .gc-product-icon { background: rgba(52,168,83,0.1);   color: #34A853; }
+.gc-product-card:nth-child(8) .gc-product-icon { background: rgba(251,188,5,0.12);  color: #F9AB00; }
+
+.gc-product-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #202124;
+}
+
+.gc-product-desc {
+  font-size: 1rem;
+  color: #5f6368;
+  line-height: 1.7;
+}
+
+/* ═══════════════════════════════
+   EXPERIENCE — simple grid
+═══════════════════════════════ */
+.gc-exp-wrap { margin-top: 36px; }
+.gc-exp-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.gc-exp-item { display: flex; align-items: center; gap: 12px; font-size: 0.97rem; color: #1e293b; line-height: 1.5; background: #f4fcf6; border: 1px solid #b8e4c4; border-left: 4px solid #34A853; border-radius: 8px; padding: 12px 16px; }
+.gc-exp-item svg { flex-shrink: 0; color: #34A853; }
+.gc-exp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.gc-exp-tag { font-size: 0.85rem; font-weight: 600; padding: 6px 16px; border-radius: 20px; border: 1.5px solid #b0d9b7; color: #1e6e35; background: #e8f8ed; }
+
+/* ═══════════════════════════════
+   WHY BTPL — 4-COL
+═══════════════════════════════ */
+.gc-btpl-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.gc-btpl-card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #dadce0;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.22s, transform 0.22s;
+}
+.gc-btpl-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+.gc-btpl-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gc-btpl-card:nth-child(1) .gc-btpl-icon { background: rgba(66,133,244,0.1);  color: #4285F4; }
+.gc-btpl-card:nth-child(2) .gc-btpl-icon { background: rgba(234,67,53,0.1);   color: #EA4335; }
+.gc-btpl-card:nth-child(3) .gc-btpl-icon { background: rgba(52,168,83,0.1);   color: #34A853; }
+.gc-btpl-card:nth-child(4) .gc-btpl-icon { background: rgba(251,188,5,0.12);  color: #F9AB00; }
+
+.gc-btpl-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #202124;
+  margin: 0;
+}
+.gc-btpl-card p {
+  font-size: 1rem;
+  color: #5f6368;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE
+═══════════════════════════════ */
+@media (max-width: 1100px) {
+  .gc-svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .gc-products-grid { grid-template-columns: repeat(3, 1fr); }
+  .gc-btpl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .gc-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .gc-stat { border-right: none; border-bottom: 1px solid #e8eaed; }
+  .gc-stat:nth-child(odd) { border-right: 1px solid #e8eaed; }
+  .gc-svc-grid { grid-template-columns: 1fr; }
+  .gc-why-grid { grid-template-columns: 1fr; }
+  .gc-products-grid { grid-template-columns: repeat(2, 1fr); }
+  .gc-exp-list { grid-template-columns: 1fr; }
+  .gc-btpl-grid { grid-template-columns: 1fr; }
+}

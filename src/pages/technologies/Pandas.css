@@ -1,0 +1,170 @@
+/* ============================================
+   Pandas Page — pd-* Styles
+   Ocean Blue #0077B6 | Sky Blue #00B4D8 | Light #E0F8FF
+   Unique design: Jupyter notebook-cell service cards with In [n]: label
+   ============================================ */
+
+/* ── SECTION HEADING WRAPPER ── */
+.pd-sec-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.pd-sec-head .sp-heading { max-width: 800px; margin-left: auto; margin-right: auto; }
+
+/* ── STATS — light sky bg, ocean blue gradient numbers ── */
+.pd-stats { background: #f0fbff; border-bottom: 2px solid #cceeff; padding: 0; }
+.pd-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.pd-stat {
+  padding: 40px 24px; text-align: center;
+  border-right: 1px solid #cceeff;
+  position: relative; overflow: hidden; transition: background 0.3s;
+}
+.pd-stat:last-child { border-right: none; }
+.pd-stat:hover { background: #e0f5ff; }
+.pd-stat::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; background: linear-gradient(90deg, #0077B6, #00B4D8);
+  transform: scaleX(0); transition: transform 0.4s; transform-origin: center;
+}
+.pd-stat:hover::after { transform: scaleX(1); }
+.pd-stat-num {
+  font-size: 2.6rem; font-weight: 600; line-height: 1;
+  display: block; margin-bottom: 6px;
+  background: linear-gradient(135deg, #0077B6, #00B4D8);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.pd-stat-label {
+  font-size: 0.85rem; color: #3a6a82;
+  text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500;
+}
+
+/* ── SERVICES — Jupyter notebook-cell cards in 2-col grid ── */
+.pd-svc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 48px; }
+.pd-svc-cell {
+  background: #fff; border-radius: 14px; border: 1.5px solid #e8edf5; overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.pd-svc-cell:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 50px rgba(0,119,182,0.13);
+  border-color: rgba(0,119,182,0.4);
+}
+/* Notebook cell header strip */
+.pd-svc-cell-header {
+  background: linear-gradient(90deg, #0077B6, #00B4D8);
+  padding: 10px 20px; display: flex; align-items: center; gap: 14px;
+}
+.pd-svc-cell-label {
+  font-family: 'Courier New', monospace;
+  font-size: 0.72rem; color: rgba(255,255,255,0.7); white-space: nowrap;
+}
+.pd-svc-cell-badge {
+  font-size: 0.65rem; font-weight: 700; padding: 2px 9px; border-radius: 4px;
+  background: rgba(255,255,255,0.25); color: #fff;
+  text-transform: uppercase; letter-spacing: 0.06em; margin-left: auto;
+}
+/* Icon + title row */
+.pd-svc-cell-title-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 18px 20px 14px; border-bottom: 1px solid #f0f4f8;
+}
+.pd-svc-icon {
+  width: 46px; height: 46px; border-radius: 10px; flex-shrink: 0;
+  background: rgba(0,119,182,0.08);
+  display: flex; align-items: center; justify-content: center; color: #0077B6;
+  transition: background 0.3s, color 0.3s;
+}
+.pd-svc-cell:hover .pd-svc-icon { background: #0077B6; color: #fff; }
+.pd-svc-cell h3 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0; }
+.pd-svc-body { padding: 14px 20px 20px; }
+.pd-svc-body p { font-size: 1rem; color: #64748b; line-height: 1.7; margin-bottom: 14px; }
+.pd-svc-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.pd-svc-chip {
+  font-size: 0.72rem; font-weight: 600; padding: 4px 11px; border-radius: 6px;
+  background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; transition: all 0.25s;
+}
+.pd-svc-cell:hover .pd-svc-chip { background: rgba(0,119,182,0.1); color: #005f8f; border-color: rgba(0,119,182,0.28); }
+
+/* ── WHY PANDAS — 2-col horizontal icon-left cards with bottom border reveal ── */
+.pd-why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 48px; }
+.pd-why-card {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 28px 26px; background: #fff;
+  border: 1.5px solid #e8edf5; border-radius: 16px;
+  border-bottom: 4px solid transparent;
+  transition: transform 0.3s, box-shadow 0.3s, border-bottom-color 0.3s;
+}
+.pd-why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 42px rgba(0,119,182,0.1);
+  border-bottom-color: #0077B6;
+}
+.pd-why-icon {
+  width: 52px; height: 52px; border-radius: 14px; flex-shrink: 0;
+  background: rgba(0,119,182,0.1);
+  display: flex; align-items: center; justify-content: center; color: #0077B6;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+.pd-why-card:hover .pd-why-icon { background: #0077B6; color: #fff; transform: scale(1.1) rotate(-6deg); }
+.pd-why-card h3 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0 0 8px; }
+.pd-why-card p { font-size: 1rem; color: #64748b; line-height: 1.7; margin: 0; }
+
+/* ── PRODUCTS — 4-col ── */
+.pd-products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+.pd-product-card {
+  background: #fff; border-radius: 14px; border: 1.5px solid #e8edf5;
+  padding: 22px 18px; display: flex; flex-direction: column; gap: 10px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.pd-product-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,119,182,0.14); border-color: rgba(0,119,182,0.4); }
+.pd-product-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: rgba(0,119,182,0.1);
+  display: flex; align-items: center; justify-content: center; color: #0077B6;
+  transition: background 0.3s, color 0.3s;
+}
+.pd-product-card:hover .pd-product-icon { background: #0077B6; color: #fff; }
+.pd-product-name { font-size: 1.2rem; font-weight: 500; color: #1e293b; }
+.pd-product-desc { font-size: 1rem; color: #64748b; line-height: 1.7; }
+
+/* ── EXPERIENCE ── */
+.pd-exp-wrap { margin-top: 36px; background: #f0fbff; border: 1px solid #cceeff; border-radius: 10px; padding: 28px 32px; }
+.pd-exp-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 40px; }
+.pd-exp-item { display: flex; align-items: flex-start; gap: 10px; font-size: 0.93rem; color: #334155; line-height: 1.55; }
+.pd-exp-item svg { flex-shrink: 0; margin-top: 3px; color: #0077B6; }
+.pd-exp-tags { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 20px; border-top: 1px solid #cceeff; margin-top: 24px; }
+.pd-exp-tag { font-size: 0.82rem; font-weight: 500; padding: 5px 14px; border-radius: 6px; border: 1px solid #9fd3ec; color: #005a87; background: #ddf0f9; }
+
+/* ── WHY BTPL — 4-col ── */
+.pd-btpl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.pd-btpl-card {
+  background: #fff; border-radius: 14px; border: 1.5px solid #e8edf5;
+  padding: 28px 22px; display: flex; flex-direction: column; gap: 12px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.pd-btpl-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(0,119,182,0.12); border-color: rgba(0,119,182,0.35); }
+.pd-btpl-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(0,119,182,0.1);
+  display: flex; align-items: center; justify-content: center; color: #0077B6;
+  transition: background 0.3s, color 0.3s;
+}
+.pd-btpl-card:hover .pd-btpl-icon { background: #0077B6; color: #fff; }
+.pd-btpl-card h4 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0; }
+.pd-btpl-card p { font-size: 1rem; color: #64748b; line-height: 1.7; margin: 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .pd-svc-grid { grid-template-columns: 1fr; }
+  .pd-products-grid { grid-template-columns: repeat(3, 1fr); }
+  .pd-btpl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .pd-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .pd-stat { border-right: none; border-bottom: 1px solid #cceeff; }
+  .pd-stat:nth-child(odd) { border-right: 1px solid #cceeff; }
+  .pd-why-grid { grid-template-columns: 1fr; }
+  .pd-products-grid { grid-template-columns: repeat(2, 1fr); }
+  .pd-exp-list { grid-template-columns: 1fr; }
+  .pd-btpl-grid { grid-template-columns: 1fr; }
+}

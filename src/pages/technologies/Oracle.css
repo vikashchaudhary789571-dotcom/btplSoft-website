@@ -1,0 +1,157 @@
+/* ============================================
+   Oracle Page — oc-* Styles
+   Oracle Red #F80000 | Dark Maroon #1e0000 | Gold #F5A623
+   ============================================ */
+
+/* ── STATS — dark maroon gradient, gold-tinted numbers ── */
+.oc-stats { background: linear-gradient(135deg, #1e0000, #3d0000); padding: 0; }
+.oc-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.oc-stat {
+  padding: 40px 24px; text-align: center;
+  border-right: 1px solid rgba(248, 0, 0, 0.15);
+  transition: background 0.3s; position: relative; overflow: hidden;
+}
+.oc-stat:last-child { border-right: none; }
+.oc-stat:hover { background: rgba(248, 0, 0, 0.08); }
+.oc-stat::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: linear-gradient(90deg, #F80000, #F5A623);
+  transform: scaleX(0); transform-origin: left; transition: transform 0.4s;
+}
+.oc-stat:hover::before { transform: scaleX(1); }
+.oc-stat-num {
+  font-size: 2.6rem; font-weight: 600; line-height: 1;
+  display: block; margin-bottom: 6px;
+  background: linear-gradient(135deg, #F5A623, #ffcc66);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.oc-stat-label {
+  font-size: 0.85rem; color: rgba(255,255,255,0.45);
+  text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500;
+}
+
+/* ── SERVICES — numbered enterprise cards with thick left red border ── */
+.oc-svc-list { display: flex; flex-direction: column; gap: 20px; margin-top: 48px; }
+.oc-svc-card {
+  background: #fff; border-radius: 16px;
+  border: 1.5px solid #e8edf5;
+  border-left: 6px solid #e8edf5;
+  padding: 28px 28px 26px 26px;
+  position: relative; overflow: hidden;
+  transition: border-left-color 0.3s, box-shadow 0.35s, transform 0.3s;
+}
+.oc-svc-card:hover {
+  border-left-color: #F80000;
+  box-shadow: 0 12px 44px rgba(248, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+/* Large number badge — top-right corner */
+.oc-svc-num {
+  position: absolute; top: -3px; right: 22px;
+  font-size: 4.5rem; font-weight: 900; line-height: 1;
+  color: rgba(248, 0, 0, 0.07);
+  font-variant-numeric: tabular-nums; user-select: none;
+  transition: color 0.3s;
+}
+.oc-svc-card:hover .oc-svc-num { color: rgba(248, 0, 0, 0.13); }
+.oc-svc-top { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+.oc-svc-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: rgba(248, 0, 0, 0.08);
+  display: flex; align-items: center; justify-content: center; color: #F80000; flex-shrink: 0;
+  transition: background 0.3s, color 0.3s;
+}
+.oc-svc-card:hover .oc-svc-icon { background: #F80000; color: #fff; }
+.oc-svc-top h3 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0; line-height: 1.3; }
+.oc-svc-desc { font-size: 1rem; color: #64748b; line-height: 1.7; margin: 0 0 14px; }
+.oc-svc-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.oc-svc-chip {
+  font-size: 0.72rem; font-weight: 600; padding: 4px 11px; border-radius: 6px;
+  background: #f8f5f5; color: #334155; border: 1px solid #eedede;
+  transition: all 0.25s;
+}
+.oc-svc-card:hover .oc-svc-chip { background: rgba(248,0,0,0.08); color: #b30000; border-color: rgba(248,0,0,0.25); }
+
+/* ── WHY ORACLE — 2-col cards with red left accent bar ── */
+.oc-why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 48px; }
+.oc-why-card {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 28px 26px; background: #fff;
+  border: 1.5px solid #e8edf5;
+  border-left: 5px solid rgba(248,0,0,0.2);
+  border-radius: 16px;
+  transition: transform 0.3s, box-shadow 0.3s, border-left-color 0.3s;
+}
+.oc-why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 38px rgba(248,0,0,0.09);
+  border-left-color: #F80000;
+}
+.oc-why-icon {
+  width: 52px; height: 52px; border-radius: 12px;
+  background: rgba(248, 0, 0, 0.08);
+  display: flex; align-items: center; justify-content: center; color: #F80000; flex-shrink: 0;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+.oc-why-card:hover .oc-why-icon { background: #F80000; color: #fff; transform: scale(1.1) rotate(-6deg); }
+.oc-why-card h3 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0 0 8px; }
+.oc-why-card p { font-size: 1rem; color: #64748b; line-height: 1.7; margin: 0; }
+
+/* ── PRODUCTS — 4-col with red glow ── */
+.oc-products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+.oc-product-card {
+  background: #fff; border-radius: 14px; border: 1.5px solid #e8edf5;
+  padding: 22px 18px; display: flex; flex-direction: column; gap: 10px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.oc-product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 28px rgba(248,0,0,0.12); border-color: rgba(248,0,0,0.35); }
+.oc-product-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: rgba(248,0,0,0.08);
+  display: flex; align-items: center; justify-content: center; color: #F80000;
+  transition: background 0.3s, color 0.3s;
+}
+.oc-product-card:hover .oc-product-icon { background: #F80000; color: #fff; }
+.oc-product-name { font-size: 1.2rem; font-weight: 500; color: #1e293b; }
+.oc-product-desc { font-size: 1rem; color: #64748b; line-height: 1.7; }
+
+/* ── EXPERIENCE ── */
+.oc-exp-wrap { margin-top: 36px; }
+.oc-exp-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.oc-exp-item { display: flex; align-items: center; gap: 12px; font-size: 0.97rem; color: #1e293b; line-height: 1.5; background: #fff5f5; border: 1px solid #ffd4d4; border-left: 4px solid #F80000; border-radius: 8px; padding: 12px 16px; }
+.oc-exp-item svg { flex-shrink: 0; color: #F80000; }
+.oc-exp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.oc-exp-tag { font-size: 0.85rem; font-weight: 600; padding: 6px 16px; border-radius: 20px; border: 1.5px solid #ffc0c0; color: #b00000; background: #fff0f0; }
+
+/* ── WHY BTPL — 4-col ── */
+.oc-btpl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.oc-btpl-card {
+  background: #fff; border-radius: 14px; border: 1.5px solid #e8edf5;
+  padding: 28px 22px; display: flex; flex-direction: column; gap: 12px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.oc-btpl-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(248,0,0,0.1); border-color: rgba(248,0,0,0.3); }
+.oc-btpl-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(248,0,0,0.07);
+  display: flex; align-items: center; justify-content: center; color: #F80000;
+  transition: background 0.3s, color 0.3s;
+}
+.oc-btpl-card:hover .oc-btpl-icon { background: #F80000; color: #fff; }
+.oc-btpl-card h4 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0; }
+.oc-btpl-card p { font-size: 1rem; color: #64748b; line-height: 1.7; margin: 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .oc-products-grid { grid-template-columns: repeat(3, 1fr); }
+  .oc-btpl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .oc-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .oc-stat { border-right: none; border-bottom: 1px solid rgba(248,0,0,0.1); }
+  .oc-stat:nth-child(odd) { border-right: 1px solid rgba(248,0,0,0.1); }
+  .oc-why-grid { grid-template-columns: 1fr; }
+  .oc-products-grid { grid-template-columns: repeat(2, 1fr); }
+  .oc-exp-list { grid-template-columns: 1fr; }
+  .oc-btpl-grid { grid-template-columns: 1fr; }
+}

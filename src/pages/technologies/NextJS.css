@@ -1,0 +1,305 @@
+/* ============================================
+   Next.js Page — Unique Styles
+   Accent: #0070f3 (Vercel Blue) + #000
+   ============================================ */
+
+/* ── STATS STRIP ── */
+.nj-stats {
+  background: #e8f4ff;
+  padding: 0;
+}
+.nj-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.nj-stat {
+  text-align: center;
+  padding: 40px 20px;
+  border-right: 1px solid #c2ddf7;
+  position: relative;
+  transition: background 0.3s;
+}
+.nj-stat:last-child { border-right: none; }
+.nj-stat:hover { background: #d4ecff; }
+.nj-stat-num {
+  font-family: var(--font-primary);
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #0058c4;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.nj-stat-num span { color: #0070f3; }
+.nj-stat-label {
+  font-size: 0.9rem;
+  color: #3a6a99;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ── SERVICES — alternating left-right layout ── */
+.nj-svc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.nj-svc-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid #e8edf5;
+  transition: background 0.25s;
+}
+.nj-svc-row:last-child { border-bottom: none; }
+.nj-svc-row:hover { background: #f8fbff; }
+.nj-svc-row:nth-child(even) .nj-svc-row-visual { order: -1; }
+.nj-svc-row-text {
+  padding: 52px 60px;
+  border-right: 1px solid #e8edf5;
+}
+.nj-svc-row:nth-child(even) .nj-svc-row-text {
+  border-right: none;
+  border-left: 1px solid #e8edf5;
+}
+.nj-svc-row-num {
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #0070f3;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.nj-svc-row-text h3 {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+.nj-svc-row-text p {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.75;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.nj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.nj-tag {
+  padding: 4px 14px;
+  background: rgba(0,112,243,0.07);
+  border: 1px solid rgba(0,112,243,0.18);
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #0070f3;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.nj-svc-row-visual {
+  padding: 52px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nj-svc-img-wrap {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,112,243,0.14);
+  border: 2px solid rgba(0,112,243,0.12);
+  transition: all 0.4s ease;
+}
+.nj-svc-row:hover .nj-svc-img-wrap {
+  transform: scale(1.03);
+  box-shadow: 0 28px 80px rgba(0,112,243,0.24);
+}
+.nj-svc-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.nj-svc-row:hover .nj-svc-img {
+  transform: scale(1.05);
+}
+
+/* ── WHY NEXT.JS — 3-col render cards ── */
+.nj-render-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: #e8edf5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.nj-render-card {
+  background: #fff;
+  padding: 48px 36px;
+  position: relative;
+  transition: background 0.3s;
+}
+.nj-render-card:hover { background: #f8fbff; }
+.nj-render-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.nj-render-card h3 {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  margin-bottom: 14px;
+}
+.nj-render-card p {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* ── EXPERIENCE — timeline ── */
+.nj-timeline {
+  position: relative;
+  padding-left: 48px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.nj-timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, #0070f3 0%, rgba(0,112,243,0.1) 100%);
+}
+.nj-tl-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding: 32px 36px;
+  background: #fff;
+  border: 2px solid #e8edf5;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.nj-tl-item:last-child { margin-bottom: 0; }
+.nj-tl-item::before {
+  content: '';
+  position: absolute;
+  left: -42px;
+  top: 34px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #0070f3;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px #0070f3;
+}
+.nj-tl-item:hover {
+  border-color: rgba(0,112,243,0.25);
+  box-shadow: 0 8px 32px rgba(0,112,243,0.08);
+  transform: translateX(6px);
+}
+.nj-tl-cat {
+  font-size: 0.73rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #0070f3;
+  margin-bottom: 8px;
+}
+.nj-tl-item h4 {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  margin-bottom: 10px;
+}
+.nj-tl-item p {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+/* ── WHY BTPL — 2x2 large cards ── */
+.nj-btpl-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.nj-btpl-card {
+  padding: 40px 36px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  transition: all 0.35s ease;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.nj-btpl-card:hover {
+  border-color: rgba(0,112,243,0.4);
+  background: rgba(0,112,243,0.06);
+}
+.nj-btpl-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(0,112,243,0.15);
+  border: 1px solid rgba(0,112,243,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0070f3;
+  transition: all 0.35s ease;
+}
+.nj-btpl-card:hover .nj-btpl-icon {
+  background: #0070f3;
+  border-color: #0070f3;
+}
+.nj-btpl-card:hover .nj-btpl-icon svg { color: #fff !important; }
+.nj-btpl-card h4 {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.nj-btpl-card p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .nj-render-grid { grid-template-columns: 1fr; }
+  .nj-svc-row     { grid-template-columns: 1fr; }
+  .nj-svc-row:nth-child(even) .nj-svc-row-visual { order: unset; }
+  .nj-svc-row-visual { display: none; }
+  .nj-svc-row-text { padding: 36px 28px; }
+}
+@media (max-width: 768px) {
+  .nj-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .nj-btpl-grid  { grid-template-columns: 1fr; }
+  .nj-timeline   { padding-left: 32px; }
+  .nj-tl-item::before { left: -28px; }
+}

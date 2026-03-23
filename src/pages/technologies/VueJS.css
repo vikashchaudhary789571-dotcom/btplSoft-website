@@ -1,0 +1,277 @@
+/* ============================================
+   Vue.js Page — Unique Styles
+   Accent: #42b883 (Vue Green) + #35495e (Vue Dark)
+   ============================================ */
+
+/* ── STATS STRIP ── */
+.vj-stats {
+  background: linear-gradient(135deg, #f0fdf8 0%, #e8faf3 100%);
+  border-bottom: 1px solid #c6edd9;
+  padding: 0;
+}
+.vj-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.vj-stat {
+  text-align: center;
+  padding: 40px 20px;
+  border-right: 1px solid #c6edd9;
+  position: relative;
+  transition: background 0.25s;
+}
+.vj-stat:last-child { border-right: none; }
+.vj-stat:hover { background: rgba(66,184,131,0.06); }
+.vj-stat-num {
+  font-family: var(--font-primary);
+  font-size: 2.8rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #42b883 0%, #35495e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.vj-stat-label {
+  font-size: 0.92rem;
+  color: #35495e;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+/* ── SERVICES — card grid with gradient tops ── */
+.vj-svc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.vj-svc-card {
+  background: #fff;
+  border: 2px solid #e0f5ec;
+  border-radius: 20px;
+  padding: 36px 30px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.vj-svc-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #42b883, #35495e);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: left;
+}
+.vj-svc-card:hover::before { transform: scaleX(1); }
+.vj-svc-card::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; right: -80px;
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(66,184,131,0.07) 0%, transparent 70%);
+  transition: transform 0.4s ease;
+}
+.vj-svc-card:hover::after { transform: scale(1.5); }
+.vj-svc-card:hover {
+  border-color: rgba(66,184,131,0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 56px rgba(66,184,131,0.12);
+}
+
+.vj-svc-icon {
+  width: 64px; height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #e8faf3 0%, #c6edd9 100%);
+  border: 1.5px solid rgba(66,184,131,0.2);
+  display: flex; align-items: center; justify-content: center;
+  color: #42b883;
+  margin-bottom: 22px;
+  position: relative; z-index: 1;
+  transition: all 0.35s ease;
+}
+.vj-svc-card:hover .vj-svc-icon {
+  background: linear-gradient(135deg, #42b883, #35495e);
+  border-color: transparent;
+}
+.vj-svc-card:hover .vj-svc-icon svg { color: #fff !important; }
+
+.vj-svc-card h3 {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  margin-bottom: 12px;
+  position: relative; z-index: 1;
+  transition: color 0.3s;
+}
+.vj-svc-card:hover h3 { color: #35495e; }
+.vj-svc-card p {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-bottom: 20px;
+  position: relative; z-index: 1;
+}
+.vj-tags { display: flex; flex-wrap: wrap; gap: 8px; position: relative; z-index: 1; }
+.vj-tag {
+  padding: 4px 13px;
+  background: rgba(66,184,131,0.08);
+  border: 1px solid rgba(66,184,131,0.2);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2d8a62;
+}
+
+/* ── WHY VUE.JS — 3-col feature list ── */
+.vj-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: #c6edd9;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.vj-why-card {
+  background: #fff;
+  padding: 44px 32px;
+  transition: background 0.3s;
+}
+.vj-why-card:hover { background: #f0fdf8; }
+.vj-why-icon-wrap {
+  width: 72px; height: 72px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e8faf3, #c6edd9);
+  display: flex; align-items: center; justify-content: center;
+  color: #42b883;
+  margin-bottom: 24px;
+  transition: all 0.35s ease;
+}
+.vj-why-card:hover .vj-why-icon-wrap {
+  background: linear-gradient(135deg, #42b883, #35495e);
+}
+.vj-why-card:hover .vj-why-icon-wrap svg { color: #fff !important; }
+.vj-why-card h3 {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  margin-bottom: 14px;
+}
+.vj-why-card p {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* ── EXPERIENCE — 2-col with feature chips grid ── */
+.vj-exp-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.vj-exp-wrap h3 {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0d1b2a;
+  margin-bottom: 16px;
+}
+.vj-exp-wrap > p {
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.85;
+  font-weight: 300;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.vj-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.vj-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  background: #fff;
+  border: 2px solid #e0f5ec;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+.vj-chip:hover {
+  border-color: #42b883;
+  background: #f0fdf8;
+  color: #2d8a62;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(66,184,131,0.12);
+}
+.vj-chip svg { color: #42b883; flex-shrink: 0; }
+
+/* ── WHY BTPL — horizontal cards dark ── */
+.vj-btpl-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.vj-btpl-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 32px 28px;
+  background: rgba(66,184,131,0.05);
+  border: 1px solid rgba(66,184,131,0.2);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+.vj-btpl-card:hover {
+  background: rgba(66,184,131,0.1);
+  border-color: rgba(66,184,131,0.4);
+}
+.vj-btpl-icon {
+  flex-shrink: 0;
+  width: 52px; height: 52px;
+  border-radius: 12px;
+  background: rgba(66,184,131,0.15);
+  display: flex; align-items: center; justify-content: center;
+  color: #42b883;
+}
+.vj-btpl-card h4 {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.vj-btpl-card p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .vj-svc-grid  { grid-template-columns: repeat(2, 1fr); }
+  .vj-why-grid  { grid-template-columns: 1fr; }
+  .vj-chips-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .vj-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .vj-svc-grid   { grid-template-columns: 1fr; }
+  .vj-btpl-grid  { grid-template-columns: 1fr; }
+  .vj-chips-grid { grid-template-columns: 1fr 1fr; }
+}

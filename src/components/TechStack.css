@@ -1,0 +1,503 @@
+/* ============================================
+   TechStack Component — Unique Interactive
+   ============================================ */
+
+.ts-section {
+  padding: 96px 0;
+  background: #f8f9fb;
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle grid bg */
+.ts-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(13,27,42,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13,27,42,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.ts-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── HEADER ── */
+.ts-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+/* Global classes used in header */
+
+/* ── BODY — split layout ── */
+.ts-body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  /* border-radius: 20px; */
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(13,27,42,0.1);
+  border: 1px solid #e5e7eb;
+  min-height: 520px;
+}
+
+/* ── SIDEBAR ── */
+.ts-sidebar {
+  background: #0d1b2a;
+  display: flex;
+  flex-direction: column;
+  /* padding: 8px; */
+  gap: 4px;
+}
+
+.ts-tab {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: none;
+  background: transparent;
+  /* border-radius: 12px; */
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.25s ease;
+  position: relative;
+  width: 100%;
+}
+.ts-tab:hover { background: rgba(255,255,255,0.06); }
+
+.ts-tab--active {
+  background: var(--accent) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.ts-tab-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.08);
+  transition: background 0.25s, color 0.25s;
+}
+.ts-tab--active .ts-tab-icon { background: rgba(255,255,255,0.2); color: #fff !important; }
+
+.ts-tab-text { flex: 1; overflow: hidden; }
+.ts-tab-label {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.ts-tab--active .ts-tab-label { color: #fff; }
+.ts-tab-count {
+  display: block;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.38);
+  margin-top: 2px;
+  font-weight: 400;
+}
+.ts-tab--active .ts-tab-count { color: rgba(255,255,255,0.65); }
+
+/* active indicator dot */
+.ts-tab-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+/* ── CONTENT panel ── */
+.ts-content {
+  background: #fff;
+  padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  animation: ts-fade-in 0.3s ease forwards;
+}
+
+@keyframes ts-fade-in {
+  from { opacity: 0; transform: translateX(12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.ts-content-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.ts-content-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ts-content-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: -0.2px;
+}
+.ts-content-desc {
+  font-size: 0.88rem;
+  color: #9CA3AF;
+  font-weight: 400;
+}
+
+/* ── CHIPS ── */
+.ts-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: flex-start;
+}
+
+.ts-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 20px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  background: #f9fafb;
+  cursor: default;
+  transition: all 0.22s ease;
+  opacity: 0;
+  animation: chip-pop 0.35s ease forwards;
+}
+@keyframes chip-pop {
+  from { opacity: 0; transform: scale(0.85) translateY(6px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.ts-chip:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 8%, white);
+  color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+/* ── PROGRESS BAR ── */
+.ts-progress-bar {
+  height: 4px;
+  background: #f3f4f6;
+  border-radius: 2px;
+  margin-top: auto;
+  overflow: hidden;
+}
+.ts-progress-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease, background 0.5s ease;
+}
+.ts-progress-label {
+  font-size: 0.75rem;
+  color: #9CA3AF;
+  font-weight: 400;
+  text-align: right;
+  margin-top: 6px;
+}
+
+/* ── BOTTOM DOTS ── */
+.ts-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 32px;
+}
+.ts-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #d1d5db;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s, width 0.3s;
+}
+.ts-dot--active {
+  background: var(--accent);
+  width: 28px;
+  border-radius: 5px;
+  transform: none;
+}
+
+/* ══ RESPONSIVE ══ */
+
+/* --- Tablet --- */
+@media (max-width: 900px) {
+  .ts-body {
+    grid-template-columns: 1fr;
+  }
+  .ts-sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 12px;
+    gap: 8px;
+  }
+  .ts-tab {
+    min-width: 140px;
+    flex-shrink: 0;
+  }
+  .ts-tab-count { display: none; }
+  .ts-tab-dot { display: none; }
+  .ts-content { padding: 28px 24px; }
+}
+
+/* --- Mobile --- */
+@media (max-width: 600px) {
+  .ts-section {
+    padding: 56px 0;
+  }
+
+  .ts-container {
+    padding: 0 16px;
+  }
+
+  /* ── Unique mobile header ── */
+  .ts-header {
+    margin-bottom: 36px;
+    text-align: left;
+    position: relative;
+    padding-left: 16px;
+  }
+
+  .ts-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 3px;
+    height: calc(100% - 8px);
+    background: linear-gradient(180deg, #6366f1, #06b6d4, #10b981);
+    border-radius: 4px;
+  }
+
+  .ts-header .section-subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 8px;
+    color: #6366f1;
+  }
+
+  .ts-header .section-title {
+    font-size: 1.65rem;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .ts-header .section-description {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin: 0 !important;
+    color: #6B7280;
+  }
+
+  /* ── Mobile sidebar → icon pills scrollable strip ── */
+  .ts-sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0;
+    gap: 0;
+    background: transparent;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .ts-sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ts-body {
+    border: none;
+    box-shadow: none;
+    min-height: auto;
+    gap: 0;
+    overflow: visible;
+  }
+
+  .ts-tab {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 72px;
+    max-width: 80px;
+    padding: 12px 8px 10px;
+    gap: 6px;
+    border-radius: 14px;
+    margin: 4px;
+    background: #fff;
+    border: 1.5px solid #e5e7eb;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+
+  .ts-tab:hover {
+    background: #f8f9fb;
+  }
+
+  .ts-tab--active {
+    background: var(--accent) !important;
+    border-color: var(--accent) !important;
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--accent) 35%, transparent);
+    transform: translateY(-2px);
+  }
+
+  .ts-tab-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.04);
+  }
+
+  .ts-tab--active .ts-tab-icon {
+    background: rgba(255,255,255,0.25);
+  }
+
+  .ts-tab-label {
+    font-size: 0.62rem;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    color: #374151;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .ts-tab--active .ts-tab-label {
+    color: #fff;
+  }
+
+  .ts-tab-text {
+    overflow: visible;
+  }
+
+  .ts-tab-count { display: none; }
+  .ts-tab-dot { display: none; }
+
+  /* ── Mobile content panel ── */
+  .ts-content {
+    padding: 24px 16px;
+    gap: 20px;
+    background: #fff;
+    border-radius: 16px;
+    border: 1.5px solid #e5e7eb;
+    box-shadow: 0 8px 32px rgba(13,27,42,0.08);
+    margin-top: 8px;
+    animation: ts-fade-up 0.35s ease forwards;
+  }
+
+  @keyframes ts-fade-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .ts-content-header {
+    gap: 14px;
+  }
+
+  .ts-content-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .ts-content-title {
+    font-size: 1.15rem;
+    margin-bottom: 2px;
+  }
+
+  .ts-content-desc {
+    font-size: 0.8rem;
+  }
+
+  /* ── Mobile chips → compact grid ── */
+  .ts-chips {
+    gap: 8px;
+  }
+
+  .ts-chip {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+    border-radius: 10px;
+    font-weight: 500;
+  }
+
+  /* ── Progress bar mobile  ── */
+  .ts-progress-bar {
+    height: 3px;
+    border-radius: 3px;
+  }
+
+  .ts-progress-label {
+    font-size: 0.7rem;
+    margin-top: 4px;
+  }
+
+  /* ── Dots → hidden on mobile, use tab pills instead ── */
+  .ts-dots {
+    display: none;
+  }
+}
+
+/* --- Small Phones --- */
+@media (max-width: 400px) {
+  .ts-section {
+    padding: 44px 0;
+  }
+  .ts-container {
+    padding: 0 12px;
+  }
+
+  .ts-header .section-title {
+    font-size: 1.45rem;
+  }
+
+  .ts-tab {
+    padding: 10px 4px 8px;
+    border-radius: 12px;
+    margin: 3px;
+  }
+
+  .ts-tab-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  .ts-tab-label {
+    font-size: 0.58rem;
+  }
+
+  .ts-content {
+    padding: 20px 14px;
+    border-radius: 14px;
+  }
+
+  .ts-chip {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+  }
+}

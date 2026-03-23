@@ -1,0 +1,187 @@
+/* ============================================
+   SQL Server Page — ms-* Styles
+   Navy #003087 | Blue #0050CC | Purple accent #8661C5
+   (distinct from Azure's #0078D4 / #50E6FF)
+   ============================================ */
+
+/* ── STATS — lavender bg, gradient navy/purple numbers ── */
+.ms-stats { background: #f0f2ff; padding: 0; border-bottom: 2px solid #dce0f7; }
+.ms-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.ms-stat {
+  padding: 38px 24px; text-align: center;
+  border-right: 1px solid #dce0f7; position: relative;
+  transition: background 0.3s;
+}
+.ms-stat:last-child { border-right: none; }
+.ms-stat:hover { background: #e4e8ff; }
+.ms-stat::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; background: linear-gradient(90deg, #0050CC, #8661C5);
+  transform: scaleX(0); transform-origin: center; transition: transform 0.4s;
+}
+.ms-stat:hover::after { transform: scaleX(1); }
+.ms-stat-num {
+  font-size: 2.6rem; font-weight: 600; line-height: 1;
+  display: block; margin-bottom: 6px;
+  background: linear-gradient(135deg, #003087, #8661C5);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.ms-stat-label {
+  font-size: 0.85rem; color: #5b5b8a;
+  text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500;
+}
+
+/* ── SERVICES — vertical timeline with numbered circles ── */
+.ms-timeline { position: relative; margin-top: 48px; display: flex; flex-direction: column; }
+.ms-tl-item {
+  display: grid; grid-template-columns: 80px 1fr;
+  gap: 0; position: relative;
+}
+.ms-tl-left {
+  display: flex; flex-direction: column; align-items: center; flex-shrink: 0;
+  padding-top: 4px;
+}
+.ms-tl-num {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: linear-gradient(135deg, #003087, #0050CC);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1.1rem; font-weight: 600; flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(0, 80, 204, 0.28);
+  position: relative; z-index: 1;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ms-tl-item:hover .ms-tl-num {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 8px rgba(0, 80, 204, 0.12), 0 4px 16px rgba(0, 80, 204, 0.3);
+}
+.ms-tl-line {
+  width: 2px; flex: 1;
+  background: linear-gradient(180deg, rgba(0,80,204,0.3), rgba(134,97,197,0.15));
+  margin: 6px 0;
+}
+.ms-tl-item:last-child .ms-tl-line { display: none; }
+
+.ms-tl-card {
+  background: #fff; border-radius: 16px;
+  border: 1.5px solid #e8edf5;
+  border-left: 4px solid transparent;
+  padding: 24px 26px; margin-left: 24px; margin-bottom: 28px;
+  transition: transform 0.3s, box-shadow 0.3s, border-left-color 0.3s;
+}
+.ms-tl-item:last-child .ms-tl-card { margin-bottom: 0; }
+.ms-tl-item:hover .ms-tl-card {
+  transform: translateX(6px);
+  box-shadow: 0 10px 36px rgba(0,80,204,0.1);
+  border-left-color: #0050CC;
+}
+.ms-tl-card-top { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.ms-tl-icon {
+  width: 42px; height: 42px; border-radius: 10px;
+  background: rgba(0, 80, 204, 0.1);
+  display: flex; align-items: center; justify-content: center; color: #0050CC;
+  transition: background 0.3s, color 0.3s;
+}
+.ms-tl-item:hover .ms-tl-icon { background: #0050CC; color: #fff; }
+.ms-tl-card h3 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0; }
+.ms-tl-card p { font-size: 1rem; color: #64748b; line-height: 1.7; margin: 0 0 14px; }
+.ms-tl-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.ms-chip {
+  font-size: 0.72rem; font-weight: 600; padding: 4px 11px; border-radius: 6px;
+  background: #f0f2ff; color: #334155; border: 1px solid #dce0f7;
+  transition: all 0.25s;
+}
+.ms-tl-item:hover .ms-chip {
+  background: rgba(0,80,204,0.08); color: #0050CC; border-color: rgba(0,80,204,0.25);
+}
+
+/* ── WHY SQL SERVER — 3-col cards with bottom gradient bar ── */
+.ms-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
+.ms-why-card {
+  padding: 28px 24px; background: #fff;
+  border: 1.5px solid #e8edf5; border-radius: 16px;
+  position: relative; overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ms-why-card:hover { transform: translateY(-5px); box-shadow: 0 14px 42px rgba(0,80,204,0.12); }
+/* Bottom gradient bar that reveals on hover */
+.ms-why-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 4px; background: linear-gradient(90deg, #003087, #8661C5);
+  transform: scaleX(0); transform-origin: left; transition: transform 0.4s;
+}
+.ms-why-card:hover::after { transform: scaleX(1); }
+.ms-why-icon {
+  width: 50px; height: 50px; border-radius: 12px;
+  background: linear-gradient(135deg, #003087, #0050CC);
+  display: flex; align-items: center; justify-content: center; color: #fff; margin-bottom: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.ms-why-card:hover .ms-why-icon {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 6px 20px rgba(0,80,204,0.28);
+}
+.ms-why-card h3 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0 0 8px; }
+.ms-why-card p { font-size: 1rem; color: #64748b; line-height: 1.7; margin: 0; }
+
+/* ── PRODUCTS — 4-col ── */
+.ms-products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+.ms-product-card {
+  background: #fff; border-radius: 14px; border: 1.5px solid #e8edf5;
+  padding: 22px 18px; display: flex; flex-direction: column; gap: 10px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.ms-product-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,80,204,0.13); border-color: rgba(0,80,204,0.35); }
+.ms-product-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: rgba(0,80,204,0.09);
+  display: flex; align-items: center; justify-content: center; color: #0050CC;
+  transition: background 0.3s, color 0.3s;
+}
+.ms-product-card:hover .ms-product-icon { background: #0050CC; color: #fff; }
+.ms-product-name { font-size: 1.2rem; font-weight: 500; color: #1e293b; }
+.ms-product-desc { font-size: 1rem; color: #64748b; line-height: 1.7; }
+
+/* ── EXPERIENCE ── */
+.ms-exp-wrap { margin-top: 36px; }
+.ms-exp-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.ms-exp-item { display: flex; align-items: center; gap: 12px; font-size: 0.97rem; color: #1e293b; line-height: 1.5; background: #f0f4ff; border: 1px solid #b8c8f0; border-left: 4px solid #0050CC; border-radius: 8px; padding: 12px 16px; }
+.ms-exp-item svg { flex-shrink: 0; color: #0050CC; }
+.ms-exp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.ms-exp-tag { font-size: 0.85rem; font-weight: 600; padding: 6px 16px; border-radius: 20px; border: 1.5px solid #b0c8f0; color: #003399; background: #e8eeff; }
+
+/* ── WHY BTPL — 4-col ── */
+.ms-btpl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.ms-btpl-card {
+  background: #fff; border-radius: 14px; border: 1.5px solid #e8edf5;
+  padding: 28px 22px; display: flex; flex-direction: column; gap: 12px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.ms-btpl-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(0,80,204,0.11); border-color: rgba(0,80,204,0.3); }
+.ms-btpl-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(0,80,204,0.09);
+  display: flex; align-items: center; justify-content: center; color: #0050CC;
+  transition: background 0.3s, color 0.3s;
+}
+.ms-btpl-card:hover .ms-btpl-icon { background: #0050CC; color: #fff; }
+.ms-btpl-card h4 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0; }
+.ms-btpl-card p { font-size: 1rem; color: #64748b; line-height: 1.7; margin: 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .ms-why-grid { grid-template-columns: repeat(2, 1fr); }
+  .ms-products-grid { grid-template-columns: repeat(3, 1fr); }
+  .ms-btpl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .ms-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .ms-stat { border-right: none; border-bottom: 1px solid #dce0f7; }
+  .ms-stat:nth-child(odd) { border-right: 1px solid #dce0f7; }
+  .ms-tl-item { grid-template-columns: 56px 1fr; }
+  .ms-tl-num { width: 44px; height: 44px; font-size: 0.9rem; }
+  .ms-tl-card { margin-left: 14px; padding: 18px; }
+  .ms-why-grid { grid-template-columns: 1fr; }
+  .ms-products-grid { grid-template-columns: repeat(2, 1fr); }
+  .ms-exp-list { grid-template-columns: 1fr; }
+  .ms-btpl-grid { grid-template-columns: 1fr; }
+}

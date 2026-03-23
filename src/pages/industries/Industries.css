@@ -1,0 +1,189 @@
+/* ============================================
+   BTPL SOFT — Industries Listing Page
+   ============================================ */
+
+.ind-page {
+  font-family: var(--font-body);
+  background: #fff;
+  color: var(--dark-800);
+}
+
+/* ── Hero ── */
+.ind-hero {
+  background: linear-gradient(130deg, #0a1628 0%, #0d1b2a 50%, #0f2a1a 100%);
+  padding: 140px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ind-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 22, 40, 0.5);
+  z-index: 0;
+}
+
+.ind-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.ind-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ind-hero .section-subtitle {
+  color: #4CAF50;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.ind-hero-title {
+  font-family: var(--font-primary);
+  font-size: 3.4rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.12;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+
+.ind-hero-title .highlight {
+  color: #2196F3;
+}
+
+.ind-hero-sub {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ── Grid ── */
+.ind-grid-section {
+  padding: 80px 0 90px;
+  background: #f8fafc;
+}
+
+.ind-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ── Card ── */
+.ind-card {
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 0;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ind-card:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 8px 28px rgba(33,150,243,0.1);
+  transform: translateY(-4px);
+}
+
+.ind-card-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  flex-shrink: 0;
+}
+
+.ind-card-title {
+  font-family: var(--font-primary);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--dark-900);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.ind-card-desc {
+  font-family: var(--font-body);
+  font-size: 0.93rem;
+  color: var(--gray-400);
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 22px;
+}
+
+.ind-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #2196F3;
+  transition: gap 0.2s ease;
+}
+
+.ind-card:hover .ind-card-link {
+  gap: 10px;
+}
+
+/* ── CTA ── */
+.ind-cta {
+  background: linear-gradient(130deg, #0a1628 0%, #0d1b2a 60%, #0f2a1a 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.ind-cta h2 {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.ind-cta p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 32px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .ind-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ind-hero-title { font-size: 2.8rem; }
+}
+
+@media (max-width: 768px) {
+  .ind-grid {
+    grid-template-columns: 1fr;
+  }
+  .ind-hero {
+    padding: 100px 0 48px;
+  }
+  .ind-hero-title { font-size: 2rem; }
+}

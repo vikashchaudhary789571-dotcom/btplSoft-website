@@ -1,0 +1,220 @@
+/* ============================================
+   AWS Page — aws-* Styles
+   Brand Blue #2196F3 | Accent: AWS Orange #FF9900
+   ============================================ */
+
+/* ── STATS — dark squid-ink bg like AWS Console ── */
+.aws-stats { background: #232f3e; padding: 0; }
+.aws-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.aws-stat {
+  padding: 38px 24px; text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.3s; position: relative;
+}
+.aws-stat:last-child { border-right: none; }
+.aws-stat:hover { background: rgba(255,153,0,0.1); }
+.aws-stat::after {
+  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 0; height: 3px; background: linear-gradient(90deg, #FF9900, #ffb84d);
+  transition: width 0.35s; border-radius: 2px;
+}
+.aws-stat:hover::after { width: 60%; }
+.aws-stat-num {
+  font-size: 2.6rem; font-weight: 600; line-height: 1;
+  display: block; margin-bottom: 6px;
+  background: linear-gradient(135deg, #FF9900, #ffb84d);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.aws-stat-label { font-size: 0.85rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+
+/* ── SERVICES — category-style cards with service chip grid ── */
+.aws-svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
+.aws-svc-card {
+  background: #fff; border-radius: 16px;
+  border: 1.5px solid #e8edf5; overflow: hidden;
+  transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s;
+}
+.aws-svc-card:hover { transform: translateY(-7px); box-shadow: 0 18px 50px rgba(255,153,0,0.15); border-color: rgba(255,153,0,0.4); }
+.aws-svc-header {
+  background: linear-gradient(135deg, #232f3e, #37475a);
+  padding: 18px 20px; display: flex; align-items: center; gap: 14px;
+}
+.aws-svc-icon {
+  width: 46px; height: 46px; border-radius: 10px;
+  background: rgba(255,153,0,0.18); border: 1.5px solid rgba(255,153,0,0.35);
+  display: flex; align-items: center; justify-content: center; color: #FF9900; flex-shrink: 0;
+  transition: background 0.35s, transform 0.35s;
+}
+.aws-svc-card:hover .aws-svc-icon { background: #FF9900; color: #232f3e; transform: rotate(-8deg) scale(1.1); }
+.aws-svc-header-text { flex: 1; }
+.aws-svc-header-title { font-size: 1.2rem; font-weight: 500; color: #fff; line-height: 1.3; }
+.aws-svc-header-badge {
+  display: inline-block; margin-top: 4px;
+  font-size: 0.65rem; font-weight: 700; padding: 2px 8px; border-radius: 4px;
+  background: rgba(255,153,0,0.25); color: #FF9900; text-transform: uppercase; letter-spacing: 0.06em;
+}
+.aws-svc-body { padding: 20px 20px 22px; }
+.aws-svc-body p { font-size: 1rem; color: #64748b; line-height: 1.75; font-weight: 400; margin-bottom: 14px; }
+.aws-svc-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.aws-svc-chip {
+  font-size: 0.72rem; font-weight: 600; padding: 4px 11px; border-radius: 6px;
+  background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+.aws-svc-card:hover .aws-svc-chip { background: rgba(255,153,0,0.1); color: #c47700; border-color: rgba(255,153,0,0.3); }
+
+/* ── WHY AWS — 2-col feature cards ── */
+.aws-why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 48px; }
+.aws-why-card {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 28px 26px; background: #fff;
+  border: 1.5px solid #e8edf5; border-radius: 16px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  position: relative; overflow: hidden;
+}
+.aws-why-card::after {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; background: linear-gradient(90deg, #FF9900, #ffb84d);
+  transform: scaleX(0); transform-origin: left; transition: transform 0.4s;
+}
+.aws-why-card:hover::after { transform: scaleX(1); }
+.aws-why-card:hover { transform: translateY(-5px); box-shadow: 0 14px 40px rgba(255,153,0,0.12); border-color: rgba(255,153,0,0.25); }
+.aws-why-icon {
+  flex-shrink: 0; width: 54px; height: 54px; border-radius: 13px;
+  background: linear-gradient(135deg, #fff8ee, #fff1d6);
+  border: 1.5px solid rgba(255,153,0,0.25);
+  display: flex; align-items: center; justify-content: center; color: #FF9900;
+  transition: background 0.35s, color 0.35s, transform 0.35s;
+}
+.aws-why-card:hover .aws-why-icon { background: linear-gradient(135deg, #FF9900, #e67e00); color: #fff; transform: rotate(8deg) scale(1.1); }
+.aws-why-body h3 { font-size: 1.2rem; font-weight: 500; color: #0d1b2a; margin-bottom: 8px; }
+.aws-why-body p { font-size: 1rem; color: #64748b; line-height: 1.75; font-weight: 400; }
+
+/* ── KEY SERVICES SHOWCASE — horizontal scrollable dark strip ── */
+.aws-products { background: #f8fafc; padding: 70px 0; }
+.aws-products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 40px; }
+.aws-product-card {
+  background: #fff; border: 1.5px solid #e8edf5; border-radius: 14px;
+  padding: 22px 18px; text-align: center;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  position: relative; overflow: hidden;
+}
+.aws-product-card::before {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; background: linear-gradient(90deg, #FF9900, #2196F3);
+  transform: scaleX(0); transition: transform 0.4s;
+}
+.aws-product-card:hover::before { transform: scaleX(1); }
+.aws-product-card:hover { border-color: rgba(255,153,0,0.35); box-shadow: 0 10px 30px rgba(255,153,0,0.1); transform: translateY(-5px); }
+.aws-product-icon {
+  width: 52px; height: 52px; border-radius: 12px; margin: 0 auto 12px;
+  background: linear-gradient(135deg, #fff8ee, #fff1d6);
+  display: flex; align-items: center; justify-content: center; color: #FF9900;
+  transition: background 0.35s, transform 0.35s;
+}
+.aws-product-card:hover .aws-product-icon { background: linear-gradient(135deg, #FF9900, #e67e00); color: #fff; transform: scale(1.12); }
+.aws-product-name { font-size: 1.2rem; font-weight: 500; color: #0d1b2a; margin-bottom: 5px; }
+.aws-product-desc { font-size: 1rem; color: #64748b; line-height: 1.7; }
+
+/* ── EXPERIENCE ── */
+.aws-exp-wrap { margin-top: 36px; }
+.aws-exp-list { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 0; }
+.aws-exp-item { display: flex; align-items: center; gap: 12px; font-size: 0.97rem; color: #1e293b; line-height: 1.5; background: #fffbf2; border: 1px solid #ffe9b8; border-left: 4px solid #FF9900; border-radius: 8px; padding: 12px 16px; }
+.aws-exp-item svg { color: #FF9900; flex-shrink: 0; }
+.aws-exp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.aws-exp-tag { font-size: 0.85rem; font-weight: 600; padding: 6px 16px; border-radius: 20px; border: 1.5px solid #ffd9a3; color: #a05a00; background: #fff3d9; }
+
+/* ── WHY BTPL — 4-col ── */
+.aws-btpl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 48px; }
+.aws-btpl-card {
+  text-align: center; padding: 30px 18px; border-radius: 16px;
+  background: #fff; border: 1.5px solid #e8edf5;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.aws-btpl-card:hover { border-color: #FF9900; box-shadow: 0 10px 32px rgba(255,153,0,0.12); transform: translateY(-5px); }
+.aws-btpl-icon {
+  width: 58px; height: 58px; border-radius: 50%; margin: 0 auto 14px;
+  background: linear-gradient(135deg, #fff8ee, #fff1d6);
+  display: flex; align-items: center; justify-content: center; color: #FF9900;
+  transition: background 0.35s, color 0.35s, transform 0.35s;
+}
+.aws-btpl-card:hover .aws-btpl-icon { background: linear-gradient(135deg, #FF9900, #e67e00); color: #fff; transform: rotate(12deg) scale(1.1); }
+.aws-btpl-card h4 { font-size: 1.2rem; font-weight: 500; color: #0d1b2a; margin-bottom: 8px; }
+.aws-btpl-card p { font-size: 1rem; color: #64748b; line-height: 1.7; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .aws-svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .aws-products-grid { grid-template-columns: repeat(3, 1fr); }
+  .aws-btpl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .aws-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .aws-stat { padding: 24px 16px; }
+  .aws-stat-num { font-size: 2rem; }
+
+  .aws-svc-grid { grid-template-columns: 1fr; gap: 18px; margin-top: 32px; }
+  .aws-svc-header { padding: 14px 16px; gap: 12px; }
+  .aws-svc-icon { width: 40px; height: 40px; }
+  .aws-svc-header-title { font-size: 1.1rem; }
+  .aws-svc-body { padding: 16px 16px 20px; }
+  .aws-svc-body p { font-size: 0.92rem; line-height: 1.7; margin-bottom: 12px; }
+  .aws-svc-chip { font-size: 0.68rem; padding: 3px 10px; }
+
+  .aws-why-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 32px; }
+  .aws-why-card {
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 18px;
+  }
+  .aws-why-card:hover { transform: none; }
+  .aws-why-icon { width: 48px; height: 48px; border-radius: 11px; }
+  .aws-why-body h3 { font-size: 1.08rem; margin-bottom: 6px; }
+  .aws-why-body p { font-size: 0.92rem; line-height: 1.7; }
+
+  .aws-products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 28px; }
+  .aws-product-card { padding: 18px 14px; }
+  .aws-product-icon { width: 44px; height: 44px; }
+  .aws-product-name { font-size: 1.05rem; }
+  .aws-product-desc { font-size: 0.9rem; }
+
+  .aws-exp-list { grid-template-columns: 1fr; gap: 10px; }
+  .aws-exp-item { font-size: 0.92rem; padding: 10px 14px; }
+  .aws-exp-tag { font-size: 0.8rem; padding: 5px 14px; }
+
+  .aws-btpl-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 32px; }
+  .aws-btpl-card { padding: 22px 14px; }
+  .aws-btpl-icon { width: 50px; height: 50px; }
+  .aws-btpl-card h4 { font-size: 1.05rem; }
+  .aws-btpl-card p { font-size: 0.9rem; }
+}
+@media (max-width: 480px) {
+  .aws-stats-grid { grid-template-columns: 1fr 1fr; }
+  .aws-stat { padding: 20px 12px; }
+  .aws-stat-num { font-size: 1.7rem; }
+  .aws-stat-label { font-size: 0.75rem; }
+
+  .aws-svc-header { padding: 12px 14px; }
+  .aws-svc-icon { width: 36px; height: 36px; }
+  .aws-svc-header-title { font-size: 1rem; }
+  .aws-svc-body { padding: 14px 14px 18px; }
+  .aws-svc-body p { font-size: 0.88rem; line-height: 1.65; }
+  .aws-svc-chip { font-size: 0.65rem; padding: 2px 8px; }
+
+  .aws-why-card { padding: 16px 14px; gap: 12px; }
+  .aws-why-icon { width: 42px; height: 42px; }
+  .aws-why-body h3 { font-size: 1rem; }
+  .aws-why-body p { font-size: 0.88rem; line-height: 1.65; }
+
+  .aws-products-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .aws-product-card { padding: 16px 12px; }
+  .aws-product-icon { width: 40px; height: 40px; margin-bottom: 8px; }
+  .aws-product-name { font-size: 0.95rem; }
+  .aws-product-desc { font-size: 0.85rem; }
+
+  .aws-exp-item { font-size: 0.88rem; padding: 10px 12px; }
+  .aws-exp-tag { font-size: 0.76rem; padding: 4px 12px; }
+
+  .aws-btpl-grid { grid-template-columns: 1fr; }
+  .aws-btpl-card { padding: 20px 16px; }
+}

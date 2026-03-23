@@ -1,0 +1,123 @@
+/* ============================================
+   Flutter Page — fl-* Styles
+   Brand Green #4CAF50 | Hover: Sky Blue #54C5F8
+   ============================================ */
+
+/* ── STATS — gradient strip with sky-blue glow ── */
+.fl-stats { background: #e0f7fa; border-bottom: 1px solid rgba(0,151,167,0.12); padding: 0; }
+.fl-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.fl-stat {
+  padding: 38px 24px; text-align: center;
+  border-right: 1px solid rgba(0,151,167,0.1);
+  transition: background var(--transition-normal);
+}
+.fl-stat:last-child { border-right: none; }
+.fl-stat:hover { background: rgba(0,151,167,0.07); }
+.fl-stat-num { font-size: 2.5rem; font-weight: 600; line-height: 1; margin-bottom: 6px; display: block; color: #0097A7; }
+.fl-stat-label { font-size: 0.82rem; color: #546e7a; text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ── SERVICES — 2-col large cards ── */
+.fl-svc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+.fl-svc-card {
+  background: var(--white); border-radius: var(--radius-md); padding: 30px 26px;
+  border: 1px solid var(--gray-200); border-top: 4px solid #0097A7;
+  transition: box-shadow var(--transition-normal), transform var(--transition-normal), border-top-color var(--transition-normal);
+}
+.fl-svc-card:hover { box-shadow: 0 10px 36px rgba(0,151,167,0.15); transform: translateY(-5px); border-top-color: #00838F; }
+.fl-svc-icon {
+  width: 56px; height: 56px; border-radius: var(--radius-md);
+  background: #e0f7fa; display: flex; align-items: center; justify-content: center;
+  color: #0097A7; margin-bottom: 18px;
+  transition: background var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+}
+.fl-svc-card:hover .fl-svc-icon { background: #0097A7; color: var(--white); transform: scale(1.12) rotate(8deg); }
+.fl-svc-card h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 10px; color: var(--dark-800); }
+.fl-svc-card p { font-size: 1rem; color: var(--gray-400); line-height: 1.7; margin-bottom: 14px; }
+.fl-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.fl-tag {
+  font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 20px;
+  background: #e0f7fa; color: #0097A7; text-transform: uppercase; letter-spacing: 0.04em;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.fl-svc-card:hover .fl-tag { background: #b2ebf2; color: #006064; }
+
+/* ── WHY FLUTTER — 3-col gradient-border cards ── */
+.fl-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+.fl-why-card {
+  border-radius: var(--radius-md); padding: 28px 24px;
+  background: rgba(255,255,255,0.04); position: relative;
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: background var(--transition-normal), transform var(--transition-normal);
+}
+.fl-why-card::before {
+  content: ''; position: absolute; inset: 0; border-radius: var(--radius-md);
+  padding: 1px; background: rgba(0,151,167,0.25);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  transition: background var(--transition-normal);
+}
+.fl-why-card:hover { background: rgba(0,151,167,0.06); transform: translateY(-4px); }
+.fl-why-card:hover::before { background: rgba(0,151,167,0.5); }
+.fl-why-icon {
+  width: 52px; height: 52px; border-radius: var(--radius-sm);
+  background: rgba(0,151,167,0.12); display: flex; align-items: center; justify-content: center;
+  color: #0097A7; margin-bottom: 16px;
+  transition: background var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+}
+.fl-why-card:hover .fl-why-icon { background: #0097A7; color: var(--white); transform: scale(1.15); }
+.fl-why-card h3 { font-size: 1.2rem; font-weight: 500; color: var(--white); margin-bottom: 8px; }
+.fl-why-card p { font-size: 1rem; color: var(--gray-300); line-height: 1.7; }
+
+/* ── PROCESS — horizontal 5-step bar ── */
+.fl-process { display: flex; align-items: flex-start; gap: 0; margin-top: 48px; position: relative; }
+.fl-process-step { flex: 1; text-align: center; position: relative; padding: 0 12px; }
+.fl-process-step::after {
+  content: ''; position: absolute; top: 24px;
+  left: 50%; right: -50%; height: 2px;
+  background: #0097A7;
+}
+.fl-process-step:last-child::after { display: none; }
+.fl-process-dot {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--white); border: 3px solid #0097A7;
+  display: flex; align-items: center; justify-content: center;
+  color: #0097A7; margin: 0 auto 16px;
+  position: relative; z-index: 1;
+  transition: background var(--transition-normal), color var(--transition-normal), border-color var(--transition-normal), transform var(--transition-normal);
+}
+.fl-process-step:hover .fl-process-dot { background: #0097A7; color: var(--white); border-color: transparent; transform: scale(1.18); }
+.fl-process-label { font-size: 1.2rem; font-weight: 500; color: var(--dark-800); margin-bottom: 4px; }
+.fl-process-sub { font-size: 1rem; color: var(--gray-400); line-height: 1.7; }
+
+/* ── WHY BTPL — 2-col icon-left dark ── */
+.fl-btpl-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; }
+.fl-btpl-card {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: rgba(255,255,255,0.05); padding: 24px;
+  border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08);
+  transition: background var(--transition-normal), border-color var(--transition-normal);
+}
+.fl-btpl-card:hover { background: rgba(0,151,167,0.09); border-color: rgba(0,151,167,0.35); }
+.fl-btpl-icon {
+  flex-shrink: 0; width: 48px; height: 48px; border-radius: var(--radius-sm);
+  background: rgba(0,151,167,0.12); display: flex; align-items: center; justify-content: center;
+  color: #0097A7;
+  transition: background var(--transition-normal), color var(--transition-normal), transform var(--transition-normal);
+}
+.fl-btpl-card:hover .fl-btpl-icon { background: #0097A7; color: var(--white); transform: scale(1.15); }
+.fl-btpl-card h4 { font-size: 1.2rem; font-weight: 500; color: var(--white); margin-bottom: 6px; }
+.fl-btpl-card p { font-size: 1rem; color: var(--gray-300); line-height: 1.7; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .fl-svc-grid { grid-template-columns: 1fr; }
+  .fl-why-grid { grid-template-columns: repeat(2, 1fr); }
+  .fl-process { flex-wrap: wrap; }
+  .fl-process-step { flex: 0 0 50%; margin-bottom: 32px; }
+  .fl-process-step::after { display: none; }
+}
+@media (max-width: 768px) {
+  .fl-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .fl-why-grid { grid-template-columns: 1fr; }
+  .fl-btpl-grid { grid-template-columns: 1fr; }
+}

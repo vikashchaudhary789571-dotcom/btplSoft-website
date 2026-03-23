@@ -1,0 +1,181 @@
+/* ============================================
+   NumPy Page — np-* Styles
+   NumPy Blue #4D77CF | Dark Teal #013243 | Light #8ABFE8
+   Unique design: Matrix/ndarray row layout with bracket decoration
+   ============================================ */
+
+/* ── SECTION HEADING WRAPPER ── */
+.np-sec-head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.np-sec-head .sp-heading { max-width: 800px; margin-left: auto; margin-right: auto; }
+
+/* ── STATS — light blue bg, teal gradient numbers, bracket decoration ── */
+.np-stats { background: #f5f9ff; border-bottom: 2px solid #d0e4f7; padding: 0; }
+.np-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.np-stat {
+  padding: 38px 24px 38px 36px; text-align: center;
+  border-right: 1px solid #d0e4f7;
+  position: relative; transition: background 0.3s;
+}
+.np-stat:last-child { border-right: none; }
+.np-stat:hover { background: #e8f2ff; }
+/* Array bracket decoration */
+.np-stat::before {
+  content: '['; position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  font-size: 2.2rem; font-weight: 300; color: rgba(77,119,207,0.2);
+  font-family: 'Courier New', monospace; transition: color 0.3s;
+}
+.np-stat::after {
+  content: ']'; position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  font-size: 2.2rem; font-weight: 300; color: rgba(77,119,207,0.2);
+  font-family: 'Courier New', monospace; transition: color 0.3s;
+}
+.np-stat:hover::before, .np-stat:hover::after { color: rgba(77,119,207,0.5); }
+.np-stat-num {
+  font-size: 2.6rem; font-weight: 600; line-height: 1;
+  display: block; margin-bottom: 6px;
+  background: linear-gradient(135deg, #013243, #4D77CF);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.np-stat-label {
+  font-size: 0.85rem; color: #3a5a7a;
+  text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500;
+}
+
+/* ── SERVICES — matrix table with dark teal header (ndarray metaphor) ── */
+.np-svc-outer { margin-top: 48px; border: 2px solid #c8dcef; border-radius: 16px; overflow: hidden; }
+.np-svc-matrix-head {
+  background: linear-gradient(90deg, #013243, #1a4a6e);
+  display: grid; grid-template-columns: 64px 220px 1fr 230px;
+  padding: 14px 24px; gap: 20px; align-items: center;
+}
+.np-svc-matrix-head span {
+  font-size: 0.7rem; font-weight: 700; color: rgba(255,255,255,0.6);
+  text-transform: uppercase; letter-spacing: 0.1em;
+}
+.np-svc-row {
+  display: grid; grid-template-columns: 64px 220px 1fr 230px;
+  padding: 22px 24px; gap: 20px; align-items: center;
+  border-top: 1px solid #e2ecf7;
+  border-left: 4px solid transparent;
+  transition: background 0.25s, border-left-color 0.25s;
+}
+.np-svc-row:nth-child(even) { background: #f5f9ff; }
+.np-svc-row:hover { background: #e4eeff; border-left-color: #4D77CF; }
+.np-svc-row-icon {
+  width: 46px; height: 46px; border-radius: 10px;
+  background: rgba(77,119,207,0.1);
+  display: flex; align-items: center; justify-content: center;
+  color: #4D77CF; transition: background 0.3s, color 0.3s;
+}
+.np-svc-row:hover .np-svc-row-icon { background: #4D77CF; color: #fff; }
+.np-svc-row-name { font-size: 1.2rem; font-weight: 500; color: #1e293b; line-height: 1.4; }
+.np-svc-row-desc { font-size: 1rem; color: #64748b; line-height: 1.7; }
+.np-svc-row-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.np-svc-chip {
+  font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 6px;
+  background: #e4eef8; color: #1e3a5f; border: 1px solid #c8dcef; transition: all 0.2s;
+}
+.np-svc-row:hover .np-svc-chip { background: rgba(77,119,207,0.12); color: #4D77CF; border-color: rgba(77,119,207,0.35); }
+
+/* ── WHY NUMPY — 3-col diagonal corner cards ── */
+.np-why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
+.np-why-card {
+  padding: 28px 24px 32px; background: #fff;
+  border: 1.5px solid #e8edf5; border-radius: 16px 16px 0 16px;
+  position: relative; overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.np-why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 42px rgba(77,119,207,0.13);
+  border-color: rgba(77,119,207,0.4);
+}
+.np-why-card::after {
+  content: ''; position: absolute; bottom: 0; right: 0;
+  width: 0; height: 0; border-style: solid;
+  border-width: 0 0 36px 36px;
+  border-color: transparent transparent #4D77CF transparent;
+  opacity: 0; transition: opacity 0.3s;
+}
+.np-why-card:hover::after { opacity: 1; }
+.np-why-icon {
+  width: 50px; height: 50px; border-radius: 12px; margin-bottom: 16px;
+  background: linear-gradient(135deg, #013243, #4D77CF);
+  display: flex; align-items: center; justify-content: center; color: #fff;
+  transition: transform 0.3s;
+}
+.np-why-card:hover .np-why-icon { transform: scale(1.1) rotate(-5deg); }
+.np-why-card h3 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0 0 8px; }
+.np-why-card p { font-size: 1rem; color: #64748b; line-height: 1.7; margin: 0; }
+
+/* ── PRODUCTS — 4-col ── */
+.np-products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+.np-product-card {
+  background: #fff; border-radius: 14px; border: 1.5px solid #e8edf5;
+  padding: 22px 18px; display: flex; flex-direction: column; gap: 10px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.np-product-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(77,119,207,0.14); border-color: rgba(77,119,207,0.4); }
+.np-product-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: rgba(77,119,207,0.1);
+  display: flex; align-items: center; justify-content: center; color: #4D77CF;
+  transition: background 0.3s, color 0.3s;
+}
+.np-product-card:hover .np-product-icon { background: #4D77CF; color: #fff; }
+.np-product-name { font-size: 1.2rem; font-weight: 500; color: #1e293b; }
+.np-product-desc { font-size: 1rem; color: #64748b; line-height: 1.7; }
+
+/* ── EXPERIENCE ── */
+.np-exp-wrap { margin-top: 36px; background: #f4f6fd; border: 1px solid #c0ccec; border-radius: 10px; padding: 28px 32px; }
+.np-exp-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px 40px; }
+.np-exp-item { display: flex; align-items: flex-start; gap: 10px; font-size: 0.93rem; color: #334155; line-height: 1.55; }
+.np-exp-item svg { flex-shrink: 0; margin-top: 3px; color: #4D77CF; }
+.np-exp-tags { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 20px; border-top: 1px solid #c0ccec; margin-top: 24px; }
+.np-exp-tag { font-size: 0.82rem; font-weight: 500; padding: 5px 14px; border-radius: 6px; border: 1px solid #b8caec; color: #2a4d96; background: #e8edf8; }
+
+/* ── WHY BTPL — 4-col ── */
+.np-btpl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.np-btpl-card {
+  background: #fff; border-radius: 14px; border: 1.5px solid #e8edf5;
+  padding: 28px 22px; display: flex; flex-direction: column; gap: 12px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.np-btpl-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(77,119,207,0.12); border-color: rgba(77,119,207,0.35); }
+.np-btpl-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(77,119,207,0.1);
+  display: flex; align-items: center; justify-content: center; color: #4D77CF;
+  transition: background 0.3s, color 0.3s;
+}
+.np-btpl-card:hover .np-btpl-icon { background: #4D77CF; color: #fff; }
+.np-btpl-card h4 { font-size: 1.2rem; font-weight: 500; color: #1e293b; margin: 0; }
+.np-btpl-card p { font-size: 1rem; color: #64748b; line-height: 1.7; margin: 0; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1200px) {
+  .np-svc-matrix-head { display: none; }
+  .np-svc-row { grid-template-columns: 50px 1fr; gap: 14px; }
+  .np-svc-row-name { grid-column: 2; font-weight: 500; }
+  .np-svc-row-desc { grid-column: 1 / -1; margin-left: 0; }
+  .np-svc-row-chips { grid-column: 1 / -1; }
+}
+@media (max-width: 1100px) {
+  .np-why-grid { grid-template-columns: repeat(2, 1fr); }
+  .np-products-grid { grid-template-columns: repeat(3, 1fr); }
+  .np-btpl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .np-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .np-stat { border-right: none; border-bottom: 1px solid #d0e4f7; padding: 28px 24px; }
+  .np-stat:nth-child(odd) { border-right: 1px solid #d0e4f7; }
+  .np-stat::before, .np-stat::after { display: none; }
+  .np-svc-row { display: flex; flex-direction: column; padding: 18px; gap: 10px; }
+  .np-why-grid { grid-template-columns: 1fr; }
+  .np-products-grid { grid-template-columns: repeat(2, 1fr); }
+  .np-exp-list { grid-template-columns: 1fr; }
+  .np-btpl-grid { grid-template-columns: 1fr; }
+}
