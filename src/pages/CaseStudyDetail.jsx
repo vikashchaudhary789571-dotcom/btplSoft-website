@@ -1,5 +1,7 @@
 import { Link, useParams, useNavigate } from 'react-router-dom'
-import { ArrowRight, ArrowLeft, ChevronDown } from 'lucide-react'
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right'
+import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left'
+import ChevronDown from 'lucide-react/dist/esm/icons/chevron-down'
 import { useState } from 'react'
 import './CaseStudy.css'
 

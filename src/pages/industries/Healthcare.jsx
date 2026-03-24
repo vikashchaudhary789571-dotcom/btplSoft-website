@@ -1,8 +1,18 @@
 import { Link } from 'react-router-dom'
-import {
-  Activity, ArrowRight, CheckCircle,
-  Shield, Cpu, Database, Globe, Users, Zap, Lock, TrendingUp, RefreshCw, Stethoscope, BarChart2
-} from 'lucide-react'
+import Activity from 'lucide-react/dist/esm/icons/activity'
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right'
+import CheckCircle from 'lucide-react/dist/esm/icons/check-circle'
+import Shield from 'lucide-react/dist/esm/icons/shield'
+import Cpu from 'lucide-react/dist/esm/icons/cpu'
+import Database from 'lucide-react/dist/esm/icons/database'
+import Globe from 'lucide-react/dist/esm/icons/globe'
+import Users from 'lucide-react/dist/esm/icons/users'
+import Zap from 'lucide-react/dist/esm/icons/zap'
+import Lock from 'lucide-react/dist/esm/icons/lock'
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up'
+import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw'
+import Stethoscope from 'lucide-react/dist/esm/icons/stethoscope'
+import BarChart2 from 'lucide-react/dist/esm/icons/bar-chart-2'
 import '../industries/IndustryPage.css'
 import heroBanner from '../../assets/industries/health&science2.webp'
 import overviewBanner from '../../assets/industries/health&science1.webp'

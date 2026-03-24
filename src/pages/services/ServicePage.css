@@ -5,7 +5,7 @@
 
 /* ── Reset ── */
 .sp-page * { box-sizing: border-box; margin: 0; padding: 0; }
-.sp-page .container { margin: 0 auto; }
+.sp-page .container { margin: 0 auto; padding: 0 24px; }
 
 .sp-page {
   font-family: var(--font-body);
@@ -201,7 +201,7 @@
 /* ════════════════════════════════════
    SECTION WRAPPERS
    ════════════════════════════════════ */
-.sp-section { padding: 80px 0; }
+.sp-section { padding: 64px 0; }
 .sp-section--light { background: #f8fafc; }
 .sp-bg-white { 
   background: #f8fafc;
@@ -287,7 +287,7 @@
   position: relative;
   max-width: 100%;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 48px;
 }
 
 .sp-overview-content .sp-label {
@@ -340,8 +340,8 @@
 .sp-overview-tech-points {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  margin-top: 45px;
+  gap: 28px;
+  margin-top: 36px;
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
@@ -408,7 +408,7 @@
 .sp-bg-dark  { background: #0d1b2a; }
 
 /* ── Section headings ── */
-.sp-section-head { margin-bottom: 52px; }
+.sp-section-head { margin-bottom: 36px; }
 .sp-section-head.center { text-align: center; }
 
 .sp-label {
@@ -756,7 +756,7 @@
    ════════════════════════════════════ */
 .sp-cta {
   background: #4CAF50;
-  padding: 80px 0;
+  padding: 60px 0;
   text-align: center;
 }
 .sp-cta h2 {
@@ -819,6 +819,9 @@
   .sp-hero-title { font-size: 2rem; }
   .sp-hero-desc  { font-size: 1rem; line-height: 1.7; -webkit-line-clamp: 4; margin-bottom: 28px; }
   .sp-services-grid { grid-template-columns: 1fr; }
+  .sp-service-card { text-align: center; align-items: center; display: flex; flex-direction: column; }
+  .sp-service-icon { margin-left: auto; margin-right: auto; }
+  .sp-service-card h3::after { left: 50%; transform: translateX(-50%); }
   .sp-process-grid  { grid-template-columns: 1fr; }
   .sp-why-grid      { grid-template-columns: 1fr; gap: 16px; }
   .sp-why-card      { padding: 24px 20px; gap: 14px; }
@@ -828,10 +831,10 @@
   .sp-sub           { font-size: 1rem; }
   .sp-cta h2        { font-size: 1.8rem; }
   .sp-cta p         { font-size: 0.95rem; }
-  .sp-cta           { padding: 60px 0; }
+  .sp-cta           { padding: 48px 0; }
   .sp-container     { padding: 0 20px; }
-  .sp-section       { padding: 60px 0; }
-  .sp-section-head  { margin-bottom: 36px; }
+  .sp-section       { padding: 48px 0; }
+  .sp-section-head  { margin-bottom: 28px; }
   .sp-label         { font-size: 0.88rem; letter-spacing: 2px; }
   .sp-hero-actions  { justify-content: center; }
   .sp-btn-primary   { padding: 12px 26px; font-size: 0.95rem; }
@@ -850,9 +853,9 @@
   .sp-btn-secondary { padding: 12px 20px; font-size: 0.88rem; width: 100%; justify-content: center; }
   .sp-heading       { font-size: 1.6rem; margin-bottom: 14px; }
   .sp-sub           { font-size: 0.9rem; line-height: 1.65; }
-  .sp-section       { padding: 48px 0; }
-  .sp-section-head  { margin-bottom: 28px; }
-  .sp-cta           { padding: 48px 0; }
+  .sp-section       { padding: 40px 0; }
+  .sp-section-head  { margin-bottom: 24px; }
+  .sp-cta           { padding: 40px 0; }
   .sp-cta h2        { font-size: 1.5rem; margin-bottom: 12px; }
   .sp-cta p         { font-size: 0.88rem; margin-bottom: 28px; }
   .sp-cta .sp-btn-primary { width: auto; }
@@ -873,7 +876,7 @@
   .sp-section-title   { font-size: 1.5rem; }
   .sp-overview-content .sp-heading { font-size: 1.65rem; }
   .sp-overview-content .sp-subtext-large { font-size: 0.92rem; }
-  .sp-tech-point      { padding: 24px 18px; gap: 16px; flex-direction: column; }
+  .sp-tech-point      { padding: 24px 18px; gap: 16px; flex-direction: column; align-items: center; text-align: center; }
   .sp-tech-point h4   { font-size: 1.05rem; }
   .sp-tech-point p    { font-size: 0.9rem; }
   .sp-tech-point .checkmark-wrapper { width: 46px; height: 46px; border-radius: 12px; }
@@ -890,7 +893,7 @@
   .sp-heading       { font-size: 1.4rem; }
   .sp-container     { padding: 0 14px; }
   .sp-cta h2        { font-size: 1.35rem; }
-  .sp-section       { padding: 40px 0; }
+  .sp-section       { padding: 36px 0; }
 }
 
 

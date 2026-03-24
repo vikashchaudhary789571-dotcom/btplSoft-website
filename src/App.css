@@ -643,7 +643,7 @@
 
 .services-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .services-header .section-description {
@@ -780,7 +780,7 @@
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 56px;
   align-items: center;
 }
 
@@ -1036,7 +1036,7 @@
 
 .industries-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .industries-header .section-description {
@@ -1102,7 +1102,7 @@
 
 .why-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .why-header .section-description {
@@ -1179,7 +1179,7 @@
 
 /* ===== CTA SECTION ===== */
 .cta-section {
-  padding: 100px 0;
+  padding: 72px 0;
   background: var(--gradient-hero);
   position: relative;
   overflow: hidden;
@@ -1370,7 +1370,7 @@
   }
 
   .cta-section {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   .cta-content .section-title {
@@ -1461,7 +1461,7 @@
   .industries-header,
   .why-header,
   .tech-header {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   /* About */
@@ -1511,7 +1511,7 @@
 
   /* CTA */
   .cta-section {
-    padding: 64px 0;
+    padding: 48px 0;
   }
 
   .cta-content .section-title {
@@ -1672,7 +1672,7 @@
 
   /* CTA */
   .cta-section {
-    padding: 48px 0;
+    padding: 40px 0;
   }
 
   .cta-content .section-title {

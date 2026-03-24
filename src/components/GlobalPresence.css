@@ -3,7 +3,7 @@
    ============================================ */
 
 .gp-v3-section {
-  padding: 100px 0;
+  padding: 72px 0;
   background: #f8faf9;
   position: relative;
   overflow: hidden;
@@ -38,7 +38,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 64px;
+  margin-bottom: 40px;
   position: relative;
   z-index: 2;
 }
@@ -292,7 +292,7 @@
 
 @media (max-width: 768px) {
   .gp-v3-section {
-    padding: 64px 0;
+    padding: 48px 0;
   }
 
   .gp-v3-top {
@@ -335,7 +335,7 @@
 
 @media (max-width: 480px) {
   .gp-v3-section {
-    padding: 48px 0;
+    padding: 40px 0;
   }
 
   .gp-v3-heading {

@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Globe, Building2, User } from 'lucide-react';
+import Mail from 'lucide-react/dist/esm/icons/mail';
+import Phone from 'lucide-react/dist/esm/icons/phone';
+import MapPin from 'lucide-react/dist/esm/icons/map-pin';
+import Send from 'lucide-react/dist/esm/icons/send';
+import MessageSquare from 'lucide-react/dist/esm/icons/message-square';
+import Globe from 'lucide-react/dist/esm/icons/globe';
+import Building2 from 'lucide-react/dist/esm/icons/building-2';
+import User from 'lucide-react/dist/esm/icons/user';
 import './Contact.css';
 
 const countries = [

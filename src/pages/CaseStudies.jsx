@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, ChevronDown } from 'lucide-react'
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right'
+import ChevronDown from 'lucide-react/dist/esm/icons/chevron-down'
 import { useState } from 'react'
 import './CaseStudies.css'
 

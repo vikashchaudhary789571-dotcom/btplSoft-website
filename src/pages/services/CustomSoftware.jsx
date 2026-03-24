@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom'
-import {
-  Code, ArrowRight, CheckCircle, Layers, ShieldCheck,
-  Zap, Cloud, Monitor, Clock, Users, DollarSign
-} from 'lucide-react'
+import Code from 'lucide-react/dist/esm/icons/code'
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right'
+import CheckCircle from 'lucide-react/dist/esm/icons/check-circle'
+import Layers from 'lucide-react/dist/esm/icons/layers'
+import ShieldCheck from 'lucide-react/dist/esm/icons/shield-check'
+import Zap from 'lucide-react/dist/esm/icons/zap'
+import Cloud from 'lucide-react/dist/esm/icons/cloud'
+import Monitor from 'lucide-react/dist/esm/icons/monitor'
+import Clock from 'lucide-react/dist/esm/icons/clock'
+import Users from 'lucide-react/dist/esm/icons/users'
+import DollarSign from 'lucide-react/dist/esm/icons/dollar-sign'
 import './ServicePage.css'
 import TechStack from '../../components/TechStack'
 import GlobalPresence from '../../components/GlobalPresence'

@@ -1,7 +1,10 @@
 import { useState } from 'react'
-import {
-  Server, Monitor, Cloud, Database, TestTube2, Smartphone
-} from 'lucide-react'
+import Server from 'lucide-react/dist/esm/icons/server'
+import Monitor from 'lucide-react/dist/esm/icons/monitor'
+import Cloud from 'lucide-react/dist/esm/icons/cloud'
+import Database from 'lucide-react/dist/esm/icons/database'
+import TestTube2 from 'lucide-react/dist/esm/icons/test-tube-2'
+import Smartphone from 'lucide-react/dist/esm/icons/smartphone'
 import './TechStack.css'
 
 const categories = [

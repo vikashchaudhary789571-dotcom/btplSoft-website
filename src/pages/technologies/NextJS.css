@@ -334,11 +334,9 @@
 }
 
 @media (max-width: 480px) {
-  .nj-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .nj-stats-grid { grid-template-columns: 1fr; }
   .nj-stat       { padding: 20px 16px; border-right: none; border-bottom: 1px solid #c2ddf7; }
-  .nj-stat:nth-child(odd) { border-right: 1px solid #c2ddf7; }
   .nj-stat:last-child { border-bottom: none; }
-  .nj-stat:nth-last-child(2):nth-child(odd) { border-bottom: none; }
   .nj-stat:nth-child(1),
   .nj-stat:nth-child(2) { border-bottom: 1px solid #c2ddf7; }
   .nj-stat-num   { font-size: 1.8rem; }

@@ -3,7 +3,7 @@
    ============================================ */
 
 .ts-section {
-  padding: 96px 0;
+  padding: 72px 0;
   background: #f8f9fb;
   position: relative;
   overflow: hidden;
@@ -32,7 +32,7 @@
 /* ── HEADER ── */
 .ts-header {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 
 /* Global classes used in header */
@@ -269,7 +269,7 @@
 /* --- Mobile --- */
 @media (max-width: 600px) {
   .ts-section {
-    padding: 56px 0;
+    padding: 44px 0;
   }
 
   .ts-container {

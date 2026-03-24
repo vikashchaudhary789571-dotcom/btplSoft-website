@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom'
-import {
-  Activity, Landmark, ShoppingCart, GraduationCap,
-  Factory, Truck, Home, Zap, ArrowRight
-} from 'lucide-react'
+import Activity from 'lucide-react/dist/esm/icons/activity'
+import Landmark from 'lucide-react/dist/esm/icons/landmark'
+import ShoppingCart from 'lucide-react/dist/esm/icons/shopping-cart'
+import GraduationCap from 'lucide-react/dist/esm/icons/graduation-cap'
+import Factory from 'lucide-react/dist/esm/icons/factory'
+import Truck from 'lucide-react/dist/esm/icons/truck'
+import Home from 'lucide-react/dist/esm/icons/home'
+import Zap from 'lucide-react/dist/esm/icons/zap'
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right'
 import './Industries.css'
 import industriesBanner from '../../assets/services/professional-programmer-working-late-dark-office.webp'
 

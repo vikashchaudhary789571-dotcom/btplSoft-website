@@ -1,9 +1,17 @@
 import { Link } from 'react-router-dom'
-import {
-  Code, Smartphone, Globe, Cpu, TrendingUp, Search,
-  Share2, Cloud, ShoppingCart, Layers, Monitor, ShieldCheck,
-  ArrowRight
-} from 'lucide-react'
+import Code from 'lucide-react/dist/esm/icons/code'
+import Smartphone from 'lucide-react/dist/esm/icons/smartphone'
+import Globe from 'lucide-react/dist/esm/icons/globe'
+import Cpu from 'lucide-react/dist/esm/icons/cpu'
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up'
+import Search from 'lucide-react/dist/esm/icons/search'
+import Share2 from 'lucide-react/dist/esm/icons/share-2'
+import Cloud from 'lucide-react/dist/esm/icons/cloud'
+import ShoppingCart from 'lucide-react/dist/esm/icons/shopping-cart'
+import Layers from 'lucide-react/dist/esm/icons/layers'
+import Monitor from 'lucide-react/dist/esm/icons/monitor'
+import ShieldCheck from 'lucide-react/dist/esm/icons/shield-check'
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right'
 import './Services.css'
 import servicesBanner from '../../assets/services/professional-programmer-working-late-dark-office.webp'
 

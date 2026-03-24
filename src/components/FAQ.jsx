@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { Plus, Minus, HelpCircle } from 'lucide-react'
+import Plus from 'lucide-react/dist/esm/icons/plus'
+import Minus from 'lucide-react/dist/esm/icons/minus'
+import HelpCircle from 'lucide-react/dist/esm/icons/help-circle'
 import './FAQ.css'
 
 const faqs = [

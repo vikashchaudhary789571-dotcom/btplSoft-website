@@ -1,32 +1,30 @@
-import {
-  ArrowRight,
-  Target,
-  Eye,
-  Users,
-  Shield,
-  Clock,
-  Lightbulb,
-  Headphones,
-  Award,
-  TrendingUp,
-  CheckCircle,
-  Globe,
-  Smartphone,
-  Code,
-  Search,
-  Share2,
-  Monitor,
-  Mail,
-  Phone,
-  Brain,
-  Cloud,
-  ShoppingBag,
-  ShoppingCart,
-  ShieldCheck,
-  PenTool,
-  MapPin,
-  ChevronRight
-} from 'lucide-react'
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right'
+import Target from 'lucide-react/dist/esm/icons/target'
+import Eye from 'lucide-react/dist/esm/icons/eye'
+import Users from 'lucide-react/dist/esm/icons/users'
+import Shield from 'lucide-react/dist/esm/icons/shield'
+import Clock from 'lucide-react/dist/esm/icons/clock'
+import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb'
+import Headphones from 'lucide-react/dist/esm/icons/headphones'
+import Award from 'lucide-react/dist/esm/icons/award'
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up'
+import CheckCircle from 'lucide-react/dist/esm/icons/check-circle'
+import Globe from 'lucide-react/dist/esm/icons/globe'
+import Smartphone from 'lucide-react/dist/esm/icons/smartphone'
+import Code from 'lucide-react/dist/esm/icons/code'
+import Search from 'lucide-react/dist/esm/icons/search'
+import Share2 from 'lucide-react/dist/esm/icons/share-2'
+import Monitor from 'lucide-react/dist/esm/icons/monitor'
+import Mail from 'lucide-react/dist/esm/icons/mail'
+import Phone from 'lucide-react/dist/esm/icons/phone'
+import Brain from 'lucide-react/dist/esm/icons/brain'
+import Cloud from 'lucide-react/dist/esm/icons/cloud'
+import ShoppingBag from 'lucide-react/dist/esm/icons/shopping-bag'
+import ShoppingCart from 'lucide-react/dist/esm/icons/shopping-cart'
+import ShieldCheck from 'lucide-react/dist/esm/icons/shield-check'
+import PenTool from 'lucide-react/dist/esm/icons/pen-tool'
+import MapPin from 'lucide-react/dist/esm/icons/map-pin'
+import ChevronRight from 'lucide-react/dist/esm/icons/chevron-right'
 import { Link } from 'react-router-dom'
 import logoImg from '../assets/images/btpl-logo.webp'
 import aboutBannerImg from '../assets/images/about-banner.webp'

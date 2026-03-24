@@ -1,7 +1,11 @@
 import React from 'react';
 import './GlobalPresence.css';
 import mapImg from "../assets/images/global-map-2.webp";
-import { Globe2, MapPin, Users2, ShieldCheck, Zap } from 'lucide-react';
+import Globe2 from 'lucide-react/dist/esm/icons/globe-2';
+import MapPin from 'lucide-react/dist/esm/icons/map-pin';
+import Users2 from 'lucide-react/dist/esm/icons/users-2';
+import ShieldCheck from 'lucide-react/dist/esm/icons/shield-check';
+import Zap from 'lucide-react/dist/esm/icons/zap';
 
 const locations = [
   { id: 1, city: 'Dallas', country: 'USA', top: '38%', left: '18%' },

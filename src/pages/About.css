@@ -129,7 +129,7 @@
    INTRO + NUTSHELL (OUR STORY)
    ════════════════════════════════════ */
 .ab-intro {
-  padding: 100px 0 0;
+  padding: 72px 0 0;
   background: linear-gradient(180deg, #ffffff 0%, #f8fffe 50%, #ffffff 100%);
   position: relative;
   overflow: hidden;
@@ -149,7 +149,7 @@
 
 /* single-column layout — heading full width, content below */
 .ab-intro-single {
-  padding-bottom: 80px;
+  padding-bottom: 56px;
   border-bottom: 2px solid #e8f5e9;
   position: relative;
   z-index: 1;
@@ -159,7 +159,7 @@
 .ab-intro-content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px 80px;
+  gap: 32px 48px;
   margin-top: 48px;
   text-align: left;
 }
@@ -168,9 +168,9 @@
 .ab-intro-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 72px;
+  gap: 48px;
   align-items: start;
-  padding-bottom: 72px;
+  padding-bottom: 48px;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -270,7 +270,7 @@
 
 /* ─── STATS STRIP ─── */
 .ab-stats {
-  padding: 60px 0;
+  padding: 48px 0;
   background: #fff;
 }
 
@@ -324,7 +324,7 @@
    GENERIC SECTION WRAPPER
    ════════════════════════════════════ */
 .ab-section {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 
 .ab-section.bg-light { background: #f8f9fb; }
@@ -332,7 +332,7 @@
 .ab-section.bg-dark  { background: #0d1b2a; }
 
 .ab-section-head {
-  margin-bottom: 52px;
+  margin-bottom: 36px;
   text-align: center;
 }
 
@@ -1050,7 +1050,7 @@
    ════════════════════════════════════ */
 .ab-cta {
   background: #4CAF50;
-  padding: 72px 0;
+  padding: 56px 0;
   text-align: center;
 }
 
@@ -1093,7 +1093,7 @@
    CONTACT STRIP
    ════════════════════════════════════ */
 .ab-contact-strip {
-  padding: 56px 0;
+  padding: 44px 0;
   border-top: 1px solid #f0f0f0;
   background: #fff;
 }
@@ -1249,11 +1249,11 @@
 
   /* Intro */
   .ab-intro {
-    padding: 64px 0 0;
+    padding: 48px 0 0;
   }
 
   .ab-intro-single {
-    padding-bottom: 48px;
+    padding-bottom: 36px;
   }
 
   .ab-intro-heading,
@@ -1283,7 +1283,7 @@
 
   /* Stats */
   .ab-stats {
-    padding: 40px 0;
+    padding: 32px 0;
   }
 
   .ab-stat-num {
@@ -1304,11 +1304,11 @@
 
   /* Section heads */
   .ab-section {
-    padding: 56px 0;
+    padding: 44px 0;
   }
 
   .ab-section-head {
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
 
   .ab-sec-head {
@@ -1476,7 +1476,7 @@
 
   /* Contact Strip */
   .ab-contact-strip {
-    padding: 40px 0;
+    padding: 32px 0;
   }
 
   .ab-contact-grid {
@@ -1495,7 +1495,7 @@
 
   /* CTA */
   .ab-cta {
-    padding: 56px 0;
+    padding: 44px 0;
   }
 
   .ab-cta h2 {
@@ -1538,11 +1538,11 @@
 
   /* Intro */
   .ab-intro {
-    padding: 48px 0 0;
+    padding: 40px 0 0;
   }
 
   .ab-intro-single {
-    padding-bottom: 36px;
+    padding-bottom: 28px;
   }
 
   .ab-intro-label {
@@ -1573,7 +1573,7 @@
 
   /* Stats */
   .ab-stats {
-    padding: 32px 0;
+    padding: 28px 0;
   }
 
   .ab-stats-grid {
@@ -1599,11 +1599,11 @@
 
   /* Section heads */
   .ab-section {
-    padding: 44px 0;
+    padding: 36px 0;
   }
 
   .ab-section-head {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
 
   .ab-sec-head {

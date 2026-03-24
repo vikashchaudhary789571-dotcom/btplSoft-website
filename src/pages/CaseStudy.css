@@ -85,14 +85,14 @@
 
 /* ══════════════ LAYOUT WITH SIDEBAR ══════════════ */
 .cs-detail-section {
-  padding: 80px 0;
+  padding: 60px 0;
   background: #fff;
 }
 
 .cs-detail-layout {
   display: grid;
   grid-template-columns: 280px 1fr;
-  gap: 60px;
+  gap: 44px;
   align-items: start;
 }
 
@@ -191,11 +191,11 @@
 .cs-detail-content {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
 }
 
 .cs-content-section {
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -348,7 +348,7 @@
 /* ══════════════ CTA SECTION ══════════════ */
 .cs-cta {
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-  padding: 100px 0;
+  padding: 72px 0;
   text-align: center;
   position: relative;
 }
@@ -451,15 +451,15 @@
   }
   
   .cs-detail-section {
-    padding: 60px 0;
+    padding: 44px 0;
   }
   
   .cs-detail-content {
-    gap: 48px;
+    gap: 32px;
   }
   
   .cs-content-section {
-    padding-bottom: 48px;
+    padding-bottom: 32px;
   }
   
   .cs-content-title {
@@ -475,7 +475,7 @@
   }
   
   .cs-cta {
-    padding: 70px 0;
+    padding: 48px 0;
   }
   
   .cs-cta h2 {

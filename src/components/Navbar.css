@@ -29,12 +29,12 @@
 }
 
 .navbar-logo img {
-  height: 70px;
+  height: 75px;
   width: auto;
 }
 
 .navbar.scrolled .navbar-logo img {
-  height: 60px;
+  height: 65px;
 }
 
 .nav-links {
@@ -427,11 +427,11 @@
   }
 
   .navbar-logo img {
-    height: 50px;
+    height: 55px;
   }
 
   .navbar.scrolled .navbar-logo img {
-    height: 46px;
+    height: 54px;
   }
 
   /* ── Hamburger button ── */
@@ -777,10 +777,10 @@
   }
 
   .navbar-logo img {
-    height: 44px;
+    height: 56px;
   }
 
   .navbar.scrolled .navbar-logo img {
-    height: 40px;
+    height: 50px;
   }
 }

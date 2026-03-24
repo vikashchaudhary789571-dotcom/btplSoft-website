@@ -43,7 +43,7 @@
   --font-body: 'Poppins', sans-serif;
   
   /* Spacing */
-  --section-padding: 100px 0;
+  --section-padding: 72px 0;
   --container-width: 1200px;
   --container-padding: 0 24px;
   
@@ -232,7 +232,7 @@ button {
   }
   
   :root {
-    --section-padding: 60px 0;
+    --section-padding: 48px 0;
   }
 }
 
