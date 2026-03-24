@@ -29,6 +29,7 @@ export default defineConfig({
   plugins: [react(), heroImagePreload()],
   build: {
     target: 'es2020',
+    modulePreload: false,
     minify: 'terser',
     terserOptions: {
       compress: {
@@ -48,6 +49,9 @@ export default defineConfig({
           }
           if (id.includes('node_modules/lucide-react')) {
             return 'icons'
+          }
+          if (id.includes('HomeSections')) {
+            return 'home-sections'
           }
         },
       },
