@@ -288,15 +288,23 @@
   .gp-v3-heading {
     font-size: 2.6rem;
   }
+
+  .gp-v3-stats-grid {
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
   .gp-v3-section {
     padding: 48px 0;
+    overflow: hidden;
   }
 
   .gp-v3-top {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+    gap: 28px;
   }
 
   .gp-v3-heading {
@@ -304,12 +312,27 @@
   }
 
   .gp-v3-stats-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
   }
 
   .gp-v3-stat-card {
-    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .stat-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .stat-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .stat-info p {
+    font-size: 0.68rem;
   }
 
   .gp-v3-bottom-info {
@@ -336,34 +359,94 @@
 @media (max-width: 480px) {
   .gp-v3-section {
     padding: 40px 0;
+    overflow: hidden;
   }
 
   .gp-v3-heading {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
   }
 
   .gp-v3-bg-text {
-    font-size: 5rem;
+    font-size: 4rem;
+    letter-spacing: 10px;
   }
 
   .gp-v3-badge {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     padding: 5px 12px;
   }
 
-  .info-box {
-    padding: 24px 20px;
+  .gp-v3-top {
+    gap: 24px;
+    margin-bottom: 24px;
   }
 
-  .info-box h3 {
+  .gp-v3-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .gp-v3-stat-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .stat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .stat-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .stat-info h3 {
     font-size: 1.15rem;
   }
 
+  .stat-info p {
+    font-size: 0.62rem;
+    letter-spacing: 0;
+  }
+
+  .info-box {
+    padding: 22px 18px;
+  }
+
+  .info-box h3 {
+    font-size: 1.1rem;
+  }
+
   .info-box p {
-    font-size: 0.92rem;
+    font-size: 0.88rem;
+    line-height: 1.6;
   }
 
   .gp-v3-map-frame {
+    aspect-ratio: 4/3;
     border-radius: 10px;
+  }
+
+  .gp-v3-bottom-info {
+    margin-top: 16px;
+    gap: 12px;
+  }
+
+  .node-card {
+    display: none;
+  }
+
+  .node-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .is-hq .node-dot {
+    width: 12px;
+    height: 12px;
   }
 }

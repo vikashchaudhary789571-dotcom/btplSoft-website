@@ -325,6 +325,8 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    width: 100%;
+    max-width: 100%;
   }
   .ts-sidebar::-webkit-scrollbar {
     display: none;
@@ -335,19 +337,19 @@
     box-shadow: none;
     min-height: auto;
     gap: 0;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .ts-tab {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 72px;
-    max-width: 80px;
-    padding: 12px 8px 10px;
+    min-width: 64px;
+    max-width: 72px;
+    padding: 10px 6px 8px;
     gap: 6px;
     border-radius: 14px;
-    margin: 4px;
+    margin: 3px;
     background: #fff;
     border: 1.5px solid #e5e7eb;
     flex-shrink: 0;
