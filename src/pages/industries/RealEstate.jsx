@@ -12,7 +12,7 @@ import MapPin from 'lucide-react/dist/esm/icons/map-pin'
 import Camera from 'lucide-react/dist/esm/icons/camera'
 import FileText from 'lucide-react/dist/esm/icons/file-text'
 import '../industries/IndustryPage.css'
-import heroBanner from '../../assets/industries/hands-working-digital-device-network-graphic-overlay.webp'
+import heroBanner from '../../assets/industries/bottom-view-building-with-exterior-lights.webp'
 
 const solutions = [
   { icon: <Building size={26} />, title: 'Property Management Portals', desc: 'All-in-one property management platforms for landlords, property managers and tenants — rent collection, maintenance requests and lease management.' },

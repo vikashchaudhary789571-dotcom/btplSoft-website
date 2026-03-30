@@ -13,7 +13,7 @@ import Sun from 'lucide-react/dist/esm/icons/sun'
 import FileCheck from 'lucide-react/dist/esm/icons/file-check'
 import Users from 'lucide-react/dist/esm/icons/users'
 import '../industries/IndustryPage.css'
-import heroBanner from '../../assets/industries/data-center-it-specialist-monitoring-ai-llm-visualization-output.webp'
+import heroBanner from '../../assets/industries/sunset-sky-powers-wind-solar-energy-generated-by-ai.webp'
 
 const solutions = [
   { icon: <Wifi size={26} />, title: 'Smart Grid Monitoring', desc: 'Real-time grid monitoring and control systems with fault detection, load balancing, outage prediction and automated response capabilities.' },
