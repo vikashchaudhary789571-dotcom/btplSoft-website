@@ -10,7 +10,7 @@ import Zap from 'lucide-react/dist/esm/icons/zap';
 const locations = [
   { id: 1, city: 'Dallas', country: 'USA', top: '38%', left: '18%' },
   { id: 2, city: 'London', country: 'UK', top: '28%', left: '48%' },
-  { id: 3, city: 'Noida', country: 'India (HQ)', top: '48%', left: '68%', isHQ: true },
+  { id: 3, city: 'California', country: 'USA (HQ)', top: '48%', left: '68%', isHQ: true },
   { id: 4, city: 'Riyadh', country: 'Saudi Arabia', top: '52%', left: '58%' },
   { id: 5, city: 'Tokyo', country: 'Japan', top: '38%', left: '88%' },
   { id: 6, city: 'Melbourne', country: 'Australia', top: '78%', left: '85%' },
@@ -92,7 +92,7 @@ export default function GlobalPresence() {
             <div className="info-box">
               <h3>Engineering Without Borders</h3>
               <p>
-                From our state-of-the-art development center in India, we provide 
+                From our state-of-the-art development center in California, USA, we provide 
                 premium software solutions to visionaries in North America, Europe, 
                 and across the world. No distance is too far for innovation.
               </p>

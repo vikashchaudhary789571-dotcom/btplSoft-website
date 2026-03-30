@@ -69,10 +69,10 @@ export default function NextJS() {
       <section className="nj-stats">
         <div className="sp-container">
           <div className="nj-stats-grid">
-            <div className="nj-stat"><div className="nj-stat-num">1800<span>+</span></div><div className="nj-stat-label">Completed Projects</div></div>
+            <div className="nj-stat"><div className="nj-stat-num">1500<span>+</span></div><div className="nj-stat-label">Completed Projects</div></div>
             <div className="nj-stat"><div className="nj-stat-num">10<span>+</span></div><div className="nj-stat-label">Years Experience</div></div>
-            <div className="nj-stat"><div className="nj-stat-num">810<span>+</span></div><div className="nj-stat-label">Global Clients</div></div>
-            <div className="nj-stat"><div className="nj-stat-num">36</div><div className="nj-stat-label">Countries Served</div></div>
+            <div className="nj-stat"><div className="nj-stat-num">500<span>+</span></div><div className="nj-stat-label">Global Clients</div></div>
+            <div className="nj-stat"><div className="nj-stat-num">25</div><div className="nj-stat-label">Countries Served</div></div>
           </div>
         </div>
       </section>

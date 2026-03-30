@@ -146,7 +146,7 @@ export default function ReactJS() {
         <div className="sp-container">
           <div className="rj-stats-grid">
             <div className="rj-stat">
-              <div className="rj-stat-num">1800+</div>
+              <div className="rj-stat-num">1500+</div>
               <div className="rj-stat-label">Completed Projects</div>
             </div>
             <div className="rj-stat">
@@ -154,11 +154,11 @@ export default function ReactJS() {
               <div className="rj-stat-label">Years of Experience</div>
             </div>
             <div className="rj-stat">
-              <div className="rj-stat-num">810+</div>
+              <div className="rj-stat-num">500+</div>
               <div className="rj-stat-label">Global Clients</div>
             </div>
             <div className="rj-stat">
-              <div className="rj-stat-num">36</div>
+              <div className="rj-stat-num">25</div>
               <div className="rj-stat-label">Countries Served</div>
             </div>
           </div>

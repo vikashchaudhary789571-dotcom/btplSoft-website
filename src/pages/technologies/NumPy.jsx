@@ -61,7 +61,7 @@ const whyNumpy = [
   {
     icon: <Cpu size={22} />,
     title: 'Memory-Efficient ndarray Engine',
-    desc: 'NumPy stores data in contiguous typed buffers (float32, int64, etc.) consuming a fraction of the memory of Python lists. Views and in-place operations allow transforming data without any duplication, critical for large-dataset workloads.',
+    desc: 'NumPy stores data in contiguous typed buffers (float32, int64, and more) consuming a fraction of the memory of Python lists. Views and in-place operations allow transforming data without any duplication, critical for large-dataset workloads.',
   },
   {
     icon: <Layers size={22} />,

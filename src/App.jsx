@@ -193,9 +193,7 @@ function App() {
             <div className="hero-badge"><span className="hero-badge-dot"></span>Trusted IT Solutions Partner</div>
             <h1 className="hero-title">Transforming Ideas<br /><span className="highlight-blue">Into Digital</span> <span className="highlight-green">Reality</span></h1>
             <p className="hero-description">
-              BTPL Soft delivers innovative software development, cloud solutions, and digital 
-              transformation services that empower businesses to scale, compete, and succeed 
-              in the modern digital landscape.
+              BTPL Soft delivers innovative website development and software development, along with cloud solutions and digital transformation services that empower businesses to scale, compete, and succeed in the modern digital landscape.
             </p>
             <div className="hero-buttons">
               <button onClick={openConsult} className="btn-primary">Get Free Consultation <ArrowRight size={20} /></button>

@@ -213,7 +213,7 @@ export default function Contact() {
             <div className="map-overlay-v2"></div>
             
             {/* Pulsing Location Pings */}
-            <div className="ping-point ping-india" data-label="India - Headquarters"></div>
+            <div className="ping-point ping-india" data-label="California - Headquarters"></div>
             <div className="ping-point ping-us" data-label="USA - Client Base"></div>
             <div className="ping-point ping-europe" data-label="Europe - Partners"></div>
             <div className="ping-point ping-dubai" data-label="Middle East - Support"></div>
@@ -221,7 +221,7 @@ export default function Contact() {
 
             <div className="map-info-content">
               <h3>Our Global Footprint</h3>
-              <p>Engineering excellence for clients across the globe from our innovation hub in India.</p>
+              <p>Engineering excellence for clients across the globe from our innovation hub in California, USA.</p>
               <div className="map-metrics">
                 <div className="metric"><span>5+</span><p>Continents</p></div>
                 <div className="metric"><span>24/7</span><p>Global Support</p></div>

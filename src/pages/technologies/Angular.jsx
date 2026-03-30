@@ -81,10 +81,10 @@ export default function Angular() {
       <section className="ag-stats">
         <div className="sp-container">
           <div className="ag-stats-grid">
-            <div className="ag-stat"><div className="ag-stat-num">1800+</div><div className="ag-stat-label">Projects Delivered</div></div>
+            <div className="ag-stat"><div className="ag-stat-num">1500+</div><div className="ag-stat-label">Projects Delivered</div></div>
             <div className="ag-stat"><div className="ag-stat-num">10+</div><div className="ag-stat-label">Years Experience</div></div>
-            <div className="ag-stat"><div className="ag-stat-num">810+</div><div className="ag-stat-label">Global Clients</div></div>
-            <div className="ag-stat"><div className="ag-stat-num">36</div><div className="ag-stat-label">Countries Served</div></div>
+            <div className="ag-stat"><div className="ag-stat-num">500+</div><div className="ag-stat-label">Global Clients</div></div>
+            <div className="ag-stat"><div className="ag-stat-num">25</div><div className="ag-stat-label">Countries Served</div></div>
           </div>
         </div>
       </section>

@@ -55,7 +55,7 @@ export default function About({ onOpenConsult }) {
           <p className="ab-hero-desc">
             Creating technology solutions that enable businesses to achieve success.
             We are a full-service IT company delivering web, mobile, software, digital marketing
-            and SEO services to clients across India and globally.
+            and SEO services to clients worldwide.
           </p>
           {/* logo shown in hero */}
           {/* <Link to="/">
@@ -75,7 +75,7 @@ export default function About({ onOpenConsult }) {
 
             {/* Full-width paragraphs */}
             <p className="ab-intro-text">
-              BTPL Soft is a Noida-based IT solutions company delivering cutting-edge
+              BTPL Soft is a California, USA-based IT solutions company delivering cutting-edge
               technology that empowers businesses to thrive in the digital age. From
               startups finding their footing to enterprises optimising operations, we
               bring ideas to life with precision and passion. Our proficiency in
@@ -115,19 +115,19 @@ export default function About({ onOpenConsult }) {
         <div className="ab-container">
           <div className="ab-stats-grid">
             <div className="ab-stat-item">
-              <div className="ab-stat-num">5+</div>
+              <div className="ab-stat-num">15+</div>
               <div className="ab-stat-title">Years of Experience</div>
               <div className="ab-stat-sub">In IT solutions & digital services</div>
             </div>
             <div className="ab-stat-item">
-              <div className="ab-stat-num">500+</div>
+              <div className="ab-stat-num">1500+</div>
               <div className="ab-stat-title">Projects Completed</div>
               <div className="ab-stat-sub">Web, mobile & software</div>
             </div>
             <div className="ab-stat-item">
-              <div className="ab-stat-num">300+</div>
+              <div className="ab-stat-num">500+</div>
               <div className="ab-stat-title">Happy Clients</div>
-              <div className="ab-stat-sub">Across India & internationally</div>
+              <div className="ab-stat-sub">Worldwide & internationally</div>
             </div>
             <div className="ab-stat-item">
               <div className="ab-stat-num">99%</div>
@@ -262,15 +262,15 @@ export default function About({ onOpenConsult }) {
               </p>
               <div className="ab-panel-stats">
                 <div className="ab-panel-stat">
-                  <span className="ab-panel-stat-num">5+</span>
+                  <span className="ab-panel-stat-num">15+</span>
                   <span className="ab-panel-stat-lbl">Years in Business</span>
                 </div>
                 <div className="ab-panel-stat">
-                  <span className="ab-panel-stat-num">500+</span>
+                  <span className="ab-panel-stat-num">1500+</span>
                   <span className="ab-panel-stat-lbl">Projects Delivered</span>
                 </div>
                 <div className="ab-panel-stat">
-                  <span className="ab-panel-stat-num">300+</span>
+                  <span className="ab-panel-stat-num">500+</span>
                   <span className="ab-panel-stat-lbl">Happy Clients</span>
                 </div>
                 <div className="ab-panel-stat">

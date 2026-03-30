@@ -75,10 +75,10 @@ export default function VueJS() {
       <section className="vj-stats">
         <div className="sp-container">
           <div className="vj-stats-grid">
-            <div className="vj-stat"><div className="vj-stat-num">1800+</div><div className="vj-stat-label">Projects Delivered</div></div>
+            <div className="vj-stat"><div className="vj-stat-num">1500+</div><div className="vj-stat-label">Projects Delivered</div></div>
             <div className="vj-stat"><div className="vj-stat-num">10+</div><div className="vj-stat-label">Years Experience</div></div>
-            <div className="vj-stat"><div className="vj-stat-num">810+</div><div className="vj-stat-label">Global Clients</div></div>
-            <div className="vj-stat"><div className="vj-stat-num">36</div><div className="vj-stat-label">Countries Served</div></div>
+            <div className="vj-stat"><div className="vj-stat-num">500+</div><div className="vj-stat-label">Global Clients</div></div>
+            <div className="vj-stat"><div className="vj-stat-num">25</div><div className="vj-stat-label">Countries Served</div></div>
           </div>
         </div>
       </section>

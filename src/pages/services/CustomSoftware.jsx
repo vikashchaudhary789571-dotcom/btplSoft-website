@@ -157,7 +157,7 @@ export default function CustomSoftware({ onOpenConsult }) {
                 <div className="cs-type-body">
                   <p className="cs-type-desc">{t.desc}</p>
                   <div className="cs-type-examples">
-                    <span>e.g. {t.examples}</span>
+                    <span>Examples: {t.examples}</span>
                   </div>
                 </div>
               </div>

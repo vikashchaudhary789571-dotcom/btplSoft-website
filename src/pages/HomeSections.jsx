@@ -49,10 +49,10 @@ function useCounter(target, duration = 1500) {
 }
 
 export default function HomeSections({ logoImg }) {
-  const [projects, setProjectsStarted] = useCounter(1800)
-  const [years, setYearsStarted] = useCounter(25)
-  const [clients, setClientsStarted] = useCounter(810)
-  const [countries, setCountriesStarted] = useCounter(36)
+  const [projects, setProjectsStarted] = useCounter(1500)
+  const [years, setYearsStarted] = useCounter(15)
+  const [clients, setClientsStarted] = useCounter(500)
+  const [countries, setCountriesStarted] = useCounter(25)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -197,13 +197,13 @@ export default function HomeSections({ logoImg }) {
                   <p>Engineering Excellence Since Day One</p>
                 </div>
               </div>
-              <div className="about-experience-badge"><span className="years">25+</span><span className="label">Years</span></div>
+              <div className="about-experience-badge"><span className="years">15+</span><span className="label">Years</span></div>
             </div>
             <div className="about-content">
               <p className="section-subtitle">About BTPL Soft</p>
               <h2 className="section-title">Your Trusted Partner for <span className="highlight">Digital Innovation</span></h2>
               <p className="section-description">
-                BTPL Soft is a leading software development company committed to delivering 
+                BTPL Soft is a leading software development & Website development company committed to delivering 
                 cutting-edge technology solutions that fuel business growth. With a passionate 
                 team of developers, designers, and strategists, we transform complex challenges 
                 into elegant, scalable software products.
