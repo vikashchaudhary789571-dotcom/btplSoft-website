@@ -184,7 +184,7 @@ export default function Contact() {
                   <div className="info-icon"><MapPin size={24} /></div>
                   <div>
                     <h4>Visit Us</h4>
-                    <p>15442 Ventura Blvd. Ste 201-1736<br />Sherman Oaks, CA 91403</p>
+                    <p>15442 VENTURA BLVD. STE 201-1736<br />SHERMAN OAKS, CA 91403</p>
                   </div>
                 </div>
               </div>

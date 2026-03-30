@@ -350,7 +350,7 @@ export default function About({ onOpenConsult }) {
               <div className="ab-contact-icon"><MapPin size={20} /></div>
               <div className="ab-contact-info">
                 <h5>Our Office</h5>
-                <p>15442 Ventura Blvd. Ste 201-1736<br />Sherman Oaks, CA 91403</p>
+                <p>15442 VENTURA BLVD. STE 201-1736<br />SHERMAN OAKS, CA 91403</p>
               </div>
             </div>
             <div className="ab-contact-item">

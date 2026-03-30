@@ -602,20 +602,6 @@ const caseStudiesData = {
   }
 }
 
-
-const industries = [
-  'Manufacturing & Supply Chain',
-  'Banking & FinTech',
-  'E-Commerce & Retail',
-  'Healthcare & Medical',
-  'Logistics & Transportation',
-  'Education & E-Learning',
-  'Energy & Utility',
-  'Media & Entertainment',
-  'Government & Public Safety',
-  'Travel & Hospitality'
-]
-
 // Map industries to case study IDs
 const industryCaseStudyMap = {
   'Manufacturing & Supply Chain': 'erp-manufacturing',
@@ -625,6 +611,9 @@ const industryCaseStudyMap = {
   'Logistics & Transportation': 'logistics-tracking',
   'Education & E-Learning': 'education-lms'
 }
+
+// Industries list - only showing industries with available case studies
+const industries = Object.keys(industryCaseStudyMap)
 
 export default function CaseStudyDetail() {
   const { id } = useParams()
@@ -688,15 +677,14 @@ export default function CaseStudyDetail() {
                   <ul className="cs-filter-list">
                     {industries.map((industry) => {
                       const caseStudyId = industryCaseStudyMap[industry]
-                      const isAvailable = !!caseStudyId
                       const isActive = study.industry === industry
                       
                       return (
                         <li 
                           key={industry}
-                          className={`${isActive ? 'active' : ''} ${!isAvailable ? 'disabled' : ''}`}
-                          onClick={() => isAvailable && handleIndustryClick(industry)}
-                          style={{ cursor: isAvailable ? 'pointer' : 'not-allowed', opacity: isAvailable ? 1 : 0.5 }}
+                          className={isActive ? 'active' : ''}
+                          onClick={() => handleIndustryClick(industry)}
+                          style={{ cursor: 'pointer' }}
                         >
                           {industry}
                         </li>

@@ -72,7 +72,7 @@ export default function Footer() {
               <ul className="footer-contact-list">
                 <li>
                   <MapPin size={15} />
-                  <span>15442 Ventura Blvd. Ste 201-1736, Sherman Oaks, CA 91403</span>
+                  <span>15442 VENTURA BLVD. STE 201-1736, SHERMAN OAKS, CA 91403</span>
                 </li>
                 <li>
                   <Mail size={15} />

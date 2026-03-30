@@ -65,16 +65,38 @@ export default function Healthcare() {
           <div className="ip-hero-badge">Healthcare & Life Sciences</div>
           <h1 className="ip-hero-title">Healthcare & Life Sciences <span>Software Solutions</span></h1>
           <p className="ip-hero-desc">
-            We build secure, HIPAA-compliant healthcare technology solutions — from telemedicine platforms and EHR
-            systems to AI-powered diagnostics — helping providers deliver better patient outcomes at scale.
+            We provide advanced app & website development for healthcare organizations to improve patient
+            care, streamline operations, and enhance digital transformation. Our app & website development
+            for healthcare solutions help hospitals, clinics, and medical startups build secure, scalable, and
+            user-friendly platforms. With expertise in app & website development for healthcare, we ensure
+            compliance, performance, and seamless user experience.
           </p>
 
 
         </div>
       </section>
 
-      {/* OVERVIEW */}
+      {/* ABOUT HEALTHCARE SOLUTION */}
       <section className="ip-section ip-bg-white">
+        <div className="ip-container">
+          <div className="ip-section-head center">
+            <p className="ip-label">About Our Services</p>
+            <h2 className="ip-heading">About Healthcare <span>Solution</span></h2>
+          </div>
+          <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+            <p className="ip-subtext" style={{ fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '0' }}>
+              Our app & website development for healthcare focuses on building innovative digital solutions
+              tailored to modern medical needs. From hospital management systems to telemedicine platforms,
+              our app & website development for healthcare services improve patient engagement and
+              operational efficiency. We deliver secure and scalable app & website development for healthcare to
+              meet industry standards and evolving technologies.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* OVERVIEW */}
+      <section className="ip-section ip-bg-light">
         <div className="ip-container">
           <div className="ip-section-head center">
             <p className="ip-label">Industry Overview</p>
@@ -93,7 +115,7 @@ export default function Healthcare() {
           <div className="ip-section-head center">
             <p className="ip-label">What We Build</p>
             <h2 className="ip-heading">Our Healthcare <span>Technology Solutions</span></h2>
-            <p className="ip-subtext">Comprehensive digital solutions purpose-built for the healthcare and life sciences ecosystem.</p>
+            <p className="ip-subtext">Our app & website development for healthcare provides powerful features including patient management systems, appointment scheduling, real-time analytics, and secure data storage. With our app & website development for healthcare, medical organizations can automate workflows, improve communication, and deliver better patient outcomes efficiently.</p>
           </div>
           <div className="ip-solutions-grid">
             {solutions.map((s, i) => (
@@ -113,6 +135,7 @@ export default function Healthcare() {
           <div className="ip-section-head center">
             <p className="ip-label">How We Work</p>
             <h2 className="ip-heading">Our Healthcare <span>Delivery Process</span></h2>
+            <p className="ip-subtext">Our app & website development for healthcare follows a structured process including planning, design, development, testing, and deployment. We ensure that every app & website development for healthcare project meets quality standards, security requirements, and business goals while delivering scalable and future-ready solutions.</p>
           </div>
           <div className="ip-process-grid">
             {process.map((p, i) => (
